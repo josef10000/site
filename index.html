@@ -10,6 +10,7 @@
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
     <script>
         tailwind.config = {
             theme: {
@@ -20,53 +21,51 @@
                         accent: '#0055ff', // Azul elétrico profundo
                         accentHover: '#0044cc',
                         danger: '#ef4444',
-                        jornalBg: '#f4f4f0', // Cor de papel de jornal
+                        jornalBg: '#f4f3ed', // Cor de papel de jornal
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        serif: ['Merriweather', 'serif'], // Fonte estilo jornal
+                        serif: ['Merriweather', 'serif'], // Fonte estilo jornal (corpo)
+                        newsTitle: ['"Playfair Display"', 'serif'], // Fonte clássica para manchetes
                     }
                 }
             }
         }
     </script>
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap');
         
         body {
             background-color: #000000;
             color: #f8fafc;
         }
 
-        /* Animação suave para o número */
         .number-transition {
             transition: all 0.3s ease-out;
         }
 
         /* Ocultar barra de rolagem mas manter funcional */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #020617; 
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #334155; 
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #475569; 
-        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
 
         /* Efeito de Letra Capitular (Jornal) */
         .drop-cap::first-letter {
-            font-size: 4.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 5.5rem;
             font-weight: 900;
             float: left;
-            line-height: 1;
+            line-height: 0.8;
             padding-right: 0.5rem;
-            margin-top: -0.5rem;
-            color: #000;
+            margin-top: 0.2rem;
+            color: #111;
+        }
+
+        /* Linhas divisórias entre as colunas do jornal */
+        .newspaper-cols {
+            column-rule: 1px solid #a8a29e;
         }
 
         /* Borda rasgada (SVG Background) */
@@ -89,31 +88,35 @@
         <!-- ========================================== -->
         <!-- FASE 1: O JORNAL DA INVISIBILIDADE (A DOR) -->
         <!-- ========================================== -->
-        <section class="bg-jornalBg text-black font-serif min-h-screen flex flex-col pt-12 pb-24 px-6 md:px-12 relative">
-            <div class="container mx-auto max-w-6xl flex-grow flex flex-col">
+        <section id="jornal-section" class="bg-jornalBg text-black font-serif min-h-screen flex flex-col pt-8 md:pt-12 pb-24 px-6 md:px-12 relative z-20">
+            
+            <!-- Logo Vintage no Canto com Texto -->
+            <div class="absolute top-4 left-4 md:top-8 md:left-8 flex items-center gap-2 md:gap-3 opacity-70 hover:opacity-100 transition-opacity duration-500 cursor-default z-20">
+                <img src="https://imgur.com/UTb6LZm.png" alt="Hub Symples Acervo" class="h-10 md:h-14 grayscale brightness-0 mix-blend-multiply" onerror="this.src='https://via.placeholder.com/128x128/000000/ffffff?text=HS'">
+                <span class="font-newsTitle font-black text-xl md:text-3xl text-gray-900 tracking-tight mix-blend-multiply">Hub Symples</span>
+            </div>
+
+            <div class="container mx-auto max-w-6xl flex-grow flex flex-col mt-20 md:mt-12">
                 
-                <!-- Cabeçalho do Jornal -->
-                <header class="border-b-4 border-black pb-4 mb-10 text-center">
-                    <h2 class="text-2xl md:text-4xl font-black uppercase tracking-widest mb-2">O Diário do Mercado</h2>
-                    <div class="flex flex-col md:flex-row justify-between items-center border-t border-b border-black py-2 mt-2 text-xs md:text-sm font-bold uppercase tracking-wider gap-2">
+                <header class="mb-10 text-center">
+                    <h2 class="text-5xl md:text-7xl lg:text-[6rem] font-newsTitle font-black tracking-tight mb-4 text-gray-900">O Diário do Mercado</h2>
+                    <div class="flex flex-col md:flex-row justify-between items-center border-y-4 border-double border-gray-800 py-3 mt-2 text-xs md:text-sm font-bold uppercase tracking-widest gap-2 font-sans text-gray-700">
                         <span>Edição Especial: Sobrevivência</span>
                         <span>Para quem depende apenas do Instagram</span>
-                        <span id="data-jornal" class="text-red-700">Edição de Hoje</span>
+                        <span id="data-jornal" class="text-gray-900 font-black">Edição de Hoje</span>
                     </div>
                 </header>
 
-                <!-- Manchete Principal -->
-                <div class="text-center mb-12">
-                    <h1 class="text-5xl sm:text-6xl md:text-8xl lg:text-[7rem] font-black leading-[0.9] uppercase text-balance mb-6">
+                <div class="text-center mb-12 border-b border-gray-400 pb-12">
+                    <h1 class="font-newsTitle text-5xl sm:text-6xl md:text-8xl lg:text-[7rem] font-black leading-[0.9] uppercase text-balance mb-6 text-gray-900">
                         Para o mundo,<br>você não existe.
                     </h1>
-                    <p class="text-xl md:text-3xl font-bold italic text-gray-700 max-w-4xl mx-auto">
+                    <p class="text-xl md:text-3xl font-newsTitle italic text-gray-700 max-w-4xl mx-auto">
                         Negócios locais perdem milhares de reais todos os dias por um único motivo: parecerem amadores aos olhos do cliente.
                     </p>
                 </div>
 
-                <!-- Corpo da Notícia (Colunas) -->
-                <div class="columns-1 md:columns-2 lg:columns-3 gap-10 text-lg leading-relaxed text-justify mb-16 text-gray-800">
+                <div class="newspaper-cols columns-1 md:columns-2 lg:columns-3 gap-10 text-lg leading-relaxed text-justify mb-16 text-gray-800">
                     <p class="mb-6 drop-cap">
                         É duro ouvir isso, mas o mercado não tem pena de quem é invisível. Quando um cliente em potencial ouve falar do seu nome, a primeira coisa que ele faz — instintivamente — é pesquisar no Google. Ele quer provas.
                     </p>
@@ -131,41 +134,37 @@
                     </p>
                 </div>
 
-                <!-- Botão de Transição -->
+                <!-- Botão de Transição da Cortina -->
                 <div class="text-center mt-auto relative z-30">
                     <p class="font-sans font-bold text-sm uppercase tracking-widest text-red-600 mb-4">Chega de ser apenas mais um</p>
-                    <a href="#nova-era" class="inline-flex items-center gap-3 bg-black text-white font-sans font-black text-lg md:text-xl px-10 py-5 rounded-none hover:bg-gray-800 transition-all transform hover:scale-105 shadow-2xl">
-                        RASGUE ESSA PÁGINA E CRIE AUTORIDADE <i class="fas fa-arrow-down animate-bounce"></i>
+                    <a href="#" onclick="revelarNovaEra(event)" class="inline-flex items-center gap-3 bg-black text-white font-sans font-black text-lg md:text-xl px-10 py-5 rounded-none hover:bg-gray-800 transition-all transform hover:scale-105 shadow-2xl">
+                        REVELE A SUA NOVA ERA <i class="fas fa-arrow-up animate-bounce"></i>
                     </a>
                 </div>
             </div>
 
-            <!-- Efeito de Borda Rasgada conectando com o fundo preto -->
             <div class="torn-edge"></div>
         </section>
 
-
         <!-- ========================================== -->
         <!-- FASE 2: A NOVA ERA (O UNIVERSO HUB SYMPLES) -->
+        <!-- NOTA IMPORTANTE: style="display: none;" é o que força o bloqueio absoluto de rolagem -->
         <!-- ========================================== -->
-        <div id="nova-era" class="bg-black relative">
+        <div id="nova-era" class="bg-black relative z-10" style="display: none;">
             
-            <!-- TOP NAVBAR COM LOGO E NOME (Agora fica no fundo escuro) -->
             <nav class="w-full z-50 px-6 py-8 border-b border-slate-900/50 bg-black/50 backdrop-blur-md sticky top-0">
                 <div class="container mx-auto max-w-6xl flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                        <img src="https://imgur.com/UTb6LZm.png" alt="Hub Symples Logo" class="h-8 md:h-10 object-contain" onerror="this.src='https://via.placeholder.com/48x48/0055ff/ffffff?text=HS'">
-                        <span class="text-xl md:text-2xl font-bold tracking-tight text-white">Hub Symples</span>
+                    <div class="flex items-center gap-4">
+                        <img src="https://imgur.com/UTb6LZm.png" alt="Hub Symples Logo" class="h-12 md:h-16 object-contain" onerror="this.src='https://via.placeholder.com/64x64/0055ff/ffffff?text=HS'">
+                        <span class="text-2xl md:text-4xl font-extrabold tracking-tight text-white">Hub Symples</span>
                     </div>
-                    <a href="#planos" class="hidden md:inline-block border border-accent/50 text-accent px-4 py-2 rounded font-bold text-sm hover:bg-accent/10 transition-colors">
+                    <a href="#planos" class="hidden md:inline-block border border-accent/50 text-accent px-6 py-3 rounded-lg font-bold text-sm hover:bg-accent/10 transition-colors">
                         Ver Assinaturas
                     </a>
                 </div>
             </nav>
 
-            <!-- HEADER / HERO SECTION (A SOLUÇÃO) -->
             <header class="relative pt-16 md:pt-24 pb-16 lg:pb-32 overflow-hidden bg-black">
-                <!-- Glow effects background -->
                 <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-accent/10 blur-[120px] rounded-full pointer-events-none"></div>
 
                 <div class="container mx-auto px-6 relative z-10 max-w-6xl">
@@ -174,63 +173,88 @@
                             <i class="fas fa-globe"></i> Bem-vindo à sua nova realidade
                         </div>
                         <h2 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight mb-6 md:mb-8 leading-tight text-white">
-                            Transformamos a sua invisibilidade em <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-blue-400">Autoridade Absoluta.</span>
+                            Transformamos o seu negócio em uma <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-blue-400">Marca de Autoridade</span> por menos de R$ 100.
                         </h2>
                         <p class="text-lg sm:text-xl md:text-2xl text-slate-400 mb-8 md:mb-10 max-w-2xl mx-auto font-light leading-relaxed">
-                            A partir de agora, o seu cliente entra no seu site e pensa: <em>"Uau, essa empresa é séria"</em>. Você ganha o poder de cobrar o valor justo pelo seu serviço, sem medo da concorrência.
+                            Esqueça agências caras e demoradas. Em apenas <strong class="text-white">4 dias</strong> seu Hub de Autoridade está no ar. E o melhor: você não precisa escrever uma única palavra, basta nos mandar um áudio de 2 minutos.
                         </p>
                         <div class="flex flex-col sm:flex-row justify-center gap-4">
-                            <a href="#planos" class="bg-accent hover:bg-accentHover text-white px-6 sm:px-8 py-4 rounded-lg font-bold text-base sm:text-lg transition-colors shadow-[0_0_30px_rgba(0,85,255,0.3)] flex items-center justify-center gap-2">
-                                Iniciar Minha Transformação <i class="fas fa-rocket"></i>
+                            <a href="https://wa.me/5511952924208?text=Ol%C3%A1%2C%20gostaria%20de%20iniciar%20minha%20transforma%C3%A7%C3%A3o%20com%20a%20Hub%20Symples!" target="_blank" rel="noopener noreferrer" class="bg-accent hover:bg-accentHover text-white px-6 sm:px-8 py-4 rounded-lg font-bold text-base sm:text-lg transition-colors shadow-[0_0_30px_rgba(0,85,255,0.3)] flex items-center justify-center gap-2">
+                                Iniciar Minha Transformação <i class="fab fa-whatsapp text-xl"></i>
                             </a>
                         </div>
+                        <p class="mt-4 text-xs sm:text-sm text-slate-600"><i class="fas fa-lock mr-1"></i> Garantia Incondicional de 7 Dias. Risco Zero.</p>
                     </div>
                 </div>
             </header>
 
-            <!-- A EQUAÇÃO DO VALOR (ZERANDO O ESFORÇO E O TEMPO) -->
-            <section class="py-16 md:py-24 bg-darker relative z-10 border-t border-slate-900" id="secao-metodo">
+            <section class="py-16 md:py-24 bg-black relative z-10 border-t border-slate-900" id="secao-dor">
                 <div class="container mx-auto px-6 max-w-5xl">
                     <div class="text-center mb-12 md:mb-16">
-                        <h2 class="text-3xl md:text-5xl font-bold mb-4 md:mb-6 leading-tight">Tiramos todo o peso das suas costas.</h2>
-                        <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto">Você assina, fala e nós trabalhamos. Sem formulários complexos, sem perda de tempo de 40 dias com agências caras. Construímos o seu Hub de Autoridade em 3 passos simples:</p>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">A dura verdade sobre vender na internet hoje</h2>
+                        <div class="w-20 h-1 bg-danger mx-auto rounded-full"></div>
                     </div>
 
-                    <div class="grid md:grid-cols-3 gap-8 md:gap-12 relative">
-                        <!-- Linha conectora (Desktop) -->
-                        <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-slate-800 -translate-y-1/2 z-0"></div>
-
-                        <!-- Passo 1 -->
-                        <div class="relative z-10 bg-black border border-slate-800 p-8 rounded-2xl text-center shadow-2xl">
-                            <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white text-2xl font-black mx-auto mb-6 shadow-[0_0_20px_rgba(0,85,255,0.4)]">
-                                1
+                    <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+                        <div class="bg-darker p-8 rounded-xl border border-slate-800 shadow-xl">
+                            <div class="w-14 h-14 bg-red-500/10 text-danger rounded-lg flex items-center justify-center text-2xl mb-6">
+                                <i class="fas fa-times-circle"></i>
                             </div>
-                            <h3 class="text-2xl font-bold text-white mb-4">Áudio de 2 Minutos</h3>
-                            <p class="text-slate-400 text-sm leading-relaxed"><strong>Esforço Zero.</strong> Esqueça textos longos. Basta nos mandar um áudio simples no WhatsApp contando a história e o foco do seu negócio. Nossa inteligência transforma suas palavras em textos persuasivos.</p>
+                            <h3 class="text-xl font-bold mb-3">O cliente foge</h3>
+                            <p class="text-slate-400">Só ter um Instagram não basta mais. Quando o cliente não acha seu site, ele acha que sua empresa é pequena ou insegura.</p>
                         </div>
-
-                        <!-- Passo 2 -->
-                        <div class="relative z-10 bg-black border border-slate-800 p-8 rounded-2xl text-center shadow-2xl">
-                            <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white text-2xl font-black mx-auto mb-6 shadow-[0_0_20px_rgba(0,85,255,0.4)]">
-                                2
+                        <div class="bg-darker p-8 rounded-xl border border-slate-800 shadow-xl">
+                            <div class="w-14 h-14 bg-red-500/10 text-danger rounded-lg flex items-center justify-center text-2xl mb-6">
+                                <i class="fas fa-file-alt"></i>
                             </div>
-                            <h3 class="text-2xl font-bold text-white mb-4">Apenas 4 Dias</h3>
-                            <p class="text-slate-400 text-sm leading-relaxed"><strong>Espera Zero.</strong> Enquanto as agências tradicionais pedem semanas ou meses, nosso time de especialistas atua rápido. Em exatos 4 dias úteis, o seu projeto premium está pronto e no ar.</p>
+                            <h3 class="text-xl font-bold mb-3">O pesadelo do "Briefing"</h3>
+                            <p class="text-slate-400">A concorrência te manda um documento de 4 páginas para você preencher. Você não tem tempo e não sabe o que escrever.</p>
                         </div>
-
-                        <!-- Passo 3 -->
-                        <div class="relative z-10 bg-black border border-slate-800 p-8 rounded-2xl text-center shadow-2xl">
-                            <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white text-2xl font-black mx-auto mb-6 shadow-[0_0_20px_rgba(34,197,94,0.4)]">
-                                <i class="fas fa-check"></i>
+                        <div class="bg-darker p-8 rounded-xl border border-slate-800 shadow-xl">
+                            <div class="w-14 h-14 bg-red-500/10 text-danger rounded-lg flex items-center justify-center text-2xl mb-6">
+                                <i class="fas fa-calendar-times"></i>
                             </div>
-                            <h3 class="text-2xl font-bold text-white mb-4">Acesso Liberado</h3>
-                            <p class="text-slate-400 text-sm leading-relaxed"><strong>Resultado dos Sonhos.</strong> O seu cliente abre a tela do celular, vê um design premium e fecha negócio. Você ganha acesso ao Portal do Assinante para solicitar alterações vitalícias sem custos.</p>
+                            <h3 class="text-xl font-bold mb-3">A demora das Agências</h3>
+                            <p class="text-slate-400">Cobram R$ 3.000 à vista, pedindo de 30 a 45 dias para entregar algo básico. Seu negócio não pode esperar.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- ANCORAGEM DE VALOR (OFERTA IRRECUSÁVEL) -->
+            <section class="py-16 md:py-24 bg-darker relative z-10 border-t border-slate-900" id="secao-metodo">
+                <div class="container mx-auto px-6 max-w-5xl">
+                    <div class="text-center mb-12 md:mb-16">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-green-500/30 bg-green-500/10 text-green-400 text-xs md:text-sm font-semibold mb-6">
+                            <i class="fas fa-bolt"></i> O Método Hub Symples
+                        </div>
+                        <h2 class="text-3xl md:text-5xl font-bold mb-4 md:mb-6 leading-tight">Tiramos todo o peso das suas costas.</h2>
+                        <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto">Você assina, fala e nós trabalhamos. Sem formulários complexos. Construímos o seu Hub de Autoridade em 3 passos:</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-8 md:gap-12 relative">
+                        <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-slate-800 -translate-y-1/2 z-0"></div>
+
+                        <div class="relative z-10 bg-black border border-slate-800 p-8 rounded-2xl text-center shadow-2xl">
+                            <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white text-2xl font-black mx-auto mb-6 shadow-[0_0_20px_rgba(0,85,255,0.4)]">1</div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Áudio de 2 Minutos</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed"><strong>Esforço Zero.</strong> Basta nos mandar um áudio simples no WhatsApp contando a história do seu negócio. Nossa inteligência transforma em textos persuasivos.</p>
+                        </div>
+
+                        <div class="relative z-10 bg-black border border-slate-800 p-8 rounded-2xl text-center shadow-2xl">
+                            <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white text-2xl font-black mx-auto mb-6 shadow-[0_0_20px_rgba(0,85,255,0.4)]">2</div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Apenas 4 Dias</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed"><strong>Espera Zero.</strong> Enquanto as agências tradicionais pedem semanas, nosso time atua rápido. Em exatos 4 dias úteis, seu projeto está pronto e no ar.</p>
+                        </div>
+
+                        <div class="relative z-10 bg-black border border-slate-800 p-8 rounded-2xl text-center shadow-2xl">
+                            <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white text-2xl font-black mx-auto mb-6 shadow-[0_0_20px_rgba(34,197,94,0.4)]"><i class="fas fa-check"></i></div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Autoridade Instantânea</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed"><strong>Resultado dos Sonhos.</strong> O cliente abre a tela, vê um design premium e fecha negócio. Você ganha acesso ao Portal do Assinante para solicitar alterações sem custos.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="py-16 md:py-24 bg-black relative z-10 border-t border-slate-900" id="secao-ancoragem">
                 <div class="container mx-auto px-6 max-w-4xl">
                     <div class="text-center mb-12 md:mb-16">
@@ -239,7 +263,6 @@
                     </div>
 
                     <div class="bg-darker border border-slate-800 rounded-2xl p-6 sm:p-8 md:p-12 shadow-2xl relative overflow-hidden">
-                        <!-- Glow interno -->
                         <div class="absolute top-0 right-0 w-64 h-64 bg-accent/5 blur-[80px] rounded-full pointer-events-none"></div>
 
                         <ul class="space-y-4 md:space-y-6 relative z-10">
@@ -315,7 +338,6 @@
                 </div>
             </section>
 
-            <!-- MANIFESTO / PARCERIA -->
             <section class="py-16 md:py-24 bg-darker border-t border-slate-900 relative z-10 overflow-hidden" id="secao-filosofia">
                 <div class="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-accent/5 blur-[100px] rounded-full pointer-events-none"></div>
 
@@ -353,12 +375,20 @@
                                     <p class="text-slate-400 text-sm leading-relaxed">Surgiu uma nova estratégia de vendas? Nossa equipe entra em contato com você propondo a atualização sem custos.</p>
                                 </div>
                             </div>
+                            <div class="bg-black border border-slate-800 p-6 rounded-2xl flex gap-4 items-start shadow-xl">
+                                <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center text-accent text-xl flex-shrink-0 mt-1">
+                                    <i class="fas fa-users-cog"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white mb-2">Equipe Multidisciplinar</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">Você não está alugando um sistema, está contratando marqueteiros focados no seu sucesso.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- RETENÇÃO / PROVA SOCIAL DE DADOS -->
             <section class="py-12 md:py-16 bg-black border-t border-slate-900 relative z-10" id="secao-retencao">
                 <div class="container mx-auto px-6 max-w-5xl">
                     <div class="bg-gradient-to-r from-slate-900 to-black border border-slate-800 rounded-3xl p-8 md:p-12 shadow-2xl flex flex-col md:flex-row items-center gap-8 md:gap-16 relative overflow-hidden">
@@ -373,22 +403,20 @@
                         
                         <div class="text-center md:text-left relative z-10">
                             <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">O mercado cancela. Nossos clientes ficam.</h3>
-                            <p class="text-slate-400 text-lg leading-relaxed">Enquanto construtores de sites tradicionais e agências têm altas taxas de abandono, nossa plataforma mantém uma <strong class="text-white">taxa de cancelamento menor que 3%</strong>. Quem assina a Hub Symples, decide continuar conosco porque o resultado aparece.</p>
+                            <p class="text-slate-400 text-lg leading-relaxed">Enquanto construtores de sites tradicionais e agências têm altas taxas de abandono, nossa plataforma mantém uma <strong class="text-white">taxa de cancelamento menor que 3%</strong>. A nossa maior prova de qualidade é o fato de que quem assina a Hub Symples, decide continuar.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- PROVA SOCIAL / DEPOIMENTOS -->
             <section class="py-16 md:py-24 bg-black border-t border-slate-900 relative z-10" id="secao-depoimentos">
                 <div class="container mx-auto px-6 max-w-6xl">
                     <div class="text-center mb-12 md:mb-16">
                         <h2 class="text-3xl md:text-5xl font-bold mb-4">Quem já escalou com a Hub</h2>
-                        <p class="text-xl text-slate-400">Junte-se a dezenas de empreendedores que pararam de perder vendas e se tornaram autoridade.</p>
+                        <p class="text-xl text-slate-400">Junte-se a dezenas de empreendedores que pararam de perder vendas.</p>
                     </div>
 
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Depoimento 1 -->
                         <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl flex flex-col h-full hover:border-accent/50 transition-colors">
                             <div class="flex items-center gap-2 mb-4 text-yellow-500 text-sm">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -403,7 +431,6 @@
                             </div>
                         </div>
 
-                        <!-- Depoimento 2 -->
                         <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl flex flex-col h-full hover:border-accent/50 transition-colors">
                             <div class="flex items-center gap-2 mb-4 text-yellow-500 text-sm">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -418,7 +445,6 @@
                             </div>
                         </div>
 
-                        <!-- Depoimento 3 -->
                         <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl flex flex-col h-full hover:border-accent/50 transition-colors">
                             <div class="flex items-center gap-2 mb-4 text-yellow-500 text-sm">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -436,11 +462,9 @@
                 </div>
             </section>
 
-            <!-- TABELA DE PLANOS & GARANTIA -->
             <section id="planos" class="py-16 md:py-24 bg-black relative z-10 border-t border-slate-900">
                 <div class="container mx-auto px-6 max-w-5xl">
                     
-                    <!-- O GOLPE DE MISERICÓRDIA -->
                     <div class="bg-gradient-to-r from-slate-900 to-black border border-slate-800 p-6 sm:p-8 md:p-10 rounded-2xl mb-12 md:mb-16 flex flex-col md:flex-row items-center gap-6 md:gap-8 max-w-4xl mx-auto shadow-2xl relative overflow-hidden text-center md:text-left">
                         <div class="absolute left-0 top-0 w-2 h-full bg-green-500"></div>
                         <div class="flex-shrink-0">
@@ -457,7 +481,6 @@
                         <p class="text-slate-400 max-w-2xl mx-auto leading-relaxed text-sm md:text-base">Comece hoje com o Start e <strong>faça o upgrade para o Pro a qualquer momento</strong> quando decidir que é a hora de plugar o seu domínio próprio.</p>
                     </div>
 
-                    <!-- Toggle Mensal / Anual -->
                     <div class="flex justify-center mb-10 md:mb-16">
                         <div class="bg-slate-900 p-1.5 rounded-full inline-flex border border-slate-800 relative items-center max-w-full overflow-x-auto">
                             <button id="btn-mensal" onclick="toggleBilling('mensal')" class="px-5 md:px-8 py-2 md:py-3 rounded-full font-bold text-xs md:text-sm transition-all duration-300 bg-accent text-white shadow-lg whitespace-nowrap">
@@ -471,13 +494,12 @@
 
                     <div class="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto items-stretch">
                         
-                        <!-- Plano Start -->
                         <div class="bg-slate-900 border border-slate-700 hover:border-slate-500 transition-colors rounded-2xl p-8 relative flex flex-col h-full">
                             <div class="inline-block px-3 py-1 rounded bg-slate-800 text-slate-300 text-xs font-bold uppercase tracking-wider mb-5 w-max border border-slate-700">
                                 Fase 1: Tração e Validação
                             </div>
                             <h3 class="text-2xl font-bold mb-2 text-white">Plano Start</h3>
-                            <p class="text-slate-400 mb-6 text-sm">A estrutura perfeita para quem precisa estar online rápido e gerar vendas hoje, sem burocracia.</p>
+                            <p class="text-slate-400 mb-6 text-sm">A estrutura perfeita para quem precisa estar online rápido e gerar vendas hoje.</p>
                             
                             <div class="mb-8 min-h-[80px]">
                                 <div class="flex items-end gap-1">
@@ -490,23 +512,22 @@
                             <ul class="space-y-4 mb-8 flex-grow">
                                 <li class="flex items-start gap-3"><i class="fas fa-check text-slate-500 mt-1"></i> <span class="text-slate-300">Site Completo Premium</span></li>
                                 <li class="flex items-start gap-3"><i class="fas fa-check text-slate-500 mt-1"></i> <span class="text-slate-300">Botão WhatsApp & Mapa</span></li>
-                                <li class="flex items-start gap-3"><i class="fas fa-check text-slate-500 mt-1"></i> <span class="text-slate-300">Certificado de Segurança SSL</span></li>
+                                <li class="flex items-start gap-3"><i class="fas fa-check text-slate-500 mt-1"></i> <span class="text-slate-300">Certificado SSL</span></li>
                                 <li class="flex items-start gap-3"><i class="fas fa-check text-slate-500 mt-1"></i> <span class="text-slate-300">Portal do Assinante (Acesso a nós)</span></li>
                                 <li class="flex items-start gap-3 text-slate-500"><i class="fas fa-info-circle mt-1"></i> <span>Domínio padrão (seunome.hubsymples...)</span></li>
                             </ul>
                             
-                            <a href="#" class="block w-full text-center border border-slate-600 text-white hover:bg-slate-800 py-4 rounded-lg font-bold transition-colors mt-auto">
-                                Começar na Fase 1
+                            <a href="https://wa.me/5511952924208?text=Ol%C3%A1%2C%20quero%20come%C3%A7ar%20na%20Fase%201%20(Plano%20Start)%20da%20Hub%20Symples." target="_blank" rel="noopener noreferrer" class="block w-full text-center border border-slate-600 text-white hover:bg-slate-800 py-4 rounded-lg font-bold transition-colors mt-auto flex justify-center items-center gap-2">
+                                <i class="fab fa-whatsapp text-lg"></i> Começar na Fase 1
                             </a>
                         </div>
 
-                        <!-- Plano Pro -->
                         <div class="bg-black border border-accent hover:border-accentHover transition-colors rounded-2xl p-8 relative flex flex-col h-full shadow-2xl shadow-accent/5">
                             <div class="inline-block px-3 py-1 rounded bg-accent/10 text-accent text-xs font-bold uppercase tracking-wider mb-5 w-max border border-accent/20">
                                 Fase 2: Autoridade e Escala
                             </div>
                             <h3 class="text-2xl font-bold mb-2 text-white">Plano Pro</h3>
-                            <p class="text-slate-300 mb-6 text-sm">O próximo passo natural. Para negócios que já tracionaram e precisam fortalecer a marca.</p>
+                            <p class="text-slate-300 mb-6 text-sm">O próximo passo natural. Para negócios que precisam fortalecer a marca.</p>
                             
                             <div class="mb-8 min-h-[80px]">
                                 <div class="flex items-end gap-1">
@@ -523,8 +544,8 @@
                                 <li class="flex items-start gap-3"><i class="fas fa-search text-accent mt-1"></i> <span class="text-slate-200">Otimização Avançada de SEO</span></li>
                             </ul>
                             
-                            <a href="#" class="block w-full text-center bg-accent hover:bg-accentHover text-white py-4 rounded-lg font-bold transition-colors shadow-lg shadow-accent/20 mt-auto">
-                                Avançar para a Fase 2
+                            <a href="https://wa.me/5511952924208?text=Ol%C3%A1%2C%20quero%20avan%C3%A7ar%20para%20a%20Fase%202%20(Plano%20Pro)%20da%20Hub%20Symples." target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-accent hover:bg-accentHover text-white py-4 rounded-lg font-bold transition-colors shadow-lg shadow-accent/20 mt-auto flex justify-center items-center gap-2">
+                                <i class="fab fa-whatsapp text-lg"></i> Avançar para a Fase 2
                             </a>
                         </div>
 
@@ -532,41 +553,85 @@
                 </div>
             </section>
 
-            <!-- FAQ & FOOTER -->
             <footer class="py-12 bg-black relative z-10 border-t border-slate-900" id="secao-final">
                 <div class="container mx-auto px-6 max-w-4xl text-center">
                     <h2 class="text-2xl font-bold mb-6">Restou alguma dúvida?</h2>
                     <div class="space-y-4 text-left max-w-2xl mx-auto mb-12">
                         <details class="bg-slate-900 rounded-lg p-4 cursor-pointer border border-slate-800">
                             <summary class="font-bold select-none outline-none text-lg">Em quanto tempo o site fica pronto?</summary>
-                            <p class="mt-2 text-slate-400 text-sm">O nosso processo é incrivelmente ágil. Após assinar, basta nos mandar um áudio de 2 minutos no WhatsApp e nossa equipe entregará o seu Hub de Autoridade pronto em apenas <strong>4 dias úteis</strong>.</p>
+                            <p class="mt-2 text-slate-400 text-sm">O processo é ágil. Basta nos mandar um áudio de 2 minutos e entregaremos o Hub pronto em <strong>4 dias úteis</strong>.</p>
                         </details>
                         <details class="bg-slate-900 rounded-lg p-4 cursor-pointer border border-slate-800">
                             <summary class="font-bold select-none outline-none text-lg text-accent">O valor é mensal?</summary>
-                            <p class="mt-2 text-slate-400 text-sm">Sim! Trabalhamos com um modelo de assinatura. Esse valor mensal já inclui toda a manutenção, atualizações, hospedagem, uso do seu <strong>Portal do Assinante (para solicitar alterações sempre que quiser)</strong> e acompanhamento. Sem taxas ocultas.</p>
+                            <p class="mt-2 text-slate-400 text-sm">Sim! É um modelo de assinatura. Esse valor já inclui manutenção, hospedagem e uso do <strong>Portal do Assinante</strong>. Sem taxas ocultas.</p>
                         </details>
                         <details class="bg-slate-900 rounded-lg p-4 cursor-pointer border border-slate-800">
                             <summary class="font-bold select-none outline-none text-lg">Quais são as formas de pagamento?</summary>
-                            <p class="mt-2 text-slate-400 text-sm">Você pode assinar o Plano Mensal via Cartão ou Pix. Se preferir o Plano Anual (com 15% OFF), pode pagar à vista no Pix ou parcelar em até <strong class="text-white">10x sem juros</strong> no Cartão.</p>
+                            <p class="mt-2 text-slate-400 text-sm">Mensal via Cartão ou Pix. Anual (com 15% OFF) à vista no Pix ou parcelado em até <strong class="text-white">10x sem juros</strong> no Cartão.</p>
                         </details>
                     </div>
                     <p class="text-slate-600 text-sm mt-12">© 2024 Hub Symples. Todos os direitos reservados.</p>
                 </div>
             </footer>
 
-        </div> <!-- Fim do Container Nova Era -->
+            <a href="https://wa.me/5511952924208?text=Ol%C3%A1%2C%20estou%20no%20site%20da%20Hub%20Symples%20e%20preciso%20de%20ajuda!" id="whatsapp-float" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(34,197,94,0.4)] transition-all duration-500 hover:scale-110 z-50 opacity-0 translate-y-10 pointer-events-none">
+                <i class="fab fa-whatsapp text-3xl"></i>
+            </a>
+
+        </div>
     </main>
 
-    <!-- SCRIPT -->
     <script>
+        function revelarNovaEra(e) {
+            e.preventDefault(); 
+            
+            const jornal = document.getElementById('jornal-section');
+            const novaEra = document.getElementById('nova-era');
+            const btnFloat = document.getElementById('whatsapp-float');
+            
+            const scrollY = window.scrollY; 
+            const jornalHeight = jornal.offsetHeight;
+            
+            document.body.style.overflow = 'hidden';
+            
+            // REMOVE O BLOQUEIO DE DISPLAY: NONE PARA A SEÇÃO EXISTIR NA TELA
+            novaEra.style.display = 'block';
+            
+            jornal.style.height = `${jornalHeight}px`;
+            jornal.style.position = 'fixed';
+            jornal.style.top = `-${scrollY}px`;
+            jornal.style.left = '0';
+            jornal.style.width = '100%';
+            jornal.style.zIndex = '50';
+            jornal.style.boxShadow = '0 30px 60px rgba(0,0,0,0.9)';
+            
+            window.scrollTo(0, 0);
+            
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    jornal.style.transition = 'transform 1.5s cubic-bezier(0.65, 0, 0.15, 1)';
+                    jornal.style.transform = 'translateY(-100%)';
+                    
+                    if (btnFloat) {
+                        setTimeout(() => {
+                            btnFloat.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
+                        }, 800);
+                    }
+                });
+            });
+            
+            setTimeout(() => {
+                jornal.style.display = 'none'; 
+                document.body.style.overflow = ''; 
+            }, 1500);
+        }
+
         function toggleBilling(type) {
             const btnMensal = document.getElementById('btn-mensal');
             const btnAnual = document.getElementById('btn-anual');
-            
             const priceStart = document.getElementById('price-start');
             const periodStart = document.getElementById('period-start');
             const instStart = document.getElementById('installments-start');
-            
             const pricePro = document.getElementById('price-pro');
             const periodPro = document.getElementById('period-pro');
             const instPro = document.getElementById('installments-pro');
@@ -586,7 +651,6 @@
                 periodPro.innerText = '/ano';
                 instPro.classList.remove('hidden');
                 setTimeout(() => instPro.classList.remove('opacity-0'), 50);
-
             } else {
                 btnMensal.classList.remove('text-slate-400');
                 btnMensal.classList.add('bg-accent', 'text-white', 'shadow-lg');
@@ -605,7 +669,6 @@
             }
         }
 
-        // Animação 97% Retenção
         document.addEventListener('DOMContentLoaded', () => {
             const retentionObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -641,17 +704,12 @@
                 retentionObserver.observe(sectionRetencao);
             }
 
-            // ==========================================
-            // Script para Data Dinâmica do Jornal
-            // ==========================================
             const spanData = document.getElementById('data-jornal');
             if (spanData) {
                 const dataAtual = new Date();
                 const opcoesData = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                // Formata a data em português e deixa a primeira letra maiúscula
                 let dataFormatada = dataAtual.toLocaleDateString('pt-BR', opcoesData);
                 dataFormatada = dataFormatada.charAt(0).toUpperCase() + dataFormatada.slice(1);
-                
                 spanData.innerText = dataFormatada;
             }
         });
