@@ -649,33 +649,6 @@
                 <i class="fab fa-whatsapp text-3xl"></i>
             </a>
 
-            <!-- MODAL EXIT INTENT (Aversão à Perda) -->
-            <div id="exit-intent-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
-                <div class="bg-darker border border-slate-800 p-8 md:p-10 rounded-3xl max-w-lg w-[90%] relative shadow-[0_0_50px_rgba(239,68,68,0.15)] transform scale-95 transition-transform duration-300" id="exit-intent-box">
-                    <div class="absolute -top-6 -right-6 w-32 h-32 bg-red-500/10 blur-[50px] rounded-full pointer-events-none"></div>
-                    
-                    <div class="text-center relative z-10">
-                        <div class="w-16 h-16 bg-red-500/10 text-danger rounded-full flex items-center justify-center text-3xl mx-auto mb-6">
-                            <i class="fas fa-exclamation-triangle animate-pulse"></i>
-                        </div>
-                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Vai mesmo voltar para a Lojinha do Instagram?</h2>
-                        <p class="text-slate-400 mb-8 leading-relaxed">
-                            Enquanto você pensa, o seu concorrente que tem um site profissional está fechando vendas. Você está a um clique de transformar seu negócio em uma Marca de Autoridade.
-                        </p>
-                        
-                        <div class="flex flex-col gap-4">
-                            <a href="https://wa.me/5511952924208?text=Ol%C3%A1%2C%20n%C3%A3o%20quero%20ficar%20para%20tr%C3%A1s.%20Quero%20construir%20minha%20Autoridade%20agora!" target="_blank" rel="noopener noreferrer" class="bg-accent hover:bg-accentHover text-white px-6 py-4 rounded-xl font-bold text-lg md:text-xl transition-colors shadow-lg shadow-accent/20 flex items-center justify-center gap-2 w-full">
-                                🚀 Quero minha Autoridade agora!
-                            </a>
-                            <!-- Confirmshaming: Botão com texto negativo para forçar aversão à perda -->
-                            <button onclick="closeExitIntent()" class="text-slate-500 hover:text-slate-300 text-xs md:text-sm font-medium transition-colors underline decoration-slate-700 underline-offset-4 p-2 mt-2">
-                                Não, prefiro continuar invisível e perdendo clientes.
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </main>
 
@@ -875,45 +848,7 @@
                 dataFormatada = dataFormatada.charAt(0).toUpperCase() + dataFormatada.slice(1);
                 spanData.innerText = dataFormatada;
             }
-
-            // Lógica do Exit Intent (Intenção de Saída)
-            let exitIntentShown = false;
-            document.addEventListener('mouseleave', (e) => {
-                // Se o mouse sair por cima da tela (clientY < 0) e o modal ainda não tiver aparecido
-                if (e.clientY < 0 && !exitIntentShown) {
-                    const novaEra = document.getElementById('nova-era');
-                    // Só mostra o popup de retenção se ele já passou do Jornal (Nova Era visível)
-                    if (novaEra && novaEra.style.display === 'block') {
-                        showExitIntent();
-                    }
-                }
-            });
         });
-
-        function showExitIntent() {
-            const modal = document.getElementById('exit-intent-modal');
-            const box = document.getElementById('exit-intent-box');
-            
-            modal.classList.remove('pointer-events-none');
-            modal.classList.remove('opacity-0');
-            box.classList.remove('scale-95');
-            box.classList.add('scale-100');
-            
-            exitIntentShown = true;
-        }
-
-        function closeExitIntent() {
-            const modal = document.getElementById('exit-intent-modal');
-            const box = document.getElementById('exit-intent-box');
-            
-            modal.classList.add('opacity-0');
-            box.classList.remove('scale-100');
-            box.classList.add('scale-95');
-            
-            setTimeout(() => {
-                modal.classList.add('pointer-events-none');
-            }, 300);
-        }
     </script>
 </body>
 </html>
