@@ -25,8 +25,8 @@
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        serif: ['Merriweather', 'serif'], // Fonte estilo jornal (corpo)
-                        newsTitle: ['"Playfair Display"', 'serif'], // Fonte clássica para manchetes
+                        serif: ['Merriweather', 'serif'], 
+                        newsTitle: ['"Playfair Display"', 'serif'], 
                     }
                 }
             }
@@ -45,13 +45,11 @@
             transition: all 0.3s ease-out;
         }
 
-        /* Ocultar barra de rolagem mas manter funcional */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #020617; }
         ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #475569; }
 
-        /* Efeito de Letra Capitular (Jornal) */
         .drop-cap::first-letter {
             font-family: 'Playfair Display', serif;
             font-size: 5.5rem;
@@ -63,12 +61,10 @@
             color: #111;
         }
 
-        /* Linhas divisórias entre as colunas do jornal */
         .newspaper-cols {
             column-rule: 1px solid #a8a29e;
         }
 
-        /* Borda rasgada (SVG Background) */
         .torn-edge {
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 50' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'%3E%3Cpath d='M0,50 L0,0 C15,30 35,0 50,20 C70,40 90,0 110,25 C130,50 150,0 170,15 C190,30 210,0 230,25 C250,50 270,0 290,20 C310,40 330,0 350,25 C370,50 390,0 410,15 C430,30 450,0 470,25 C490,50 510,0 530,20 C550,40 570,0 590,25 C610,50 630,0 650,15 C670,30 690,0 710,25 C730,50 750,0 770,20 C790,40 810,0 830,25 C850,50 870,0 890,15 C910,30 930,0 950,25 C970,50 990,0 1010,20 C1030,40 1050,0 1070,25 C1090,50 1110,0 1130,15 C1150,30 1170,0 1190,25 L1200,50 Z' fill='%23000000'/%3E%3C/svg%3E");
             background-size: 100px 100%;
@@ -90,7 +86,6 @@
         <!-- ========================================== -->
         <section id="jornal-section" class="bg-jornalBg text-black font-serif min-h-screen flex flex-col pt-8 md:pt-12 pb-24 px-6 md:px-12 relative z-20">
             
-            <!-- Logo Vintage no Canto com Texto -->
             <div class="absolute top-4 left-4 md:top-8 md:left-8 flex items-center gap-2 md:gap-3 opacity-70 hover:opacity-100 transition-opacity duration-500 cursor-default z-20">
                 <img src="https://imgur.com/UTb6LZm.png" alt="Hub Symples Acervo" class="h-10 md:h-14 grayscale brightness-0 mix-blend-multiply" onerror="this.src='https://via.placeholder.com/128x128/000000/ffffff?text=HS'">
                 <span class="font-newsTitle font-black text-xl md:text-3xl text-gray-900 tracking-tight mix-blend-multiply">Hub Symples</span>
@@ -102,7 +97,7 @@
                     <h2 class="text-5xl md:text-7xl lg:text-[6rem] font-newsTitle font-black tracking-tight mb-4 text-gray-900">O Diário do Mercado</h2>
                     <div class="flex flex-col md:flex-row justify-between items-center border-y-4 border-double border-gray-800 py-3 mt-2 text-xs md:text-sm font-bold uppercase tracking-widest gap-2 font-sans text-gray-700">
                         <span>Edição Especial: Sobrevivência</span>
-                        <span>Para quem depende apenas do Instagram</span>
+                        <span>Para quem depende apenas das redes</span>
                         <span id="data-jornal" class="text-gray-900 font-black">Edição de Hoje</span>
                     </div>
                 </header>
@@ -112,29 +107,31 @@
                         Seu feed de fotos<br>não vende.
                     </h1>
                     <p class="text-xl md:text-3xl font-newsTitle italic text-gray-700 max-w-4xl mx-auto">
-                        Negócios locais perdem milhares de reais todos os dias por um único motivo: usarem o Instagram como um catálogo sem alma, onde o cliente só olha o preço e vai embora.
+                        Profissionais autônomos, lojistas, clínicas, criadores de conteúdo e empresas de todos os portes perdem milhares de reais todos os dias por dependerem exclusivamente das redes sociais.
                     </p>
                 </div>
 
-                <div class="newspaper-cols columns-1 md:columns-2 lg:columns-3 gap-10 text-lg leading-relaxed text-justify mb-16 text-gray-800">
-                    <p class="mb-6 drop-cap">
-                        É duro ouvir isso, mas o Instagram foi desenhado para o entretenimento, não para conversão profunda. Quando um cliente entra no seu perfil, o que ele vê? Uma foto do seu serviço, uma legenda curta e, talvez, um preço.
+                <div class="max-w-4xl mx-auto text-left md:text-center mb-16 space-y-8">
+                    <p class="text-xl md:text-2xl font-newsTitle text-gray-900 leading-relaxed font-bold">
+                        O Instagram é excelente para atrair atenção, mas péssimo para converter. Entenda por que você está perdendo dinheiro e contratos valiosos hoje:
                     </p>
-                    <p class="mb-6">
-                        Não há história. Não há o "porquê" do seu método funcionar. Não há um espaço dedicado a apresentar os seus profissionais e a paixão que move o seu negócio. É apenas um catálogo frio, disputando a atenção do cliente com vídeos de gatinhos, memes e dancinhas.
-                    </p>
-                    <p class="mb-6">
-                        Sem um site profissional, você não tem onde explicar o seu verdadeiro diferencial. O cliente olha a foto, acha caro porque não entendeu o valor, e vai embora. Falta um "estímulo de venda" (Copywriting), algo que pegue na mão dele e diga: "É por isso que somos a melhor escolha".
-                    </p>
-                    <p class="mb-6">
-                        E sabe o que acontece nesse exato segundo de dúvida? A indicação que era sua vai parar no WhatsApp do seu concorrente. Aquele que cobra mais caro, que tem um serviço pior, mas que <strong>tem um site que conta uma história e transmite autoridade visual</strong>.
-                    </p>
-                    <p class="mb-6">
-                        Enquanto sua única vitrine for um perfil social limitado, você continuará parecendo apenas um hobby ou "só mais um" na multidão. A escolha é simples: continuar refém de fotos soltas ou construir um ativo real que vende por você 24h por dia.
-                    </p>
+                    
+                    <div class="flex flex-col gap-6 text-lg md:text-xl font-sans text-gray-900 font-medium text-left max-w-3xl mx-auto bg-black/5 p-6 md:p-8 rounded-xl border border-black/10 shadow-inner">
+                        <div class="flex items-start gap-4">
+                            <span class="text-red-600 font-black text-2xl mt-0.5">✖</span>
+                            <p><strong>A Síndrome do Catálogo:</strong> Seu perfil é só uma vitrine fria de preços. Não há conexão emocional, nem história.</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="text-red-600 font-black text-2xl mt-0.5">✖</span>
+                            <p><strong>Falta de um Ambiente Oficial:</strong> Seja você um autônomo, loja ou clínica, seus clientes buscam segurança. Sem um site, falta o selo de "negócio oficial e estruturado".</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="text-red-600 font-black text-2xl mt-0.5">✖</span>
+                            <p><strong>Concorrência Desleal:</strong> Enquanto o cliente tenta achar seu link na bio, ele já clicou no site profissional do seu concorrente.</p>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Botão de Transição da Cortina -->
                 <div class="text-center mt-auto relative z-30">
                     <p class="font-sans font-bold text-sm uppercase tracking-widest text-red-600 mb-4">Chega de ser apenas mais um</p>
                     <a href="#" onclick="revelarNovaEra(event)" class="inline-flex items-center gap-3 bg-black text-white font-sans font-black text-lg md:text-xl px-10 py-5 rounded-none hover:bg-gray-800 transition-all transform hover:scale-105 shadow-2xl">
@@ -148,7 +145,6 @@
 
         <!-- ========================================== -->
         <!-- FASE 2: A NOVA ERA (O UNIVERSO HUB SYMPLES) -->
-        <!-- NOTA IMPORTANTE: style="display: none;" é o que força o bloqueio absoluto de rolagem -->
         <!-- ========================================== -->
         <div id="nova-era" class="bg-black relative z-10" style="display: none;">
             
@@ -179,9 +175,18 @@
                             Esqueça agências caras e demoradas. Enquanto eles pedem 45 dias, em apenas <strong class="text-white">96 horas úteis</strong> seu Hub de Autoridade está no ar. E o melhor: você não precisa escrever uma única palavra, basta nos mandar um áudio.
                         </p>
                         <div class="flex flex-col sm:flex-row justify-center gap-4">
-                            <a href="https://wa.me/5511952924208?text=Ol%C3%A1%2C%20gostaria%20de%20iniciar%20minha%20transforma%C3%A7%C3%A3o%20com%20a%20Hub%20Symples!" target="_blank" rel="noopener noreferrer" class="bg-accent hover:bg-accentHover text-white px-6 sm:px-8 py-4 rounded-lg font-bold text-base sm:text-lg transition-colors shadow-[0_0_30px_rgba(0,85,255,0.3)] flex items-center justify-center gap-2">
+                            <button onclick="abrirChat(event, 'Geral')" class="bg-accent hover:bg-accentHover text-white px-6 sm:px-8 py-4 rounded-lg font-bold text-base sm:text-lg transition-colors shadow-[0_0_30px_rgba(0,85,255,0.3)] flex items-center justify-center gap-2">
                                 Iniciar Minha Transformação <i class="fab fa-whatsapp text-xl"></i>
-                            </a>
+                            </button>
+                        </div>
+                        
+                        <div class="flex flex-wrap justify-center gap-2 md:gap-3 mt-10 opacity-70 max-w-3xl mx-auto">
+                            <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-full text-xs text-slate-400 font-medium">Profissionais Autônomos</span>
+                            <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-full text-xs text-slate-400 font-medium">Clínicas e Saúde</span>
+                            <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-full text-xs text-slate-400 font-medium">Lojas e Comércio</span>
+                            <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-full text-xs text-slate-400 font-medium">Estética e Beleza</span>
+                            <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-full text-xs text-slate-400 font-medium">Prestadores de Serviço</span>
+                            <span class="px-3 py-1.5 bg-slate-900 border border-slate-800 rounded-full text-xs text-slate-400 font-medium">Criadores de Conteúdo</span>
                         </div>
                         
                         <p class="mt-8 text-xs sm:text-sm text-slate-600"><i class="fas fa-lock mr-1"></i> Garantia Incondicional de 7 Dias. Risco Zero.</p>
@@ -198,41 +203,37 @@
                         <h2 class="text-3xl md:text-4xl font-bold mb-4">Por que apenas ter Instagram está matando suas vendas?</h2>
                         <p class="text-lg text-slate-400 max-w-3xl mx-auto mb-6">Entenda a diferença entre um catálogo que faz o cliente pedir desconto, e um ambiente projetado para vender pelo seu valor real.</p>
                         <div class="bg-red-500/10 border border-red-500/20 p-4 rounded-xl max-w-3xl mx-auto">
-                            <p class="text-base md:text-lg text-red-400 font-medium"><i class="fas fa-exclamation-triangle mr-2"></i><strong>A dura verdade:</strong> A cada dia que você adia a criação do seu Hub, você não está apenas deixando de ganhar dinheiro. Você está literalmente entregando seus clientes para o concorrente que já tem um site profissional.</p>
+                            <p class="text-base md:text-lg text-red-400 font-medium"><i class="fas fa-exclamation-triangle mr-2"></i><strong>A dura verdade:</strong> A cada dia que você adia a criação do seu Hub, você está entregando clientes e parcerias para concorrentes que já possuem presença profissional.</p>
                         </div>
                     </div>
 
                     <div class="grid md:grid-cols-2 gap-8 md:gap-12">
-                        <!-- Lado Ruim (Instagram) -->
+                        <!-- Lado Ruim -->
                         <div class="bg-red-950/20 border border-red-900/50 p-8 rounded-2xl relative overflow-hidden">
                             <div class="absolute top-0 left-0 w-full h-1 bg-red-600"></div>
                             <div class="flex items-center gap-4 mb-6">
                                 <div class="w-12 h-12 bg-red-900/40 text-red-500 rounded-lg flex items-center justify-center text-xl">
                                     <i class="fab fa-instagram"></i>
                                 </div>
-                                <h3 class="text-xl font-bold text-white">A Lojinha no Instagram</h3>
+                                <h3 class="text-xl font-bold text-white">A Limitação das Redes</h3>
                             </div>
                             <ul class="space-y-4">
                                 <li class="flex items-start gap-3 text-slate-300">
                                     <i class="fas fa-times text-red-500 mt-1"></i>
-                                    <span><strong>Vitrine Fria:</strong> Apenas fotos de serviços/produtos com o preço na legenda. Não há estímulo emocional para comprar.</span>
+                                    <span><strong>Vitrine Fria:</strong> Apenas fotos com preços soltos. Não há estímulo emocional para o cliente comprar de você.</span>
                                 </li>
                                 <li class="flex items-start gap-3 text-slate-300">
                                     <i class="fas fa-times text-red-500 mt-1"></i>
-                                    <span><strong>Zero História:</strong> O cliente não sabe quem são seus profissionais, qual o seu método ou o que te faz único.</span>
+                                    <span><strong>Zero História:</strong> Ninguém sabe quem são seus profissionais ou qual a paixão por trás do seu negócio.</span>
                                 </li>
                                 <li class="flex items-start gap-3 text-slate-300">
                                     <i class="fas fa-times text-red-500 mt-1"></i>
-                                    <span><strong>Guerra de Preços:</strong> Como não vê valor agregado na sua marca, o cliente compara você apenas pelo preço mais barato.</span>
-                                </li>
-                                <li class="flex items-start gap-3 text-slate-300">
-                                    <i class="fas fa-times text-red-500 mt-1"></i>
-                                    <span><strong>Distração Extrema:</strong> Uma notificação, um meme ou o feed do seu concorrente tiram a atenção do cliente em 1 segundo.</span>
+                                    <span><strong>Falta de Ambiente Próprio:</strong> Sem um site oficial, as pessoas tendem a comparar você apenas pelo preço, limitando seu crescimento.</span>
                                 </li>
                             </ul>
                         </div>
 
-                        <!-- Lado Bom (Hub Symples) -->
+                        <!-- Lado Bom -->
                         <div class="bg-blue-950/20 border border-accent/30 p-8 rounded-2xl relative overflow-hidden shadow-[0_0_30px_rgba(0,85,255,0.1)]">
                             <div class="absolute top-0 left-0 w-full h-1 bg-accent"></div>
                             <div class="flex items-center gap-4 mb-6">
@@ -244,19 +245,15 @@
                             <ul class="space-y-4">
                                 <li class="flex items-start gap-3 text-slate-300">
                                     <i class="fas fa-check text-accent mt-1"></i>
-                                    <span><strong>Textos que Vendem (Copy):</strong> Contamos a sua história com persuasão, criando desejo na mente do cliente antes de mostrar o preço.</span>
+                                    <span><strong>Textos que Vendem (Copy):</strong> Contamos a sua história gerando desejo na mente do cliente e justificando o seu preço.</span>
                                 </li>
                                 <li class="flex items-start gap-3 text-slate-300">
                                     <i class="fas fa-check text-accent mt-1"></i>
-                                    <span><strong>Destaque para o seu Método:</strong> Um espaço exclusivo e visualmente lindo para mostrar seus bastidores, equipe e credenciais.</span>
+                                    <span><strong>Seu Método em Destaque:</strong> Um espaço exclusivo e lindo para mostrar bastidores, equipe e credenciais.</span>
                                 </li>
                                 <li class="flex items-start gap-3 text-slate-300">
                                     <i class="fas fa-check text-accent mt-1"></i>
-                                    <span><strong>Venda pelo Valor:</strong> O cliente percebe sua autoridade imediatamente e para de ficar pedindo "descontinho".</span>
-                                </li>
-                                <li class="flex items-start gap-3 text-slate-300">
-                                    <i class="fas fa-check text-accent mt-1"></i>
-                                    <span><strong>Foco Total em Você:</strong> Sem notificações ou vídeos de dancinha. Um ambiente 100% projetado para ele te chamar no WhatsApp.</span>
+                                    <span><strong>Foco Total em Você:</strong> Sem vídeos de dancinha. Um ambiente livre de distrações projetado para o cliente fechar negócio.</span>
                                 </li>
                             </ul>
                         </div>
@@ -264,34 +261,56 @@
                 </div>
             </section>
 
-            <section class="py-16 md:py-24 bg-black relative z-10 border-t border-slate-900" id="secao-dor">
-                <div class="container mx-auto px-6 max-w-5xl">
-                    <div class="text-center mb-12 md:mb-16">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4">A dura verdade sobre vender na internet hoje</h2>
-                        <div class="w-20 h-1 bg-danger mx-auto rounded-full"></div>
-                    </div>
-
-                    <div class="grid md:grid-cols-3 gap-6 md:gap-8">
-                        <div class="bg-darker p-8 rounded-xl border border-slate-800 shadow-xl">
-                            <div class="w-14 h-14 bg-red-500/10 text-danger rounded-lg flex items-center justify-center text-2xl mb-6">
-                                <i class="fas fa-times-circle"></i>
+            <!-- ========================================== -->
+            <!-- NOVA SEÇÃO: INFLUENCIADORES & CRIADORES -->
+            <!-- ========================================== -->
+            <section class="py-16 md:py-24 bg-gradient-to-b from-darker to-slate-950 relative z-10 border-t border-slate-900" id="secao-influenciadores">
+                <div class="container mx-auto px-6 max-w-6xl">
+                    <div class="flex flex-col lg:flex-row gap-12 items-center">
+                        <div class="lg:w-1/2">
+                            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-400 text-xs md:text-sm font-semibold mb-6">
+                                <i class="fas fa-camera-retro"></i> Criadores de Conteúdo
                             </div>
-                            <h3 class="text-xl font-bold mb-3">O cliente foge</h3>
-                            <p class="text-slate-400">Só ter um Instagram não basta mais. Quando o cliente não acha seu site, ele acha que sua empresa é pequena ou insegura.</p>
+                            <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">Sua influência não cabe só no Instagram. Torne-se a própria marca.</h2>
+                            <p class="text-lg text-slate-300 mb-6 leading-relaxed">Muitas marcas chegam até o seu perfil, mas desistem de fechar parceria porque você não passa o profissionalismo de uma empresa estruturada. Entenda: <strong>nenhuma marca quer assistir 50 stories por dia</strong> para tentar entender a sua história ou o seu posicionamento.</p>
+                            <p class="text-lg text-slate-300 mb-8 leading-relaxed">Com a Hub Symples, você ganha a sua casa própria na internet. Um verdadeiro <strong>Media Kit Vivo</strong>, que impressiona patrocinadores em 5 segundos e converte seguidores em fãs.</p>
                         </div>
-                        <div class="bg-darker p-8 rounded-xl border border-slate-800 shadow-xl">
-                            <div class="w-14 h-14 bg-red-500/10 text-danger rounded-lg flex items-center justify-center text-2xl mb-6">
-                                <i class="fas fa-file-alt"></i>
-                            </div>
-                            <h3 class="text-xl font-bold mb-3">O pesadelo do "Briefing"</h3>
-                            <p class="text-slate-400">A concorrência te manda um documento de 4 páginas para você preencher. Você não tem tempo e não sabe o que escrever.</p>
-                        </div>
-                        <div class="bg-darker p-8 rounded-xl border border-slate-800 shadow-xl">
-                            <div class="w-14 h-14 bg-red-500/10 text-danger rounded-lg flex items-center justify-center text-2xl mb-6">
-                                <i class="fas fa-calendar-times"></i>
-                            </div>
-                            <h3 class="text-xl font-bold mb-3">A demora das Agências</h3>
-                            <p class="text-slate-400">Cobram R$ 3.000 à vista, pedindo de 30 a 45 dias para entregar algo básico. Seu negócio não pode esperar.</p>
+                        
+                        <div class="lg:w-1/2 w-full bg-black border border-purple-900/50 p-8 md:p-10 rounded-3xl shadow-[0_0_50px_rgba(168,85,247,0.1)] relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-64 h-64 bg-purple-600/10 blur-[60px] rounded-full pointer-events-none"></div>
+                            
+                            <h3 class="text-xl md:text-2xl font-bold text-white mb-8">O que entregamos no seu "Site Minimalista":</h3>
+                            
+                            <ul class="space-y-6 relative z-10">
+                                <li class="flex items-start gap-4">
+                                    <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0 text-purple-400 mt-1"><i class="fas fa-bolt"></i></div>
+                                    <div>
+                                        <strong class="text-white block text-lg mb-1">Header de Impacto</strong>
+                                        <span class="text-sm text-slate-400 leading-relaxed block">Sua foto profissional, seu nome e sua promessa clara (ex: "Criando conexões reais através do humor cotidiano").</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0 text-purple-400 mt-1"><i class="fas fa-book-open"></i></div>
+                                    <div>
+                                        <strong class="text-white block text-lg mb-1">A Sua História (Quem Sou)</strong>
+                                        <span class="text-sm text-slate-400 leading-relaxed block">Texto curto e muito bem escrito (Copy), mostrando a sua essência. O que humaniza e conecta de verdade com as marcas.</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0 text-purple-400 mt-1"><i class="fas fa-images"></i></div>
+                                    <div>
+                                        <strong class="text-white block text-lg mb-1">Galeria / Portfólio Visual</strong>
+                                        <span class="text-sm text-slate-400 leading-relaxed block">Espaço limpo para destacar os melhores conteúdos ou fotos, transmitindo imediatamente a estética da sua marca pessoal.</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 text-green-400 mt-1"><i class="fab fa-whatsapp"></i></div>
+                                    <div>
+                                        <strong class="text-white block text-lg mb-1">O Grande Diferencial: Contato Profissional</strong>
+                                        <span class="text-sm text-slate-400 leading-relaxed block">Botão direto pro WhatsApp (com automação receptiva para triagem) e destaque para o e-mail corporativo que fornecemos a você.</span>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -352,14 +371,14 @@
                             <li class="flex items-start sm:items-center justify-between pb-4 md:pb-6 border-b border-slate-800/50 gap-4">
                                 <div class="flex items-start sm:items-center gap-3 md:gap-4">
                                     <i class="fas fa-pen-nib text-green-500 text-xl md:text-2xl mt-0.5 sm:mt-0 flex-shrink-0"></i>
-                                    <span class="text-base md:text-lg font-medium text-slate-200">Estrutura de Copywriting (Contamos sua história e método para justificar seu preço)</span>
+                                    <span class="text-base md:text-lg font-medium text-slate-200">Estrutura de Copywriting (Contamos sua história)</span>
                                 </div>
                                 <span class="text-slate-500 line-through text-sm md:text-base whitespace-nowrap mt-1 sm:mt-0">R$ 550,00</span>
                             </li>
                             <li class="flex items-start sm:items-center justify-between pb-4 md:pb-6 border-b border-slate-800/50 gap-4">
                                 <div class="flex items-start sm:items-center gap-3 md:gap-4">
                                     <i class="fas fa-laptop-house text-green-500 text-xl md:text-2xl mt-0.5 sm:mt-0 flex-shrink-0"></i>
-                                    <span class="text-base md:text-lg font-medium text-slate-200">Portal Exclusivo do Assinante (Painel direto conosco)</span>
+                                    <span class="text-base md:text-lg font-medium text-slate-200">Portal Exclusivo do Assinante (Painel conosco)</span>
                                 </div>
                                 <span class="text-slate-500 line-through text-sm md:text-base whitespace-nowrap mt-1 sm:mt-0">R$ 300,00</span>
                             </li>
@@ -401,6 +420,7 @@
             </section>
 
             <section class="py-16 md:py-24 bg-darker border-t border-slate-900 relative z-10 overflow-hidden" id="secao-filosofia">
+                <!-- Seção Filosofia mantida intacta -->
                 <div class="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-accent/5 blur-[100px] rounded-full pointer-events-none"></div>
 
                 <div class="container mx-auto px-6 max-w-5xl relative z-10">
@@ -414,11 +434,12 @@
                                 A maioria do mercado te vende uma página e some. Nosso objetivo é <strong>nos tornarmos o braço digital do seu negócio.</strong>
                             </p>
                             <p class="text-lg text-slate-300 mb-8 leading-relaxed">
-                                Como uma parceria de longo prazo, nossa equipe de Marketing, Design e Vendas monitora ativamente os projetos da nossa base. Se identificarmos uma oportunidade de melhorar a sua conversão, nós mesmos entramos em contato sugerindo a evolução.
+                                Como uma parceria de longo prazo, nossa equipe de Marketing, Design e Vendas monitora ativamente os projetos da nossa base. Se identificarmos uma oportunidade de melhorar a sua conversão, nós mesmos entramos em contato sugerindo a evolução sem custos.
                             </p>
                         </div>
 
                         <div class="space-y-4">
+                            <!-- Cards de Filosofia -->
                             <div class="bg-black border border-slate-800 p-6 rounded-2xl flex gap-4 items-start shadow-xl">
                                 <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center text-accent text-xl flex-shrink-0 mt-1">
                                     <i class="fas fa-eye"></i>
@@ -434,16 +455,7 @@
                                 </div>
                                 <div>
                                     <h4 class="text-lg font-bold text-white mb-2">Evolução Proativa</h4>
-                                    <p class="text-slate-400 text-sm leading-relaxed">Surgiu uma nova estratégia de vendas? Nossa equipe entra em contato com você propondo a atualização sem custos.</p>
-                                </div>
-                            </div>
-                            <div class="bg-black border border-slate-800 p-6 rounded-2xl flex gap-4 items-start shadow-xl">
-                                <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center text-accent text-xl flex-shrink-0 mt-1">
-                                    <i class="fas fa-users-cog"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-bold text-white mb-2">Equipe Multidisciplinar</h4>
-                                    <p class="text-slate-400 text-sm leading-relaxed">Você não está alugando um sistema, está contratando marqueteiros focados no seu sucesso.</p>
+                                    <p class="text-slate-400 text-sm leading-relaxed">Surgiu uma nova estratégia de vendas? Nossa equipe entra em contato propondo atualização.</p>
                                 </div>
                             </div>
                         </div>
@@ -465,90 +477,37 @@
                         
                         <div class="text-center md:text-left relative z-10">
                             <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">O mercado cancela. Nossos clientes ficam.</h3>
-                            <p class="text-slate-400 text-lg leading-relaxed">Enquanto construtores de sites e agências têm altas taxas de abandono, nossa plataforma mantém uma <strong class="text-white">taxa de cancelamento menor que 3%</strong>. Por quê? Porque você constrói um império digital conosco. Ninguém quer jogar fora o tempo e a autoridade conquistada para voltar à invisibilidade de uma "lojinha no Instagram".</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="py-16 md:py-24 bg-black border-t border-slate-900 relative z-10" id="secao-depoimentos">
-                <div class="container mx-auto px-6 max-w-6xl">
-                    <div class="text-center mb-12 md:mb-16">
-                        <h2 class="text-3xl md:text-5xl font-bold mb-4">Quem já escalou com a Hub</h2>
-                        <p class="text-xl text-slate-400">Junte-se a dezenas de empreendedores que pararam de perder vendas.</p>
-                    </div>
-
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl flex flex-col h-full hover:border-accent/50 transition-colors">
-                            <div class="flex items-center gap-2 mb-4 text-yellow-500 text-sm">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <p class="text-slate-300 mb-6 flex-grow">"Eu perdia muito cliente porque só tinha o Instagram. Mandei o áudio pra eles, e em 4 dias entregaram um site que mudou a percepção de valor do meu serviço na hora."</p>
-                            <div class="flex items-center gap-4 mt-auto">
-                                <div class="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center text-accent font-bold text-lg border border-accent/30">MS</div>
-                                <div>
-                                    <h4 class="font-bold text-white">Marcos Silva</h4>
-                                    <p class="text-xs text-slate-500">Dono de Barbearia</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl flex flex-col h-full hover:border-accent/50 transition-colors">
-                            <div class="flex items-center gap-2 mb-4 text-yellow-500 text-sm">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <p class="text-slate-300 mb-6 flex-grow">"Sempre achei que ter um site premium ia me custar mais de 3 mil reais. O site ficou maravilhoso, eles resolvem tudo pelo portal e eu não precisei escrever uma palavra!"</p>
-                            <div class="flex items-center gap-4 mt-auto">
-                                <div class="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center text-purple-400 font-bold text-lg border border-purple-500/30">AP</div>
-                                <div>
-                                    <h4 class="font-bold text-white">Ana Paula</h4>
-                                    <p class="text-xs text-slate-500">Clínica de Estética</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl flex flex-col h-full hover:border-accent/50 transition-colors">
-                            <div class="flex items-center gap-2 mb-4 text-yellow-500 text-sm">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <p class="text-slate-300 mb-6 flex-grow">"Tentei fazer sozinho e perdi semanas pra ficar com cara de amador. A equipe da Hub me livrou desse estresse. Em 4 dias um site que parece de uma multinacional estava no ar."</p>
-                            <div class="flex items-center gap-4 mt-auto">
-                                <div class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-400 font-bold text-lg border border-blue-500/30">RA</div>
-                                <div>
-                                    <h4 class="font-bold text-white">Roberto Almeida</h4>
-                                    <p class="text-xs text-slate-500">Consultor Financeiro</p>
-                                </div>
-                            </div>
+                            <p class="text-slate-400 text-lg leading-relaxed">Enquanto construtores e agências têm altas taxas de abandono, nossa plataforma mantém uma <strong class="text-white">taxa de cancelamento menor que 3%</strong>. Por quê? Porque ninguém quer jogar fora o tempo e a autoridade conquistada para voltar a depender exclusivamente das redes sociais.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
             <section id="planos" class="py-16 md:py-24 bg-black relative z-10 border-t border-slate-900">
-                <div class="container mx-auto px-6 max-w-5xl">
+                <div class="container mx-auto px-6 max-w-[1200px]">
                     
                     <div class="bg-gradient-to-r from-slate-900 to-black border border-slate-800 p-6 sm:p-8 md:p-10 rounded-2xl mb-12 md:mb-16 flex flex-col md:flex-row items-center gap-6 md:gap-8 max-w-4xl mx-auto shadow-2xl relative overflow-hidden text-center md:text-left">
                         <div class="absolute left-0 top-0 w-2 h-full bg-green-500"></div>
                         <div class="flex-shrink-0">
-                            <img src="https://i.imgur.com/n4mk9LY.png" alt="Selo de Garantia Absoluta 7 Dias" class="w-24 md:w-32 lg:w-40 object-contain drop-shadow-[0_0_15px_rgba(34,197,94,0.3)] hover:scale-105 transition-transform duration-300 mx-auto">
+                            <img src="https://i.imgur.com/nPpsi3z.png" alt="Selo de Garantia Absoluta 7 Dias" class="w-24 md:w-32 lg:w-40 object-contain drop-shadow-[0_0_15px_rgba(34,197,94,0.3)] hover:scale-105 transition-transform duration-300 mx-auto">
                         </div>
                         <div>
                             <h4 class="text-xl md:text-2xl font-bold text-white mb-2 md:mb-3">Garantia Absoluta de Autoridade</h4>
-                            <p class="text-slate-300 leading-relaxed text-sm md:text-base">Assine o plano hoje. Nós criamos o seu Hub. Se quando você vir o projeto pronto nos 4 dias, não achar que sua empresa parece <strong>10x mais profissional e confiável</strong>, nós devolvemos a sua primeira mensalidade na mesma hora. Sem burocracia.</p>
+                            <p class="text-slate-300 leading-relaxed text-sm md:text-base">Assine o plano hoje. Nós criamos o seu Hub. Se quando você vir o projeto pronto nos 4 dias, não achar que sua empresa parece <strong>10x mais profissional e confiável</strong>, nós devolvemos a sua primeira mensalidade na mesma hora.</p>
                         </div>
                     </div>
 
                     <div class="text-center mb-8 md:mb-10">
                         <h2 class="text-3xl md:text-4xl font-bold mb-4">Escolha o plano para o seu momento atual</h2>
-                        <p class="text-slate-400 max-w-2xl mx-auto leading-relaxed text-sm md:text-base">Comece hoje com o Start e <strong>faça o upgrade para o Pro a qualquer momento</strong> quando decidir que é a hora de plugar o seu domínio próprio.</p>
+                        <p class="text-slate-400 max-w-2xl mx-auto leading-relaxed text-sm md:text-base">Comece hoje e faça upgrades a qualquer momento, conforme o seu negócio exige mais escala.</p>
                         
-                        <!-- CONTADOR AO VIVO PERSISTENTE (Adicionado aqui) -->
+                        <!-- CONTADOR AO VIVO -->
                         <div class="mt-8 flex items-center justify-center gap-3 text-sm md:text-base font-medium text-slate-300 bg-slate-900/50 border border-slate-800 py-2.5 px-5 rounded-full w-max mx-auto shadow-inner">
                             <span class="relative flex h-3 w-3">
                               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                               <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                             </span>
-                            <p><strong id="live-members-count" class="text-white font-black tabular-nums transition-all duration-300 text-lg">77</strong> empreendedores já deram esse passo</p>
+                            <p><strong id="live-members-count" class="text-white font-black tabular-nums transition-all duration-300 text-lg">77</strong> negócios já deram esse passo</p>
                         </div>
                     </div>
 
@@ -563,11 +522,13 @@
                         </div>
                     </div>
 
-                    <div class="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto items-stretch">
+                    <!-- GRID DOS 3 PLANOS -->
+                    <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-6 md:gap-8 max-w-full items-stretch">
                         
+                        <!-- PLANO START -->
                         <div class="bg-slate-900 border border-slate-700 hover:border-slate-500 transition-colors rounded-2xl p-8 relative flex flex-col h-full">
                             <div class="inline-block px-3 py-1 rounded bg-slate-800 text-slate-300 text-xs font-bold uppercase tracking-wider mb-5 w-max border border-slate-700">
-                                Fase 1: Tração e Validação
+                                Fase 1: Tração Inicial
                             </div>
                             <h3 class="text-2xl font-bold mb-2 text-white">Plano Start</h3>
                             <p class="text-slate-400 mb-6 text-sm">A estrutura perfeita para quem precisa estar online rápido e gerar vendas hoje.</p>
@@ -581,35 +542,32 @@
                             </div>
                             
                             <ul class="space-y-3 mb-8 flex-grow">
-                                <!-- Benefícios Principais (Destaque) -->
                                 <li class="flex items-start gap-3"><i class="fas fa-rocket text-green-500 mt-1"></i> <span class="text-slate-200 font-medium">Site Premium de Alta Conversão</span></li>
                                 <li class="flex items-start gap-3"><i class="fas fa-pen-nib text-green-500 mt-1"></i> <span class="text-slate-200 font-medium">Copywriting Persuasivo</span></li>
                                 <li class="flex items-start gap-3"><i class="fas fa-mobile-alt text-green-500 mt-1"></i> <span class="text-slate-200 font-medium">Design Mobile-First</span></li>
     
-                                <!-- Divisória -->
                                 <li class="pt-2 pb-1"><div class="h-px w-full bg-slate-800"></div></li>
     
-                                <!-- Empilhamento de Valor Técnico (Secundário) -->
-                                <li class="flex items-start gap-2 text-sm text-slate-400"><i class="fas fa-server mt-0.5 text-slate-500"></i> <span>Hospedagem Ultra Rápida Inclusa</span></li>
-                                <li class="flex items-start gap-2 text-sm text-slate-400"><i class="fas fa-lock mt-0.5 text-slate-500"></i> <span>Certificado de Segurança SSL</span></li>
-                                <li class="flex items-start gap-2 text-sm text-slate-400"><i class="fab fa-whatsapp mt-0.5 text-slate-500"></i> <span>Botão de WhatsApp Inteligente</span></li>
-                                <li class="flex items-start gap-2 text-sm text-slate-400"><i class="fas fa-tools mt-0.5 text-slate-500"></i> <span>Manutenção e Atualizações</span></li>
-                                <li class="flex items-start gap-2 text-sm text-slate-400"><i class="fas fa-headset mt-0.5 text-slate-500"></i> <span>Acesso ao Portal do Assinante</span></li>
+                                <li class="flex items-start gap-2 text-sm text-slate-400"><i class="fas fa-server mt-0.5 text-slate-500"></i> <span>Hospedagem Ultra Rápida</span></li>
+                                <li class="flex items-start gap-2 text-sm text-slate-400"><i class="fas fa-lock mt-0.5 text-slate-500"></i> <span>Certificado SSL Incluso</span></li>
+                                <li class="flex items-start gap-2 text-sm text-slate-400"><i class="fab fa-whatsapp mt-0.5 text-slate-500"></i> <span>Botão de WhatsApp Simples</span></li>
+                                <li class="flex items-start gap-2 text-sm text-slate-400"><i class="fas fa-tools mt-0.5 text-slate-500"></i> <span>Manutenção Inclusa</span></li>
     
-                                <li class="flex items-start gap-2 text-xs text-slate-500 mt-2"><i class="fas fa-info-circle mt-0.5"></i> <span>Domínio padrão (seunome.hubsymples.com)</span></li>
+                                <li class="flex items-start gap-2 text-xs text-slate-500 mt-2"><i class="fas fa-info-circle mt-0.5"></i> <span>Domínio (seunome.hubsymples.com)</span></li>
                             </ul>
                             
-                            <a href="https://wa.me/5511952924208?text=Ol%C3%A1%2C%20quero%20come%C3%A7ar%20na%20Fase%201%20(Plano%20Start)%20da%20Hub%20Symples." target="_blank" rel="noopener noreferrer" class="block w-full text-center border border-slate-600 text-white hover:bg-slate-800 py-4 rounded-lg font-bold transition-colors mt-auto flex justify-center items-center gap-2">
-                                <i class="fab fa-whatsapp text-lg"></i> Começar na Fase 1
-                            </a>
+                            <button onclick="abrirChat(event, 'Fase 1 (Start)')" class="w-full text-center border border-slate-600 text-white hover:bg-slate-800 py-4 rounded-lg font-bold transition-colors mt-auto flex justify-center items-center gap-2">
+                                <i class="fab fa-whatsapp text-lg"></i> Iniciar Fase 1
+                            </button>
                         </div>
 
-                        <div class="bg-black border border-accent hover:border-accentHover transition-colors rounded-2xl p-8 relative flex flex-col h-full shadow-2xl shadow-accent/5">
+                        <!-- PLANO PRO -->
+                        <div class="bg-black border border-accent hover:border-accentHover transition-colors rounded-2xl p-8 relative flex flex-col h-full shadow-xl shadow-accent/10">
                             <div class="inline-block px-3 py-1 rounded bg-accent/10 text-accent text-xs font-bold uppercase tracking-wider mb-5 w-max border border-accent/20">
-                                Fase 2: Autoridade e Escala
+                                Fase 2: Autoridade
                             </div>
                             <h3 class="text-2xl font-bold mb-2 text-white">Plano Pro</h3>
-                            <p class="text-slate-300 mb-6 text-sm">O próximo passo natural. Para negócios que precisam fortalecer a marca.</p>
+                            <p class="text-slate-300 mb-6 text-sm">O próximo passo natural. Domínio próprio e e-mail corporativo para fortalecer a marca.</p>
                             
                             <div class="mb-8 min-h-[80px]">
                                 <div class="flex items-end gap-1">
@@ -620,49 +578,137 @@
                             </div>
                             
                             <ul class="space-y-3 mb-8 flex-grow">
-                                <!-- Benefícios Principais (Destaque Máximo) -->
                                 <li class="flex items-start gap-3"><i class="fas fa-star text-accent mt-1"></i> <span class="font-bold text-white">Tudo da Fase 1 (Start) +</span></li>
                                 <li class="flex items-start gap-3 bg-accent/10 p-2 rounded -mx-2 border border-accent/20"><i class="fas fa-globe text-accent mt-1"></i> <span class="text-white font-semibold">Domínio Próprio (.com.br)</span></li>
-                                <li class="flex items-start gap-3"><i class="fas fa-envelope-open-text text-accent mt-1"></i> <span class="text-slate-200 font-medium">E-mail Profissional (contato@...)</span></li>
-                                <li class="flex items-start gap-3"><i class="fas fa-search text-accent mt-1"></i> <span class="text-slate-200 font-medium">Otimização Avançada de SEO</span></li>
+                                <li class="flex items-start gap-3"><i class="fas fa-envelope-open-text text-accent mt-1"></i> <span class="text-slate-200 font-medium">E-mail Profissional (contato@)</span></li>
+                                <li class="flex items-start gap-3"><i class="fas fa-search text-accent mt-1"></i> <span class="text-slate-200 font-medium">Otimização Básica SEO</span></li>
     
-                                <!-- Divisória -->
                                 <li class="pt-2 pb-1"><div class="h-px w-full bg-slate-800"></div></li>
     
-                                <!-- Empilhamento de Valor Técnico (Secundário) -->
                                 <li class="flex items-start gap-2 text-sm text-slate-300"><i class="fas fa-images mt-0.5 text-accent/70"></i> <span>Galeria de Portfólio Premium</span></li>
-                                <li class="flex items-start gap-2 text-sm text-slate-300"><i class="fas fa-crosshairs mt-0.5 text-accent/70"></i> <span>Instalação de Pixel (Tráfego Pago)</span></li>
-                                <li class="flex items-start gap-2 text-sm text-slate-300"><i class="fas fa-tachometer-alt mt-0.5 text-accent/70"></i> <span>Servidor com Prioridade Máxima</span></li>
-                                <li class="flex items-start gap-2 text-sm text-slate-300"><i class="fas fa-crown mt-0.5 text-accent/70"></i> <span>Atendimento VIP no Portal</span></li>
+                                <li class="flex items-start gap-2 text-sm text-slate-300"><i class="fas fa-crosshairs mt-0.5 text-accent/70"></i> <span>Instalação de Pixel (Anúncios)</span></li>
+                                <li class="flex items-start gap-2 text-sm text-slate-300"><i class="fas fa-headset mt-0.5 text-accent/70"></i> <span>Atendimento VIP no Portal</span></li>
                             </ul>
                             
-                            <a href="https://wa.me/5511952924208?text=Ol%C3%A1%2C%20quero%20avan%C3%A7ar%20para%20a%20Fase%202%20(Plano%20Pro)%20da%20Hub%20Symples." target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-accent hover:bg-accentHover text-white py-4 rounded-lg font-bold transition-colors shadow-lg shadow-accent/20 mt-auto flex justify-center items-center gap-2">
+                            <button onclick="abrirChat(event, 'Fase 2 (Pro)')" class="w-full text-center bg-accent hover:bg-accentHover text-white py-4 rounded-lg font-bold transition-colors shadow-lg shadow-accent/20 mt-auto flex justify-center items-center gap-2">
                                 <i class="fab fa-whatsapp text-lg"></i> Avançar para a Fase 2
-                            </a>
+                            </button>
+                        </div>
+
+                        <!-- PLANO ELITE (NOVO) -->
+                        <div class="bg-gradient-to-b from-slate-900 to-black border border-purple-500 hover:border-purple-400 transition-colors rounded-2xl p-8 relative flex flex-col h-full shadow-[0_0_40px_rgba(168,85,247,0.15)] md:col-span-2 lg:col-span-1">
+                            <div class="absolute -top-3 right-6 bg-purple-600 text-white text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-lg">O Mais Completo</div>
+                            <div class="inline-block px-3 py-1 rounded bg-purple-500/10 text-purple-400 text-xs font-bold uppercase tracking-wider mb-5 w-max border border-purple-500/30">
+                                Fase 3: Automação Total
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2 text-white">Plano Elite</h3>
+                            <p class="text-slate-400 mb-6 text-sm">A máquina rodando sozinha. Atenda, filtre e agende clientes 24 horas por dia no piloto automático.</p>
+                            
+                            <div class="mb-8 min-h-[80px]">
+                                <div class="flex items-end gap-1">
+                                    <span class="text-4xl font-black text-white transition-all" id="price-elite">R$ 3.029,40</span>
+                                    <span class="text-slate-500 mb-1" id="period-elite">/ano</span>
+                                </div>
+                                <p class="text-green-400 text-sm font-semibold mt-2 transition-opacity duration-300" id="installments-elite">ou até 12x de R$ 252,45 sem juros</p>
+                            </div>
+                            
+                            <ul class="space-y-3 mb-8 flex-grow">
+                                <li class="flex items-start gap-3"><i class="fas fa-star text-purple-500 mt-1"></i> <span class="font-bold text-white">Tudo da Fase 2 (Pro) +</span></li>
+                                <li class="flex items-start gap-3 bg-purple-500/10 p-2 rounded -mx-2 border border-purple-500/20"><i class="fas fa-robot text-purple-400 mt-1"></i> <span class="text-white font-semibold">Automação de WhatsApp (Robô)</span></li>
+                                <li class="flex items-start gap-3"><i class="fas fa-calendar-check text-purple-400 mt-1"></i> <span class="text-slate-200 font-medium">Agendamento Automático 24h</span></li>
+                                <li class="flex items-start gap-3"><i class="fas fa-filter text-purple-400 mt-1"></i> <span class="text-slate-200 font-medium">Triagem de Clientes e Marcas</span></li>
+    
+                                <li class="pt-2 pb-1"><div class="h-px w-full bg-slate-800"></div></li>
+    
+                                <li class="flex items-start gap-2 text-sm text-slate-300"><i class="fas fa-tachometer-alt mt-0.5 text-purple-400/70"></i> <span>Servidor com Prioridade Máxima</span></li>
+                                <li class="flex items-start gap-2 text-sm text-slate-300"><i class="fas fa-crown mt-0.5 text-purple-400/70"></i> <span>Fila Expressa no Portal</span></li>
+                            </ul>
+                            
+                            <button onclick="abrirChat(event, 'Fase 3 (Elite)')" class="w-full text-center bg-purple-600 hover:bg-purple-700 text-white py-4 rounded-lg font-bold transition-colors shadow-lg shadow-purple-500/30 mt-auto flex justify-center items-center gap-2">
+                                <i class="fab fa-whatsapp text-lg"></i> Avançar para a Fase 3
+                            </button>
                         </div>
 
                     </div>
                 </div>
             </section>
 
-            <footer class="py-12 bg-black relative z-10 border-t border-slate-900" id="secao-final">
+            <section class="py-16 md:py-24 bg-darker relative z-10 border-t border-slate-900" id="secao-faq">
                 <div class="container mx-auto px-6 max-w-4xl text-center">
-                    <h2 class="text-2xl font-bold mb-6">Restou alguma dúvida?</h2>
-                    <div class="space-y-4 text-left max-w-2xl mx-auto mb-12">
-                        <details class="bg-slate-900 rounded-lg p-4 cursor-pointer border border-slate-800">
-                            <summary class="font-bold select-none outline-none text-lg">Em quanto tempo o site fica pronto?</summary>
-                            <p class="mt-2 text-slate-400 text-sm">O processo é ágil. Basta nos mandar um áudio de 2 minutos e entregaremos o Hub pronto em <strong>4 dias úteis</strong>.</p>
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-slate-500/30 bg-slate-500/10 text-slate-300 text-xs md:text-sm font-semibold mb-6">
+                        <i class="fas fa-question-circle"></i> FAQ
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-10 text-white">Restou alguma dúvida?</h2>
+                    
+                    <div class="space-y-4 text-left max-w-2xl mx-auto">
+                        <details class="bg-black rounded-lg p-5 cursor-pointer border border-slate-800 shadow-lg group">
+                            <summary class="font-bold select-none outline-none text-lg text-white group-hover:text-accent transition-colors">Em quanto tempo o site fica pronto?</summary>
+                            <p class="mt-4 text-slate-400 text-sm leading-relaxed border-t border-slate-800 pt-4">O processo é ágil. Basta nos mandar um áudio de 2 minutos e entregaremos o Hub pronto em <strong>exatas 96 horas úteis (4 dias)</strong>.</p>
                         </details>
-                        <details class="bg-slate-900 rounded-lg p-4 cursor-pointer border border-slate-800">
-                            <summary class="font-bold select-none outline-none text-lg text-accent">O valor é mensal?</summary>
-                            <p class="mt-2 text-slate-400 text-sm">Sim! É um modelo de assinatura. Esse valor já inclui manutenção, hospedagem e uso do <strong>Portal do Assinante</strong>. Sem taxas ocultas.</p>
+                        <details class="bg-black rounded-lg p-5 cursor-pointer border border-slate-800 shadow-lg group">
+                            <summary class="font-bold select-none outline-none text-lg text-white group-hover:text-accent transition-colors">O valor é mensal?</summary>
+                            <p class="mt-4 text-slate-400 text-sm leading-relaxed border-t border-slate-800 pt-4">Sim! É um modelo de assinatura. Esse valor já inclui manutenção contínua, hospedagem super rápida e uso do <strong>Portal do Assinante</strong>. Sem pegadinhas ou taxas ocultas.</p>
                         </details>
-                        <details class="bg-slate-900 rounded-lg p-4 cursor-pointer border border-slate-800">
-                            <summary class="font-bold select-none outline-none text-lg">Quais são as formas de pagamento?</summary>
-                            <p class="mt-2 text-slate-400 text-sm">Mensal via Cartão ou Pix. Anual (com 15% OFF) à vista no Pix ou parcelado em até <strong class="text-white">12x sem juros</strong> no Cartão.</p>
+                        <details class="bg-black rounded-lg p-5 cursor-pointer border border-slate-800 shadow-lg group">
+                            <summary class="font-bold select-none outline-none text-lg text-white group-hover:text-accent transition-colors">Quais são as formas de pagamento?</summary>
+                            <p class="mt-4 text-slate-400 text-sm leading-relaxed border-t border-slate-800 pt-4">Mensal via Cartão de Crédito ou Pix. Anual (com 15% OFF) à vista no Pix ou parcelado em até <strong class="text-white">12x sem juros</strong> no Cartão.</p>
                         </details>
                     </div>
-                    <p class="text-slate-600 text-sm mt-12">© 2024 Hub Symples. Todos os direitos reservados.</p>
+                </div>
+            </section>
+
+            <footer class="bg-black pt-16 pb-8 border-t border-slate-900 relative z-10" id="footer-principal">
+                <div class="container mx-auto px-6 max-w-6xl">
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+                        
+                        <!-- Coluna 1: A Marca -->
+                        <div class="md:col-span-5">
+                            <div class="flex items-center gap-3 mb-6">
+                                <img src="https://imgur.com/UTb6LZm.png" alt="Hub Symples" class="h-10 object-contain" onerror="this.src='https://via.placeholder.com/64x64/0055ff/ffffff?text=HS'">
+                                <span class="text-2xl font-extrabold tracking-tight text-white">Hub Symples</span>
+                            </div>
+                            <p class="text-slate-400 mb-6 max-w-sm leading-relaxed">Construindo impérios digitais. Transformamos negócios comuns em Marcas de Autoridade que vendem todos os dias.</p>
+                            <div class="flex gap-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-accent hover:bg-accent/10 transition-all"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-accent hover:bg-accent/10 transition-all"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Coluna 2: Links Rápidos -->
+                        <div class="md:col-span-3">
+                            <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Navegação</h4>
+                            <ul class="space-y-3">
+                                <li><a href="#nova-era" class="text-slate-400 hover:text-accent transition-colors">A Nova Era</a></li>
+                                <li><a href="#secao-metodo" class="text-slate-400 hover:text-accent transition-colors">O Método</a></li>
+                                <li><a href="#planos" class="text-slate-400 hover:text-accent transition-colors">Assinaturas</a></li>
+                                <li><a href="#secao-faq" class="text-slate-400 hover:text-accent transition-colors">Dúvidas Frequentes</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Coluna 3: Contato -->
+                        <div class="md:col-span-4">
+                            <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Contato Profissional</h4>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3 text-slate-400">
+                                    <i class="fas fa-envelope text-slate-500"></i> suporte@hubsymples.com
+                                </li>
+                                <li>
+                                    <a href="https://wa.me/5511952924208?text=Ol%C3%A1%2C%20estou%20no%20site%20da%20Hub%20Symples%20e%20preciso%20de%20ajuda!" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-2 px-5 py-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:bg-green-500/10 hover:border-green-500/50 hover:text-green-400 transition-all text-sm font-medium">
+                                        <i class="fab fa-whatsapp text-lg"></i> Falar no WhatsApp
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Base do Rodapé (Legal) -->
+                    <div class="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+                        <p>© 2024 Hub Symples. Todos os direitos reservados.</p>
+                        <div class="flex gap-6">
+                            <a href="#" class="hover:text-slate-300 transition-colors">Termos de Uso</a>
+                            <a href="#" class="hover:text-slate-300 transition-colors">Política de Privacidade</a>
+                        </div>
+                    </div>
                 </div>
             </footer>
 
@@ -670,11 +716,58 @@
                 <i class="fab fa-whatsapp text-3xl"></i>
             </a>
 
+            <!-- MODAL DE CHAT CONVERSACIONAL -->
+            <div id="chat-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-black/80 backdrop-blur-md">
+                <!-- Caixa de Chat -->
+                <div class="bg-[#0a0a0a] border border-slate-800 rounded-2xl w-full max-w-lg h-[90vh] md:h-[600px] flex flex-col shadow-2xl overflow-hidden relative transition-all transform scale-100">
+                    
+                    <!-- Header do Chat -->
+                    <div class="bg-slate-900 border-b border-slate-800 p-4 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="relative">
+                                <img src="https://imgur.com/UTb6LZm.png" alt="Hub Symples" class="w-10 h-10 rounded-full bg-black p-1 border border-slate-700 object-contain" onerror="this.src='https://via.placeholder.com/40x40/0055ff/ffffff?text=HS'">
+                                <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-slate-900 rounded-full"></div>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold text-sm">Especialista Hub Symples</h3>
+                                <p class="text-green-400 text-xs font-medium">Online agora</p>
+                            </div>
+                        </div>
+                        <button onclick="fecharChat()" class="text-slate-500 hover:text-white transition-colors w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-800">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+
+                    <!-- Área de Mensagens -->
+                    <div id="chat-messages" class="flex-grow p-4 md:p-6 overflow-y-auto flex flex-col gap-4 bg-[#050505]">
+                        <!-- As mensagens serão injetadas via JavaScript aqui -->
+                    </div>
+
+                    <!-- Indicador de Digitação (Escondido por padrão) -->
+                    <div id="typing-indicator" class="hidden px-6 pb-4 bg-[#050505]">
+                        <div class="bg-slate-800 w-max px-4 py-3 rounded-2xl rounded-tl-sm flex gap-1.5">
+                            <div class="w-2 h-2 bg-slate-500 rounded-full animate-bounce"></div>
+                            <div class="w-2 h-2 bg-slate-500 rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
+                            <div class="w-2 h-2 bg-slate-500 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+                        </div>
+                    </div>
+
+                    <!-- Input Area -->
+                    <div class="p-4 bg-slate-900 border-t border-slate-800">
+                        <form id="chat-form" onsubmit="enviarMensagem(event)" class="flex gap-2 relative">
+                            <input type="text" id="chat-input" placeholder="Digite sua resposta..." class="w-full bg-[#050505] border border-slate-700 text-white text-sm rounded-full px-5 py-3 focus:outline-none focus:border-accent transition-colors disabled:opacity-50" autocomplete="off">
+                            <button type="submit" id="chat-submit" class="w-11 h-11 rounded-full bg-accent text-white flex items-center justify-center flex-shrink-0 hover:bg-accentHover transition-colors disabled:opacity-50 disabled:bg-slate-700">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
 
     <script>
-        // Função para simular o crescimento de assinantes com "Memória" (localStorage)
         function initPersistentCounter() {
             const counterElement = document.getElementById('live-members-count');
             if (!counterElement) return;
@@ -683,7 +776,6 @@
             const baseNumber = 77;
             let currentMembers = baseNumber;
             
-            // 1. Tenta pegar o número salvo (com try/catch para evitar bloqueios em iframes de preview)
             try {
                 const saved = localStorage.getItem(storageKey);
                 if (saved) {
@@ -697,7 +789,6 @@
 
             counterElement.innerText = currentMembers;
 
-            // 2. Define quantos pulos vai dar nessa visita
             const maxIncrementsThisSession = Math.random() > 0.5 ? 1 : 2; 
             let incrementsDone = 0;
 
@@ -707,7 +798,6 @@
                 currentMembers++;
                 incrementsDone++;
                 
-                // Salva o novo número (com proteção)
                 try {
                     localStorage.setItem(storageKey, currentMembers);
                 } catch (e) {}
@@ -725,13 +815,11 @@
                 }, 400);
 
                 if (incrementsDone < maxIncrementsThisSession) {
-                    // Tempo para o segundo pulo (se houver)
                     const nextTime = Math.floor(Math.random() * (15000 - 8000 + 1) + 8000);
                     setTimeout(tryIncrement, nextTime);
                 }
             }
 
-            // Acelerei o primeiro pulo (entre 3 e 8 segundos) para você conseguir testar mais rápido!
             const firstTime = Math.floor(Math.random() * (8000 - 3000 + 1) + 3000);
             setTimeout(tryIncrement, firstTime);
         }
@@ -748,7 +836,6 @@
             
             document.body.style.overflow = 'hidden';
             
-            // REMOVE O BLOQUEIO DE DISPLAY: NONE PARA A SEÇÃO EXISTIR NA TELA
             novaEra.style.display = 'block';
             
             jornal.style.height = `${jornalHeight}px`;
@@ -778,7 +865,6 @@
                 jornal.style.display = 'none'; 
                 document.body.style.overflow = ''; 
                 
-                // Inicia o contador apenas quando o site revelar a "Nova Era"
                 initPersistentCounter();
             }, 1500);
         }
@@ -786,12 +872,18 @@
         function toggleBilling(type) {
             const btnMensal = document.getElementById('btn-mensal');
             const btnAnual = document.getElementById('btn-anual');
+            
             const priceStart = document.getElementById('price-start');
             const periodStart = document.getElementById('period-start');
             const instStart = document.getElementById('installments-start');
+            
             const pricePro = document.getElementById('price-pro');
             const periodPro = document.getElementById('period-pro');
             const instPro = document.getElementById('installments-pro');
+            
+            const priceElite = document.getElementById('price-elite');
+            const periodElite = document.getElementById('period-elite');
+            const instElite = document.getElementById('installments-elite');
 
             if (type === 'anual') {
                 btnAnual.classList.remove('text-slate-400');
@@ -799,30 +891,35 @@
                 btnMensal.classList.remove('bg-accent', 'text-white', 'shadow-lg');
                 btnMensal.classList.add('text-slate-400');
 
-                priceStart.innerText = 'R$ 989,40';
-                periodStart.innerText = '/ano';
-                instStart.classList.remove('hidden');
-                setTimeout(() => instStart.classList.remove('opacity-0'), 50);
+                // Plano Start
+                priceStart.innerText = 'R$ 989,40'; periodStart.innerText = '/ano';
+                instStart.classList.remove('hidden'); setTimeout(() => instStart.classList.remove('opacity-0'), 50);
 
-                pricePro.innerText = 'R$ 1.530';
-                periodPro.innerText = '/ano';
-                instPro.classList.remove('hidden');
-                setTimeout(() => instPro.classList.remove('opacity-0'), 50);
+                // Plano Pro
+                pricePro.innerText = 'R$ 1.530'; periodPro.innerText = '/ano';
+                instPro.classList.remove('hidden'); setTimeout(() => instPro.classList.remove('opacity-0'), 50);
+
+                // Plano Elite
+                priceElite.innerText = 'R$ 3.029,40'; periodElite.innerText = '/ano';
+                instElite.classList.remove('hidden'); setTimeout(() => instElite.classList.remove('opacity-0'), 50);
+
             } else {
                 btnMensal.classList.remove('text-slate-400');
                 btnMensal.classList.add('bg-accent', 'text-white', 'shadow-lg');
                 btnAnual.classList.remove('bg-accent', 'text-white', 'shadow-lg');
                 btnAnual.classList.add('text-slate-400');
 
-                priceStart.innerText = 'R$ 97';
-                periodStart.innerText = '/mês';
-                instStart.classList.add('opacity-0');
-                setTimeout(() => instStart.classList.add('hidden'), 300);
+                // Plano Start
+                priceStart.innerText = 'R$ 97'; periodStart.innerText = '/mês';
+                instStart.classList.add('opacity-0'); setTimeout(() => instStart.classList.add('hidden'), 300);
 
-                pricePro.innerText = 'R$ 150';
-                periodPro.innerText = '/mês';
-                instPro.classList.add('opacity-0');
-                setTimeout(() => instPro.classList.add('hidden'), 300);
+                // Plano Pro
+                pricePro.innerText = 'R$ 150'; periodPro.innerText = '/mês';
+                instPro.classList.add('opacity-0'); setTimeout(() => instPro.classList.add('hidden'), 300);
+                
+                // Plano Elite
+                priceElite.innerText = 'R$ 297'; periodElite.innerText = '/mês';
+                instElite.classList.add('opacity-0'); setTimeout(() => instElite.classList.add('hidden'), 300);
             }
         }
 
@@ -870,6 +967,276 @@
                 spanData.innerText = dataFormatada;
             }
         });
+
+        /* ========================================== */
+        /* LÓGICA DO CHAT CONVERSACIONAL              */
+        /* ========================================== */
+        
+        let chatState = {
+            step: 0,
+            planoInteresse: '',
+            nome: '',
+            nicho: '',
+            telefone: ''
+        };
+
+        // Função auxiliar para identificar e falar o preço
+        function getPrecoBot(plano) {
+            if (plano.includes('Start') || plano.includes('Fase 1')) {
+                return "apenas <strong>R$ 97/mês</strong> (ou até 12x de R$ 82,45 no anual)";
+            } else if (plano.includes('Pro') || plano.includes('Fase 2')) {
+                return "<strong>R$ 150/mês</strong> (ou até 12x de R$ 127,50 no anual)";
+            } else if (plano.includes('Elite') || plano.includes('Fase 3')) {
+                return "<strong>R$ 297/mês</strong> (ou até 12x de R$ 252,45 no anual)";
+            }
+            return "um valor muito acessível";
+        }
+
+        const chatModal = document.getElementById('chat-modal');
+        const chatMessages = document.getElementById('chat-messages');
+        const chatInput = document.getElementById('chat-input');
+        const typingIndicator = document.getElementById('typing-indicator');
+        const chatSubmit = document.getElementById('chat-submit');
+
+        function abrirChat(e, plano) {
+            e.preventDefault();
+            chatState.planoInteresse = plano;
+            chatState.step = 0;
+            chatState.nome = '';
+            chatState.nicho = '';
+            chatState.telefone = '';
+            
+            chatMessages.innerHTML = ''; // Limpa o chat
+            chatInput.value = '';
+            chatInput.disabled = true;
+            chatSubmit.disabled = true;
+            
+            document.body.style.overflow = 'hidden'; // Impede rolagem do site atrás
+            chatModal.classList.remove('hidden');
+            
+            // Inicia o fluxo simulando o bot digitando a primeira mensagem
+            simularDigitacao(() => {
+                let msgInicial = "Olá! Parabéns pela decisão de elevar o nível do seu negócio.";
+                if(plano !== 'Geral') {
+                    msgInicial = `Olá! Ótima escolha se interessar pelo <strong>${plano}</strong>.`;
+                }
+                adicionarMensagemBot(`${msgInicial} Como você se chama?`);
+                prepararInput('nome', 'text', 'Digite seu nome...');
+            });
+        }
+
+        function fecharChat() {
+            chatModal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function adicionarMensagemBot(texto) {
+            const div = document.createElement('div');
+            div.className = 'w-max max-w-[85%] bg-slate-800 text-slate-200 text-sm md:text-base px-5 py-3 rounded-2xl rounded-tl-sm self-start shadow-md opacity-0 translate-y-2 transition-all duration-300';
+            div.innerHTML = texto;
+            chatMessages.appendChild(div);
+            scrollToBottom();
+            
+            // Efeito de entrada suave
+            requestAnimationFrame(() => {
+                div.classList.remove('opacity-0', 'translate-y-2');
+            });
+        }
+
+        function adicionarMensagemUser(texto) {
+            const div = document.createElement('div');
+            div.className = 'w-max max-w-[85%] bg-accent text-white text-sm md:text-base px-5 py-3 rounded-2xl rounded-tr-sm self-end shadow-md shadow-accent/20 opacity-0 translate-y-2 transition-all duration-300';
+            div.innerText = texto;
+            chatMessages.appendChild(div);
+            scrollToBottom();
+            
+            requestAnimationFrame(() => {
+                div.classList.remove('opacity-0', 'translate-y-2');
+            });
+        }
+
+        function simularDigitacao(callback) {
+            chatInput.disabled = true;
+            chatSubmit.disabled = true;
+            typingIndicator.classList.remove('hidden');
+            scrollToBottom();
+            
+            // Tempo aleatório entre 800ms e 1500ms para parecer real
+            const tempo = Math.floor(Math.random() * 700) + 800;
+            
+            setTimeout(() => {
+                typingIndicator.classList.add('hidden');
+                callback();
+            }, tempo);
+        }
+
+        function prepararInput(tipo, inputType, placeholder) {
+            chatInput.type = inputType;
+            chatInput.placeholder = placeholder;
+            chatInput.disabled = false;
+            chatSubmit.disabled = false;
+            chatInput.parentElement.classList.remove('hidden');
+            chatInput.focus();
+        }
+
+        function esconderInput() {
+            chatInput.parentElement.classList.add('hidden');
+        }
+
+        function adicionarOpcoes(opcoes) {
+            esconderInput();
+            
+            const divContainer = document.createElement('div');
+            divContainer.className = 'flex flex-col gap-2 self-end mt-1 w-full max-w-[85%] items-end opacity-0 translate-y-2 transition-all duration-300';
+            
+            opcoes.forEach(opt => {
+                const btn = document.createElement('button');
+                btn.className = 'bg-slate-900 border border-accent/50 hover:bg-accent/20 hover:border-accent text-white text-sm md:text-base px-5 py-3 rounded-2xl rounded-tr-sm text-left transition-all shadow-md w-full';
+                btn.innerHTML = opt.texto;
+                btn.onclick = () => {
+                    // Quando clica, remove os botões e simula que o usuário digitou a resposta
+                    divContainer.remove();
+                    adicionarMensagemUser(opt.textoLimpo || opt.texto);
+                    
+                    // Salva a intenção e avança
+                    chatState.planoInteresse = opt.plano;
+                    chatState.step = 3; // Pula para a etapa de pedir telefone
+                    
+                    simularDigitacao(() => {
+                        adicionarMensagemBot(`Incrível! O nosso <strong>${opt.plano}</strong> encaixa perfeitamente com essa necessidade.`);
+                        simularDigitacao(() => {
+                            const preco = getPrecoBot(opt.plano);
+                            adicionarMensagemBot(`O investimento para essa estrutura é de ${preco}. Uma fração mínima do que cobram as agências.`);
+                            simularDigitacao(() => {
+                                adicionarMensagemBot(`Para finalizarmos e eu te transferir para um Diretor especialista, qual o seu <strong>WhatsApp (com DDD)</strong>?`);
+                                prepararInput('telefone', 'tel', '(11) 99999-9999');
+                            });
+                        });
+                    });
+                };
+                divContainer.appendChild(btn);
+            });
+            
+            chatMessages.appendChild(divContainer);
+            scrollToBottom();
+            
+            requestAnimationFrame(() => {
+                divContainer.classList.remove('opacity-0', 'translate-y-2');
+            });
+        }
+
+        // Nova função para o botão final de consentimento
+        function adicionarBotaoWhatsApp() {
+            esconderInput();
+            
+            const divContainer = document.createElement('div');
+            divContainer.className = 'flex flex-col gap-2 self-end mt-1 w-full max-w-[85%] items-end opacity-0 translate-y-2 transition-all duration-300';
+            
+            const btn = document.createElement('button');
+            btn.className = 'bg-green-600 border border-green-500 hover:bg-green-500 text-white font-bold text-sm md:text-base px-5 py-4 rounded-2xl rounded-tr-sm text-center transition-all shadow-[0_0_20px_rgba(34,197,94,0.3)] w-full flex items-center justify-center gap-2';
+            btn.innerHTML = '<i class="fab fa-whatsapp text-lg"></i> Sim, abrir WhatsApp agora';
+            btn.onclick = () => {
+                divContainer.remove();
+                adicionarMensagemUser("Pode transferir!");
+                
+                simularDigitacao(() => {
+                    adicionarMensagemBot(`Abrindo o WhatsApp...`);
+                    
+                    setTimeout(() => {
+                        const numZap = "5511952924208";
+                        let textoZap = `Olá! Meu nome é *${chatState.nome}*.\nMeu negócio é do nicho de *${chatState.nicho}*.\nMeu contato: ${chatState.telefone}.\n\n`;
+                        
+                        textoZap += `O robô me recomendou e eu gostaria de avançar com o *${chatState.planoInteresse}*!`;
+
+                        const urlFinal = `https://wa.me/${numZap}?text=${encodeURIComponent(textoZap)}`;
+                        window.open(urlFinal, '_blank');
+                        fecharChat();
+                    }, 800);
+                });
+            };
+            divContainer.appendChild(btn);
+            
+            chatMessages.appendChild(divContainer);
+            scrollToBottom();
+            
+            requestAnimationFrame(() => {
+                divContainer.classList.remove('opacity-0', 'translate-y-2');
+            });
+        }
+
+        function scrollToBottom() {
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function enviarMensagem(e) {
+            e.preventDefault();
+            const texto = chatInput.value.trim();
+            if(!texto) return;
+
+            adicionarMensagemUser(texto);
+            chatInput.value = '';
+
+            // Lógica dos passos
+            if (chatState.step === 0) {
+                chatState.nome = texto;
+                chatState.step = 1;
+                simularDigitacao(() => {
+                    const primeiroNome = chatState.nome.split(' ')[0];
+                    adicionarMensagemBot(`Prazer, <strong>${primeiroNome}</strong>! E qual é o nicho ou a área de atuação da sua empresa?`);
+                    prepararInput('nicho', 'text', 'Ex: Odontologia, Moda, Tecnologia...');
+                });
+            } 
+            else if (chatState.step === 1) {
+                chatState.nicho = texto;
+                
+                if (chatState.planoInteresse === 'Geral') {
+                    // Fluxo da Triagem (Botão do Topo)
+                    chatState.step = 2; // Esperando escolha de opção
+                    simularDigitacao(() => {
+                        adicionarMensagemBot(`Excelente! Entendi perfeitamente a sua área. Esse é um segmento que tem um potencial gigantesco quando posicionado da forma correta.`);
+                        simularDigitacao(() => {
+                            adicionarMensagemBot(`Para eu te recomendar a melhor estrutura, me diga: <strong>qual é a sua maior necessidade hoje?</strong>`);
+                            adicionarOpcoes([
+                                { texto: "Site Premium para estar online e gerar vendas", textoLimpo: "Site para vendas rápidas", plano: "Plano Start (Fase 1)" },
+                                { texto: "Site Premium + Domínio próprio e E-mail corporativo", textoLimpo: "Site + Domínio e E-mail", plano: "Plano Pro (Fase 2)" },
+                                { texto: "Site Premium + Automação de WhatsApp e Agendamentos", textoLimpo: "Site + Automação de WhatsApp", plano: "Plano Elite (Fase 3)" }
+                            ]);
+                        });
+                    });
+                } else {
+                    // Fluxo Direto (Clicou no botão específico de um Plano)
+                    chatState.step = 3; // Pula a triagem
+                    simularDigitacao(() => {
+                        adicionarMensagemBot(`Excelente! Entendi a sua área. Esse é um segmento que tem resultados incríveis com o ${chatState.planoInteresse}.`);
+                        simularDigitacao(() => {
+                            const preco = getPrecoBot(chatState.planoInteresse);
+                            adicionarMensagemBot(`Lembrando que o investimento para esse plano é de ${preco}.`);
+                            simularDigitacao(() => {
+                                adicionarMensagemBot(`Para finalizarmos e eu te transferir para um Diretor, qual o seu <strong>WhatsApp (com DDD)</strong>?`);
+                                prepararInput('telefone', 'tel', '(11) 99999-9999');
+                            });
+                        });
+                    });
+                }
+            }
+            else if (chatState.step === 3) {
+                chatState.telefone = texto;
+                chatState.step = 4;
+                chatInput.disabled = true;
+                chatSubmit.disabled = true;
+                chatInput.placeholder = "Aguarde...";
+                
+                simularDigitacao(() => {
+                    const primeiroNome = chatState.nome.split(' ')[0];
+                    adicionarMensagemBot(`Perfeito, ${primeiroNome}! Já tenho tudo o que precisamos.`);
+                    
+                    simularDigitacao(() => {
+                        adicionarMensagemBot(`Podemos abrir o seu WhatsApp agora para você falar com o nosso Diretor Especialista?`);
+                        adicionarBotaoWhatsApp();
+                    });
+                });
+            }
+        }
     </script>
 </body>
 </html>
