@@ -156,7 +156,18 @@
         <!-- ========================================== -->
         <div id="nova-era" class="bg-black relative z-10" style="display: none;">
             
-            <nav class="w-full z-50 px-6 py-8 border-b border-slate-900/50 bg-black/50 backdrop-blur-md sticky top-0">
+            <!-- BANNER INTELIGENTE DE URGÊNCIA -->
+            <div id="urgency-banner" class="w-full bg-gradient-to-r from-red-600/90 via-accent/90 to-blue-600/90 text-white py-2.5 px-4 text-center text-xs md:text-sm font-semibold tracking-wider relative z-50 shadow-md">
+                <div class="container mx-auto flex items-center justify-center gap-2 flex-wrap">
+                    <span class="flex h-2 w-2 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                    </span>
+                    <p id="urgency-text">Atenção: Apenas mais 2 vagas para entrega garantida em 96h úteis esta semana!</p>
+                </div>
+            </div>
+            
+            <nav class="w-full z-50 px-6 py-8 border-b border-slate-900/50 bg-black/50 backdrop-blur-md sticky top-[42px] md:top-[44px]">
                 <div class="container mx-auto max-w-6xl flex items-center justify-between">
                     <div class="flex items-center gap-4">
                         <img src="https://imgur.com/UTb6LZm.png" alt="Hub Symples Logo" class="h-12 md:h-16 object-contain" onerror="this.src='https://via.placeholder.com/64x64/0055ff/ffffff?text=HS'">
@@ -270,6 +281,89 @@
             </section>
 
             <!-- ========================================== -->
+            <!-- NOVA SEÇÃO: SLIDER INTERATIVO ANTES/DEPOIS -->
+            <!-- ========================================== -->
+            <section class="py-16 md:py-24 bg-black relative z-10 border-t border-slate-900" id="secao-comparador">
+                <div class="container mx-auto px-6 max-w-4xl">
+                    <div class="text-center mb-12 md:mb-16">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/30 bg-accent/10 text-accent text-xs md:text-sm font-semibold mb-6">
+                            <i class="fas fa-sliders-h"></i> Interatividade
+                        </div>
+                        <h2 class="text-3xl md:text-5xl font-bold mb-4 leading-tight text-white">Compare o Posicionamento Visível</h2>
+                        <p class="text-lg text-slate-400 max-w-2xl mx-auto">Arraste a barra central para ver o contraste brutal entre a confusão do Instagram e a sobriedade profissional de um Hub de Autoridade da Symples.</p>
+                    </div>
+
+                    <!-- CONTAINER DO COMPARADOR DE IMAGENS -->
+                    <div class="relative w-full aspect-[16/10] max-h-[500px] overflow-hidden rounded-2xl border border-slate-800 shadow-2xl select-none group">
+                        
+                        <!-- IMAGEM ANTES (Instagram - Fundo) -->
+                        <div class="absolute inset-0 w-full h-full bg-slate-900 flex flex-col items-center justify-center p-6 md:p-12 text-center">
+                            <div class="absolute top-4 left-4 bg-red-600/90 text-white font-bold text-xs uppercase px-3 py-1 rounded">Antes: Vitrine Fria do Instagram</div>
+                            <div class="max-w-md bg-black/40 border border-white/5 rounded-2xl p-6 backdrop-blur-sm pointer-events-none grayscale opacity-60">
+                                <div class="flex items-center gap-4 mb-4">
+                                    <div class="w-12 h-12 rounded-full bg-slate-700 flex items-center justify-center text-slate-500 text-xl"><i class="fab fa-instagram"></i></div>
+                                    <div class="flex-grow text-left">
+                                        <div class="h-4 w-24 bg-slate-700 rounded mb-2"></div>
+                                        <div class="h-3 w-16 bg-slate-700 rounded"></div>
+                                    </div>
+                                </div>
+                                <div class="space-y-2 text-left mb-4">
+                                    <div class="h-3 w-full bg-slate-800 rounded"></div>
+                                    <div class="h-3 w-[90%] bg-slate-800 rounded"></div>
+                                </div>
+                                <div class="grid grid-cols-3 gap-2">
+                                    <div class="aspect-square bg-slate-800 rounded"></div>
+                                    <div class="aspect-square bg-slate-800 rounded"></div>
+                                    <div class="aspect-square bg-slate-800 rounded"></div>
+                                </div>
+                                <div class="mt-4 h-10 w-full bg-slate-800 rounded flex items-center justify-center text-slate-600 text-xs font-bold">Enviar Mensagem (Preço por direct)</div>
+                            </div>
+                        </div>
+
+                        <!-- IMAGEM DEPOIS (Hub Symples - Sobreposição) -->
+                        <div id="after-image" class="absolute inset-y-0 left-0 w-1/2 h-full bg-gradient-to-br from-slate-950 via-black to-slate-900 flex flex-col items-center justify-center p-6 md:p-12 text-center overflow-hidden border-r border-accent/50 shadow-[5px_0_15px_rgba(0,85,255,0.1)]">
+                            <div class="absolute top-4 left-4 bg-green-500 text-black font-black text-xs uppercase px-3 py-1 rounded whitespace-nowrap">Depois: Seu Hub de Autoridade</div>
+                            
+                            <!-- Simulação de Site Premium -->
+                            <div class="w-full max-w-md bg-slate-900/90 border border-accent/20 rounded-2xl p-6 shadow-2xl relative pointer-events-none scale-95 md:scale-100">
+                                <div class="absolute top-0 right-0 w-32 h-32 bg-accent/10 blur-[30px] rounded-full pointer-events-none"></div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <div class="flex items-center gap-2">
+                                        <img src="https://imgur.com/UTb6LZm.png" alt="Hub Symples" class="h-6 object-contain">
+                                        <div class="h-3 w-16 bg-white/20 rounded"></div>
+                                    </div>
+                                    <div class="h-6 w-20 bg-accent rounded-full text-[8px] flex items-center justify-center text-white font-bold">Ver Planos</div>
+                                </div>
+                                <div class="text-left space-y-3 mb-4">
+                                    <div class="h-5 w-40 bg-gradient-to-r from-accent to-blue-400 rounded"></div>
+                                    <div class="h-3 w-full bg-slate-700 rounded"></div>
+                                    <div class="h-3 w-[80%] bg-slate-700 rounded"></div>
+                                </div>
+                                <div class="h-36 w-full bg-black/60 rounded-xl border border-white/5 flex items-center justify-center p-4">
+                                    <div class="text-center">
+                                        <div class="w-10 h-10 rounded-full bg-accent/20 text-accent flex items-center justify-center mx-auto mb-2 text-sm"><i class="fas fa-play"></i></div>
+                                        <div class="h-2 w-24 bg-slate-600 rounded mx-auto mb-1"></div>
+                                        <div class="h-2 w-16 bg-slate-700 rounded mx-auto"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SLIDER CONTROLLER (INPUT RANGE) -->
+                        <input type="range" min="0" max="100" value="50" id="comparison-slider" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30">
+                        
+                        <!-- LINHA GUIA VISUAL E ALÇA -->
+                        <div id="slider-bar" class="absolute inset-y-0 w-1 bg-accent pointer-events-none z-20 shadow-[0_0_10px_rgba(0,85,255,0.8)]" style="left: 50%;">
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center border-2 border-white shadow-2xl pointer-events-none text-xs">
+                                <i class="fas fa-arrows-alt-h text-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ========================================== -->
             <!-- NOVA SEÇÃO: INFLUENCIADORES & CRIADORES -->
             <!-- ========================================== -->
             <section class="py-16 md:py-24 bg-gradient-to-b from-darker to-slate-950 relative z-10 border-t border-slate-900" id="secao-influenciadores">
@@ -354,6 +448,163 @@
                             <h3 class="text-2xl font-bold text-white mb-4">Autoridade Instantânea</h3>
                             <p class="text-slate-400 text-sm leading-relaxed"><strong>Resultado dos Sonhos.</strong> O cliente abre a tela, vê um design premium e fecha negócio. Você ganha acesso ao Portal do Assinante para solicitar alterações sem custos.</p>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================================== -->
+            <!-- NOVA SEÇÃO: CARROSSEL DE DEPOIMENTOS (PROVA SOCIAL) -->
+            <!-- ========================================== -->
+            <section class="py-16 md:py-24 bg-gradient-to-b from-slate-950 to-black relative z-10 border-t border-slate-900" id="secao-depoimentos">
+                <div class="container mx-auto px-6 max-w-6xl">
+                    <div class="text-center mb-12 md:mb-16">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-green-500/30 bg-green-500/10 text-green-400 text-xs md:text-sm font-semibold mb-6">
+                            <i class="fas fa-users"></i> Prova Social
+                        </div>
+                        <h2 class="text-3xl md:text-5xl font-bold mb-4 leading-tight text-white">Histórias Reais de Quem Deixou a Invisibilidade</h2>
+                        <p class="text-lg text-slate-400 max-w-2xl mx-auto">Veja o impacto real nos negócios de quem parou de depender do algoritmo do Instagram e conquistou autoridade oficial.</p>
+                    </div>
+
+                    <!-- CONTAINER DO CARROSSEL -->
+                    <div class="relative max-w-4xl mx-auto px-4 md:px-12 select-none">
+                        
+                        <!-- SLIDES -->
+                        <div class="relative overflow-hidden min-h-[380px] md:min-h-[280px]">
+                            
+                            <!-- Slide 1 -->
+                            <div class="testimonial-slide absolute inset-0 flex flex-col justify-between bg-slate-900/60 border border-slate-800 p-8 rounded-3xl backdrop-blur-sm transition-all duration-500 opacity-100 scale-100 z-10">
+                                <div>
+                                    <div class="flex items-center gap-1 text-orange-400 text-sm mb-4">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-slate-300 italic text-base md:text-lg leading-relaxed mb-6">
+                                        "O Instagram só me trazia curiosos pedindo orçamento no direct e pechinchando. Com o Hub de Autoridade da Symples, passamos a filtrar os pacientes de alto valor. Nosso ticket médio de tratamento estético aumentou 60% no primeiro mês com o site no ar."
+                                    </p>
+                                </div>
+                                <div class="flex items-center gap-4 border-t border-slate-800/80 pt-4">
+                                    <div class="w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center font-black text-lg">AV</div>
+                                    <div>
+                                        <h4 class="font-bold text-white text-base">Dra. Alessandra Veiga</h4>
+                                        <p class="text-xs text-slate-500">Clínica de Dermatologia & Estética</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="testimonial-slide absolute inset-0 flex flex-col justify-between bg-slate-900/60 border border-slate-800 p-8 rounded-3xl backdrop-blur-sm transition-all duration-500 opacity-0 scale-95 pointer-events-none z-0">
+                                <div>
+                                    <div class="flex items-center gap-1 text-orange-400 text-sm mb-4">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-slate-300 italic text-base md:text-lg leading-relaxed mb-6">
+                                        "Em advocacia, a confiança é o principal ativo. Depender de um link cru de WhatsApp no perfil transmitia amadorismo. Agora os clientes veem uma banca estruturada e oficial. Fechamos três contratos premium de recorrência na primeira semana do site no ar."
+                                    </p>
+                                </div>
+                                <div class="flex items-center gap-4 border-t border-slate-800/80 pt-4">
+                                    <div class="w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-black text-lg">RA</div>
+                                    <div>
+                                        <h4 class="font-bold text-white text-base">Roberto Albuquerque</h4>
+                                        <p class="text-xs text-slate-500">Advogado Tributarista Corporativo</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="testimonial-slide absolute inset-0 flex flex-col justify-between bg-slate-900/60 border border-slate-800 p-8 rounded-3xl backdrop-blur-sm transition-all duration-500 opacity-0 scale-95 pointer-events-none z-0">
+                                <div>
+                                    <div class="flex items-center gap-1 text-orange-400 text-sm mb-4">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-slate-300 italic text-base md:text-lg leading-relaxed mb-6">
+                                        "Minha marca de moda era refém das atualizações de algoritmo do Instagram. Com o nosso Hub de Conversão, centralizamos as coleções, contamos nossa história através de um design impecável e as vendas via WhatsApp explodiram."
+                                    </p>
+                                </div>
+                                <div class="flex items-center gap-4 border-t border-slate-800/80 pt-4">
+                                    <div class="w-12 h-12 rounded-full bg-pink-500/20 text-pink-400 flex items-center justify-center font-black text-lg">BR</div>
+                                    <div>
+                                        <h4 class="font-bold text-white text-base">Beatriz Rocha</h4>
+                                        <p class="text-xs text-slate-500">Fundadora da UseBia (Moda Autoral)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 4 -->
+                            <div class="testimonial-slide absolute inset-0 flex flex-col justify-between bg-slate-900/60 border border-slate-800 p-8 rounded-3xl backdrop-blur-sm transition-all duration-500 opacity-0 scale-95 pointer-events-none z-0">
+                                <div>
+                                    <div class="flex items-center gap-1 text-orange-400 text-sm mb-4">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-slate-300 italic text-base md:text-lg leading-relaxed mb-6">
+                                        "Nossos projetos residenciais premium exigem uma apresentação visual de altíssimo nível. Nenhuma marca cabe em posts quadradinhos. A galeria e a copy da Symples contaram nosso conceito perfeitamente. O site se tornou nosso Media Kit oficial."
+                                    </p>
+                                </div>
+                                <div class="flex items-center gap-4 border-t border-slate-800/80 pt-4">
+                                    <div class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-black text-lg">SK</div>
+                                    <div>
+                                        <h4 class="font-bold text-white text-base">Studio Kaza</h4>
+                                        <p class="text-xs text-slate-500">Arquitetura de Alto Padrão & Interiores</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 5 -->
+                            <div class="testimonial-slide absolute inset-0 flex flex-col justify-between bg-slate-900/60 border border-slate-800 p-8 rounded-3xl backdrop-blur-sm transition-all duration-500 opacity-0 scale-95 pointer-events-none z-0">
+                                <div>
+                                    <div class="flex items-center gap-1 text-orange-400 text-sm mb-4">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-slate-300 italic text-base md:text-lg leading-relaxed mb-6">
+                                        "Assinei o Plano Elite com agendamentos integrados. Foi a melhor decisão do ano. Nossos pacientes agendam e pagam consultas particulares em um ambiente limpo e sem distrações. A taxa de faltas caiu drasticamente."
+                                    </p>
+                                </div>
+                                <div class="flex items-center gap-4 border-t border-slate-800/80 pt-4">
+                                    <div class="w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 flex items-center justify-center font-black text-lg">MR</div>
+                                    <div>
+                                        <h4 class="font-bold text-white text-base">Dr. Marcelo Rezende</h4>
+                                        <p class="text-xs text-slate-500">Reabilitação & Odontologia Estética</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 6 -->
+                            <div class="testimonial-slide absolute inset-0 flex flex-col justify-between bg-slate-900/60 border border-slate-800 p-8 rounded-3xl backdrop-blur-sm transition-all duration-500 opacity-0 scale-95 pointer-events-none z-0">
+                                <div>
+                                    <div class="flex items-center gap-1 text-orange-400 text-sm mb-4">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-slate-300 italic text-base md:text-lg leading-relaxed mb-6">
+                                        "Eu achava que criar um site daria muito trabalho e tomaria meu tempo. Com a Symples, mandei apenas dois áudios e em 4 dias meu site estava online, com uma copy maravilhosa que capta mentorandos qualificados todos os dias."
+                                    </p>
+                                </div>
+                                <div class="flex items-center gap-4 border-t border-slate-800/80 pt-4">
+                                    <div class="w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center font-black text-lg">CM</div>
+                                    <div>
+                                        <h4 class="font-bold text-white text-base">Carla Mendes</h4>
+                                        <p class="text-xs text-slate-500">Mentora & Consultora de Negócios</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- CONTROLES LATERAIS -->
+                        <button onclick="prevTestimonial()" class="absolute left-[-20px] md:left-[-40px] top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-slate-800 bg-black/80 hover:bg-slate-900 text-slate-400 hover:text-white flex items-center justify-center shadow-lg transition-colors z-20">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button onclick="nextTestimonial()" class="absolute right-[-20px] md:right-[-40px] top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-slate-800 bg-black/80 hover:bg-slate-900 text-slate-400 hover:text-white flex items-center justify-center shadow-lg transition-colors z-20">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+
+                        <!-- PONTOS DE NAVEGAÇÃO -->
+                        <div class="flex justify-center gap-2 mt-8" id="testimonial-dots">
+                            <button onclick="setTestimonial(0)" class="w-2.5 h-2.5 rounded-full bg-accent transition-all duration-300"></button>
+                            <button onclick="setTestimonial(1)" class="w-2.5 h-2.5 rounded-full bg-slate-800 hover:bg-slate-700 transition-all duration-300"></button>
+                            <button onclick="setTestimonial(2)" class="w-2.5 h-2.5 rounded-full bg-slate-800 hover:bg-slate-700 transition-all duration-300"></button>
+                            <button onclick="setTestimonial(3)" class="w-2.5 h-2.5 rounded-full bg-slate-800 hover:bg-slate-700 transition-all duration-300"></button>
+                            <button onclick="setTestimonial(4)" class="w-2.5 h-2.5 rounded-full bg-slate-800 hover:bg-slate-700 transition-all duration-300"></button>
+                            <button onclick="setTestimonial(5)" class="w-2.5 h-2.5 rounded-full bg-slate-800 hover:bg-slate-700 transition-all duration-300"></button>
+                        </div>
+
                     </div>
                 </div>
             </section>
@@ -642,25 +893,82 @@
             </section>
 
             <section class="py-16 md:py-24 bg-darker relative z-10 border-t border-slate-900" id="secao-faq">
-                <div class="container mx-auto px-6 max-w-4xl text-center">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-slate-500/30 bg-slate-500/10 text-slate-300 text-xs md:text-sm font-semibold mb-6">
-                        <i class="fas fa-question-circle"></i> FAQ
+                <div class="container mx-auto px-6 max-w-4xl">
+                    <div class="text-center mb-12 md:mb-16">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-slate-500/30 bg-slate-500/10 text-slate-300 text-xs md:text-sm font-semibold mb-6">
+                            <i class="fas fa-question-circle"></i> FAQ
+                        </div>
+                        <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white">Restou alguma dúvida?</h2>
+                        <p class="text-lg text-slate-400 max-w-2xl mx-auto">Respondemos às perguntas mais comuns para que você tome a decisão de dar o próximo passo com total clareza.</p>
                     </div>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-10 text-white">Restou alguma dúvida?</h2>
                     
-                    <div class="space-y-4 text-left max-w-2xl mx-auto">
-                        <details class="bg-black rounded-lg p-5 cursor-pointer border border-slate-800 shadow-lg group">
-                            <summary class="font-bold select-none outline-none text-lg text-white group-hover:text-accent transition-colors">Em quanto tempo o site fica pronto?</summary>
-                            <p class="mt-4 text-slate-400 text-sm leading-relaxed border-t border-slate-800 pt-4">O processo é ágil. Basta nos mandar um áudio de 2 minutos e entregaremos o Hub pronto em <strong>exatas 96 horas úteis (4 dias)</strong>.</p>
-                        </details>
-                        <details class="bg-black rounded-lg p-5 cursor-pointer border border-slate-800 shadow-lg group">
-                            <summary class="font-bold select-none outline-none text-lg text-white group-hover:text-accent transition-colors">O valor é mensal?</summary>
-                            <p class="mt-4 text-slate-400 text-sm leading-relaxed border-t border-slate-800 pt-4">Sim! É um modelo de assinatura. Esse valor já inclui manutenção contínua, hospedagem super rápida e uso do <strong>Portal do Assinante</strong>. Sem pegadinhas ou taxas ocultas.</p>
-                        </details>
-                        <details class="bg-black rounded-lg p-5 cursor-pointer border border-slate-800 shadow-lg group">
-                            <summary class="font-bold select-none outline-none text-lg text-white group-hover:text-accent transition-colors">Quais são as formas de pagamento?</summary>
-                            <p class="mt-4 text-slate-400 text-sm leading-relaxed border-t border-slate-800 pt-4">Mensal via Cartão de Crédito ou Pix. Anual (com 15% OFF) à vista no Pix ou parcelado em até <strong class="text-white">12x sem juros</strong> no Cartão.</p>
-                        </details>
+                    <div class="space-y-4 max-w-3xl mx-auto">
+                        
+                        <!-- Pergunta 1 -->
+                        <div class="faq-item bg-black/50 border border-slate-800 rounded-2xl overflow-hidden shadow-lg transition-colors duration-300 hover:border-slate-700">
+                            <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 outline-none focus:outline-none">
+                                <span class="font-bold text-base md:text-lg text-white group-hover:text-accent transition-colors">Como funciona o processo de criação por áudio?</span>
+                                <span class="faq-icon w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center text-slate-400 transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                            </button>
+                            <div class="faq-collapse max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <p class="px-6 pb-6 text-slate-400 text-sm md:text-base leading-relaxed border-t border-slate-900 pt-4">
+                                    O processo é 100% descomplicado. Você não precisa saber programar, nem preencher formulários intermináveis. Logo após assinar, nossa equipe entra em contato com você pelo WhatsApp. Tudo o que você precisa fazer é nos enviar um áudio de até 2 minutos explicando o seu modelo de negócio, quem são seus clientes e o que você vende. Nossa equipe de Copywriters e Designers cuida de tudo e coloca o seu site no ar em <strong>exatas 96 horas úteis (4 dias)</strong>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Pergunta 2 -->
+                        <div class="faq-item bg-black/50 border border-slate-800 rounded-2xl overflow-hidden shadow-lg transition-colors duration-300 hover:border-slate-700">
+                            <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 outline-none focus:outline-none">
+                                <span class="font-bold text-base md:text-lg text-white group-hover:text-accent transition-colors">Eu preciso pagar domínio e hospedagem separadamente?</span>
+                                <span class="faq-icon w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center text-slate-400 transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                            </button>
+                            <div class="faq-collapse max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <p class="px-6 pb-6 text-slate-400 text-sm md:text-base leading-relaxed border-t border-slate-900 pt-4">
+                                    Não! O valor da sua assinatura já cobre a hospedagem ultra rápida da sua página em servidores de alta performance globais, certificado de segurança SSL (o cadeado de segurança na barra de navegação) e e-mail corporativo profissional. O domínio nacional (ex: www.seunegocio.com.br) está incluso gratuitamente no plano Pro e Elite no primeiro ano de assinatura.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Pergunta 3 -->
+                        <div class="faq-item bg-black/50 border border-slate-800 rounded-2xl overflow-hidden shadow-lg transition-colors duration-300 hover:border-slate-700">
+                            <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 outline-none focus:outline-none">
+                                <span class="font-bold text-base md:text-lg text-white group-hover:text-accent transition-colors">O que acontece se eu precisar alterar o meu site depois?</span>
+                                <span class="faq-icon w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center text-slate-400 transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                            </button>
+                            <div class="faq-collapse max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <p class="px-6 pb-6 text-slate-400 text-sm md:text-base leading-relaxed border-t border-slate-900 pt-4">
+                                    Com a Hub Symples você nunca fica desamparado. Você ganha acesso exclusivo ao <strong>Portal do Assinante</strong>, um painel interativo onde pode solicitar qualquer alteração de textos, fotos, botões ou novas informações a qualquer momento, sem limites e sem custos adicionais. Nossa equipe realiza as alterações para você de forma ágil e proativa.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Pergunta 4 -->
+                        <div class="faq-item bg-black/50 border border-slate-800 rounded-2xl overflow-hidden shadow-lg transition-colors duration-300 hover:border-slate-700">
+                            <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 outline-none focus:outline-none">
+                                <span class="font-bold text-base md:text-lg text-white group-hover:text-accent transition-colors">O site é otimizado para celulares (Mobile-First)?</span>
+                                <span class="faq-icon w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center text-slate-400 transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                            </button>
+                            <div class="faq-collapse max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <p class="px-6 pb-6 text-slate-400 text-sm md:text-base leading-relaxed border-t border-slate-900 pt-4">
+                                    Com certeza! Mais de 85% do tráfego de vendas atual de negócios autônomos e clínicas vem de celulares. Todos os sites que criamos são desenvolvidos sob a filosofia Mobile-First, focando na velocidade de carregamento imediata, legibilidade e botões de ação e chat conversacional estrategicamente visíveis para capturar e converter leads.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Pergunta 5 -->
+                        <div class="faq-item bg-black/50 border border-slate-800 rounded-2xl overflow-hidden shadow-lg transition-colors duration-300 hover:border-slate-700">
+                            <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 outline-none focus:outline-none">
+                                <span class="font-bold text-base md:text-lg text-white group-hover:text-accent transition-colors">Há fidelidade ou contrato que me prende no serviço?</span>
+                                <span class="faq-icon w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center text-slate-400 transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                            </button>
+                            <div class="faq-collapse max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <p class="px-6 pb-6 text-slate-400 text-sm md:text-base leading-relaxed border-t border-slate-900 pt-4">
+                                    Zero fidelidade! Acreditamos na qualidade de nossa entrega. No plano mensal, você pode cancelar a sua assinatura a qualquer momento que desejar, sem multas, sem pegadinhas e sem burocracias, diretamente pelo Portal do Assinante. No plano anual, você garante um desconto de 15% e parcelamento sem juros no cartão de crédito, com renovação anual simples.
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </section>
@@ -858,8 +1166,10 @@
             
             requestAnimationFrame(() => {
                 requestAnimationFrame(() => {
-                    jornal.style.transition = 'transform 1.5s cubic-bezier(0.65, 0, 0.15, 1)';
+                    jornal.style.transition = 'transform 1.6s cubic-bezier(0.65, 0, 0.15, 1), opacity 1.4s ease-out, filter 1.4s ease-out';
                     jornal.style.transform = 'translateY(-100%)';
+                    jornal.style.opacity = '0';
+                    jornal.style.filter = 'blur(10px)';
                     
                     if (btnFloat) {
                         setTimeout(() => {
@@ -874,6 +1184,7 @@
                 document.body.style.overflow = ''; 
                 
                 initPersistentCounter();
+                initUrgencyBanner(); // Inicializa o banner de urgência
             }, 1500);
         }
 
@@ -931,7 +1242,131 @@
             }
         }
 
+        /* ========================================== */
+        /* INICIALIZADORES DAS MELHORIAS E COMPONENTES */
+        /* ========================================== */
+        
+        function initUrgencyBanner() {
+            const urgencyText = document.getElementById('urgency-text');
+            if (!urgencyText) return;
+            const diasSemana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
+            const hoje = new Date();
+            const diaNome = diasSemana[hoje.getDay()];
+            
+            let vagas = 2;
+            if (hoje.getDay() === 0 || hoje.getDay() === 6) { // Fim de semana
+                vagas = 3;
+            } else if (hoje.getDay() >= 4) { // Quinta/Sexta
+                vagas = 1;
+            }
+            urgencyText.innerHTML = `🔥 <strong>Urgência de ${diaNome}</strong>: Restam apenas <span class="bg-white text-red-600 px-2 py-0.5 rounded font-black text-xs md:text-sm animate-pulse">${vagas} ${vagas === 1 ? 'vaga' : 'vagas'}</span> para ativação e entrega em 96h úteis esta semana!`;
+        }
+
+        function initComparisonSlider() {
+            const slider = document.getElementById('comparison-slider');
+            const afterImage = document.getElementById('after-image');
+            const sliderBar = document.getElementById('slider-bar');
+            if (!slider || !afterImage || !sliderBar) return;
+
+            slider.addEventListener('input', (e) => {
+                const val = e.target.value;
+                afterImage.style.width = `${val}%`;
+                sliderBar.style.left = `${val}%`;
+            });
+        }
+
+        let activeTestimonial = 0;
+        const totalTestimonials = 6;
+        let testimonialInterval;
+
+        function updateTestimonials() {
+            const slides = document.querySelectorAll('.testimonial-slide');
+            const dots = document.querySelectorAll('#testimonial-dots button');
+            if (slides.length === 0 || dots.length === 0) return;
+
+            slides.forEach((slide, idx) => {
+                if (idx === activeTestimonial) {
+                    slide.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+                    slide.classList.add('opacity-100', 'scale-100', 'z-10');
+                } else {
+                    slide.classList.remove('opacity-100', 'scale-100', 'z-10');
+                    slide.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+                }
+            });
+
+            dots.forEach((dot, idx) => {
+                if (idx === activeTestimonial) {
+                    dot.classList.remove('bg-slate-800', 'hover:bg-slate-700');
+                    dot.classList.add('bg-accent');
+                } else {
+                    dot.classList.remove('bg-accent');
+                    dot.classList.add('bg-slate-800', 'hover:bg-slate-700');
+                }
+            });
+        }
+
+        function nextTestimonial() {
+            activeTestimonial = (activeTestimonial + 1) % totalTestimonials;
+            updateTestimonials();
+            resetTestimonialAutoPlay();
+        }
+
+        function prevTestimonial() {
+            activeTestimonial = (activeTestimonial - 1 + totalTestimonials) % totalTestimonials;
+            updateTestimonials();
+            resetTestimonialAutoPlay();
+        }
+
+        function setTestimonial(idx) {
+            activeTestimonial = idx;
+            updateTestimonials();
+            resetTestimonialAutoPlay();
+        }
+
+        function startTestimonialAutoPlay() {
+            testimonialInterval = setInterval(nextTestimonial, 7000);
+        }
+
+        function resetTestimonialAutoPlay() {
+            clearInterval(testimonialInterval);
+            startTestimonialAutoPlay();
+        }
+
+        function initFAQAccordion() {
+            const toggles = document.querySelectorAll('.faq-toggle');
+            
+            toggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const item = toggle.parentElement;
+                    const collapse = item.querySelector('.faq-collapse');
+                    const icon = item.querySelector('.faq-icon');
+                    
+                    const isOpen = item.classList.contains('faq-open');
+                    
+                    document.querySelectorAll('.faq-item').forEach(otherItem => {
+                        otherItem.classList.remove('faq-open');
+                        otherItem.querySelector('.faq-collapse').style.maxHeight = '0px';
+                        otherItem.querySelector('.faq-collapse').style.opacity = '0';
+                        otherItem.querySelector('.faq-icon').classList.remove('rotate-180');
+                    });
+                    
+                    if (!isOpen) {
+                        item.classList.add('faq-open');
+                        collapse.style.maxHeight = collapse.scrollHeight + 'px';
+                        collapse.style.opacity = '1';
+                        icon.classList.add('rotate-180');
+                    }
+                });
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
+            // Inicializadores Básicos
+            initComparisonSlider();
+            updateTestimonials();
+            startTestimonialAutoPlay();
+            initFAQAccordion();
+
             const retentionObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -977,7 +1412,7 @@
         });
 
         /* ========================================== */
-        /* LÓGICA DO CHAT CONVERSACIONAL              */
+        /* LÓGICA DO CHAT CONVERSACIONAL COM PERSISTÊNCIA */
         /* ========================================== */
         
         let chatState = {
@@ -1006,23 +1441,78 @@
         const typingIndicator = document.getElementById('typing-indicator');
         const chatSubmit = document.getElementById('chat-submit');
 
+        function salvarEstadoChat() {
+            try {
+                sessionStorage.setItem('hubSymples_chatState', JSON.stringify(chatState));
+                sessionStorage.setItem('hubSymples_chatHTML', chatMessages.innerHTML);
+                sessionStorage.setItem('hubSymples_chatInputConfig', JSON.stringify({
+                    type: chatInput.type,
+                    placeholder: chatInput.placeholder,
+                    disabled: chatInput.disabled,
+                    parentHidden: chatInput.parentElement.classList.contains('hidden')
+                }));
+            } catch (e) {}
+        }
+
+        function limparEstadoChat() {
+            try {
+                sessionStorage.removeItem('hubSymples_chatState');
+                sessionStorage.removeItem('hubSymples_chatHTML');
+                sessionStorage.removeItem('hubSymples_chatInputConfig');
+            } catch(e) {}
+        }
+
         function abrirChat(e, plano) {
-            e.preventDefault();
+            if (e) e.preventDefault();
+            
+            document.body.style.overflow = 'hidden';
+            chatModal.classList.remove('hidden');
+
+            // Tenta recuperar do sessionStorage
+            let estadoSalvo = null;
+            let htmlSalvo = null;
+            try {
+                estadoSalvo = sessionStorage.getItem('hubSymples_chatState');
+                htmlSalvo = sessionStorage.getItem('hubSymples_chatHTML');
+            } catch(err) {}
+
+            if (estadoSalvo && htmlSalvo) {
+                chatState = JSON.parse(estadoSalvo);
+                chatMessages.innerHTML = htmlSalvo;
+                
+                // Restaura o estado do input
+                try {
+                    const inputConfig = JSON.parse(sessionStorage.getItem('hubSymples_chatInputConfig'));
+                    if (inputConfig) {
+                        chatInput.type = inputConfig.type;
+                        chatInput.placeholder = inputConfig.placeholder;
+                        chatInput.disabled = inputConfig.disabled;
+                        chatSubmit.disabled = inputConfig.disabled;
+                        if (inputConfig.parentHidden) {
+                            chatInput.parentElement.classList.add('hidden');
+                        } else {
+                            chatInput.parentElement.classList.remove('hidden');
+                            chatInput.focus();
+                        }
+                    }
+                } catch(err) {}
+                
+                scrollToBottom();
+                return;
+            }
+
+            // Inicia do zero
             chatState.planoInteresse = plano;
             chatState.step = 0;
             chatState.nome = '';
             chatState.nicho = '';
             chatState.telefone = '';
             
-            chatMessages.innerHTML = ''; // Limpa o chat
+            chatMessages.innerHTML = '';
             chatInput.value = '';
             chatInput.disabled = true;
             chatSubmit.disabled = true;
             
-            document.body.style.overflow = 'hidden'; // Impede rolagem do site atrás
-            chatModal.classList.remove('hidden');
-            
-            // Inicia o fluxo simulando o bot digitando a primeira mensagem
             simularDigitacao(() => {
                 let msgInicial = "Olá! Parabéns pela decisão de elevar o nível do seu negócio.";
                 if(plano !== 'Geral') {
@@ -1045,9 +1535,9 @@
             chatMessages.appendChild(div);
             scrollToBottom();
             
-            // Efeito de entrada suave
             requestAnimationFrame(() => {
                 div.classList.remove('opacity-0', 'translate-y-2');
+                salvarEstadoChat();
             });
         }
 
@@ -1060,6 +1550,7 @@
             
             requestAnimationFrame(() => {
                 div.classList.remove('opacity-0', 'translate-y-2');
+                salvarEstadoChat();
             });
         }
 
@@ -1069,7 +1560,6 @@
             typingIndicator.classList.remove('hidden');
             scrollToBottom();
             
-            // Tempo aleatório entre 800ms e 1500ms para parecer real
             const tempo = Math.floor(Math.random() * 700) + 800;
             
             setTimeout(() => {
@@ -1085,10 +1575,12 @@
             chatSubmit.disabled = false;
             chatInput.parentElement.classList.remove('hidden');
             chatInput.focus();
+            salvarEstadoChat();
         }
 
         function esconderInput() {
             chatInput.parentElement.classList.add('hidden');
+            salvarEstadoChat();
         }
 
         function adicionarOpcoes(opcoes) {
@@ -1102,13 +1594,11 @@
                 btn.className = 'bg-slate-900 border border-accent/50 hover:bg-accent/20 hover:border-accent text-white text-sm md:text-base px-5 py-3 rounded-2xl rounded-tr-sm text-left transition-all shadow-md w-full';
                 btn.innerHTML = opt.texto;
                 btn.onclick = () => {
-                    // Quando clica, remove os botões e simula que o usuário digitou a resposta
                     divContainer.remove();
                     adicionarMensagemUser(opt.textoLimpo || opt.texto);
                     
-                    // Salva a intenção e avança
                     chatState.planoInteresse = opt.plano;
-                    chatState.step = 3; // Pula para a etapa de pedir telefone
+                    chatState.step = 3;
                     
                     simularDigitacao(() => {
                         adicionarMensagemBot(`Incrível! O nosso <strong>${opt.plano}</strong> encaixa perfeitamente com essa necessidade.`);
@@ -1130,10 +1620,10 @@
             
             requestAnimationFrame(() => {
                 divContainer.classList.remove('opacity-0', 'translate-y-2');
+                salvarEstadoChat();
             });
         }
 
-        // Nova função para o botão final de consentimento
         function adicionarBotaoWhatsApp() {
             esconderInput();
             
@@ -1158,6 +1648,8 @@
 
                         const urlFinal = `https://wa.me/${numZap}?text=${encodeURIComponent(textoZap)}`;
                         window.open(urlFinal, '_blank');
+                        
+                        limparEstadoChat(); // Limpa estado ao concluir com sucesso
                         fecharChat();
                     }, 800);
                 });
@@ -1169,6 +1661,7 @@
             
             requestAnimationFrame(() => {
                 divContainer.classList.remove('opacity-0', 'translate-y-2');
+                salvarEstadoChat();
             });
         }
 
@@ -1198,8 +1691,7 @@
                 chatState.nicho = texto;
                 
                 if (chatState.planoInteresse === 'Geral') {
-                    // Fluxo da Triagem (Botão do Topo)
-                    chatState.step = 2; // Esperando escolha de opção
+                    chatState.step = 2;
                     simularDigitacao(() => {
                         adicionarMensagemBot(`Excelente! Entendi perfeitamente a sua área. Esse é um segmento que tem um potencial gigantesco quando posicionado da forma correta.`);
                         simularDigitacao(() => {
@@ -1212,8 +1704,7 @@
                         });
                     });
                 } else {
-                    // Fluxo Direto (Clicou no botão específico de um Plano)
-                    chatState.step = 3; // Pula a triagem
+                    chatState.step = 3;
                     simularDigitacao(() => {
                         adicionarMensagemBot(`Excelente! Entendi a sua área. Esse é um segmento que tem resultados incríveis com o ${chatState.planoInteresse}.`);
                         simularDigitacao(() => {

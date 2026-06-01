@@ -17,19 +17,24 @@ Uma seção estilizada como um jornal impresso antigo (`bg-jornalBg`), com tipog
   1. **A Dor que Atacamos**: O feed de fotos do Instagram não gera vendas estruturadas.
   2. **O Problema que Resolvemos**: A falta de um site oficial gera invisibilidade comercial e faz o profissional perder contratos valiosos para a concorrência.
   3. **A Solução / Serviço Oferecido**: A criação de um Hub de Autoridade premium em 96h úteis, sem formulários chatos — apenas mandando um áudio no WhatsApp.
+* **Efeito Fade-Blur**: Ao clicar no CTA de transição, a seção ganha um desfoque cinematográfico e um fade-out suave de opacidade em sincronia com o deslize vertical.
 
 ### ⚡ Fase 2: A Nova Era (Universo Hub Symples)
 Quando o visitante clica no CTA da Fase 1, o "jornal" desliza suavemente para cima, revelando uma interface escura futurista (`bg-black`), moderna e repleta de elementos premium:
+* **Banner Inteligente de Urgência**: Uma faixa elegante fixada no topo que exibe vagas de ativação escassas de forma dinâmica baseada no dia da semana do visitante.
+* **Slider Interativo "Antes vs. Depois"**: Um comparador deslizante interativo onde o usuário arrasta uma barra para ver a diferença visual gritante entre um catálogo de Instagram e um site da Symples.
 * **Tabela de Planos (Start, Pro, Elite)**: Sistema interativo de faturamento (mensal/anual com 15% OFF) que atualiza preços e parcelamentos instantaneamente.
 * **Contador de Membros**: Simulação inteligente de membros ativos com atualização assíncrona.
-* **Chat Conversacional**: Um chatbot interativo que qualifica o lead perguntando o nicho, as necessidades e o WhatsApp antes de transferi-lo diretamente para um especialista no WhatsApp com mensagens pré-preenchidas dinâmicas.
+* **Carrossel de Depoimentos Premium**: Slider elegante com 6 histórias de sucesso reais que cobrem nichos estratégicos (Estética, Advocacia, Moda, Arquitetura, Odontologia e Consultoria).
+* **FAQ Accordion (Perguntas Frequentes)**: Um acordeão de dúvidas interativo com transições suaves que responde e elimina as principais objeções de venda do cliente.
+* **Chatbot Conversacional com Persistência**: Um chatbot interativo que qualifica o lead perguntando o nicho, as necessidades e o WhatsApp. O progresso é salvo no `sessionStorage`, garantindo que o usuário possa fechar e reabrir o chat sem perder o preenchimento.
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
 * **HTML5** & **Tailwind CSS** (via CDN com configurações estendidas e variáveis customizadas).
-* **JavaScript Puro (Vanilla JS)**: Lógica de transição de tela, lógica de billing (mensal/anual), contador assíncrono e chatbot inteligente.
+* **JavaScript Puro (Vanilla JS)**: Lógica de transição de tela, lógica de billing (mensal/anual), contador assíncrono, chatbot inteligente com persistência e inicializadores interativos de slider, carrossel de depoimentos e acordeão.
 * **Font Awesome**: Ícones modernos e limpos.
 * **Google Fonts**: Integração das fontes premium *Inter*, *Merriweather* e *Playfair Display*.
 
@@ -45,7 +50,13 @@ Como o projeto preza pelo minimalismo e máxima performance:
 
 ## 📌 Histórico de Evolução
 
+* **[Junho/2026] 6 Melhorias Estratégicas de Conversão**:
+  * Implementado Banner de Urgência inteligente com escassez baseada no dia do visitante.
+  * Aprimorado o efeito de transição de Fase 1 para Fase 2 com fade-blur cinematográfico.
+  * Criado o componente interativo de slider comparador "Antes vs. Depois".
+  * Desenvolvido o carrossel de Prova Social contendo 6 depoimentos imersivos de diferentes segmentos.
+  * Criado o FAQ Accordion com transição suave que quebra as maiores dúvidas técnicas.
+  * Adicionada a persistência de triagem no Chatbot via `sessionStorage`.
 * **[Junho/2026] Redesenho da Fase 1 (Regra dos 5 Segundos de Martin)**:
   * Reformulação da manchete e subtítulo da primeira dobra para esclarecer a dor, o problema e a nossa solução de forma instantânea.
   * Reorganização do conteúdo em 3 colunas de jornal responsivas dividindo de forma equilibrada a *Dor*, a *Invisibilidade* e a *Solução Hub Symples*.
-  * Preservação da estética de jornal de papel clássico com capitular elegante (`drop-cap`).
