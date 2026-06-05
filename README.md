@@ -23,6 +23,8 @@ Uma seção estilizada como um jornal impresso antigo (`bg-jornalBg`), com tipog
 Quando o visitante clica no CTA da Fase 1, o "jornal" desliza suavemente para cima, revelando uma interface escura futurista (`bg-black`), moderna e repleta de elementos premium:
 * **Banner Inteligente de Urgência**: Uma faixa elegante fixada no topo que exibe vagas de ativação escassas de forma dinâmica baseada no dia da semana do visitante.
 * **Slider Interativo "Antes vs. Depois" (Hiper-realista)**: Um comparador deslizante simulando fisicamente um smartphone premium com status bar. Contrasta um feed de Instagram confuso e dependente de algoritmo (Antes) com uma Landing Page médica de luxo completa, rolável e de altíssima autoridade com CRM, especialidades, diferenciais técnicos e selo de segurança SSL (Depois).
+* **Plano de 3 Passos Simples**: Uma seção visual conectada por linhas indicadoras que detalha o processo de criação sem fricção: o envio de um áudio no WhatsApp, a produção pela nossa equipe e a publicação em 96h.
+* **Manifesto da Autoridade**: Uma conexão filosófica profunda combatendo a injustiça do algoritmo das redes sociais, empoderando o profissional de excelência a focar na sua competência e não na produção diária de dancinhas e conteúdo efêmero.
 * **Tabela de Planos (Start, Pro, Elite)**: Sistema interativo de faturamento (mensal/anual com 15% OFF) que atualiza preços e parcelamentos instantaneamente.
 * **Contador de Membros**: Simulação inteligente de membros ativos com atualização assíncrona.
 * **Carrossel de Depoimentos Premium**: Slider elegante com 6 histórias de sucesso reais que cobrem nichos estratégicos (Estética, Advocacia, Moda, Arquitetura, Odontologia e Consultoria).
@@ -50,6 +52,12 @@ Como o projeto preza pelo minimalismo e máxima performance:
 
 ## 📌 Histórico de Evolução
 
+* **[Junho/2026] Reestruturação StoryBrand (Metodologia de Alta Conversão)**:
+  * Reposicionamento da Headline e Subtítulo focados na dor e no desejo final do cliente ideal (Herói da jornada).
+  * Criação da seção visual do "Plano de 3 Passos" conectando a jornada simplificada de áudio no WhatsApp até a publicação em 96h.
+  * Inserção do "Manifesto de Autoridade" (Conexão Filosófica) combatendo a escravidão diária do algoritmo das redes sociais.
+  * Adoção de CTAs com comandos mais diretos, assertivos e focados na conversão ("Garantir...", "Quero...").
+  * Implementação de fallback seguro offline para o avatar da médica no slider.
 * **[Junho/2026] 6 Melhorias Estratégicas de Conversão**:
   * Implementado Banner de Urgência inteligente com escassez baseada no dia do visitante.
   * Aprimorado o efeito de transição de Fase 1 para Fase 2 com fade-blur cinematográfico.
