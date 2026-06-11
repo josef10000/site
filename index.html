@@ -678,16 +678,16 @@
                         <div class="bg-gradient-to-b from-slate-900 to-black border border-slate-800 p-8 rounded-3xl relative z-10 flex flex-col justify-between hover:border-purple-500/40 transition-colors shadow-xl group">
                             <div>
                                 <div class="w-16 h-16 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
-                                    <i class="fas fa-paper-plane"></i>
+                                    <i class="fas fa-rocket"></i>
                                 </div>
                                 <span class="text-xs font-bold text-purple-400 uppercase tracking-widest block mb-2">Passo 3</span>
-                                <h3 class="text-xl font-bold text-white mb-4">No ar em 96 Horas</h3>
+                                <h3 class="text-xl font-bold text-white mb-4">Site + Portal Hub Ativos</h3>
                                 <p class="text-slate-400 text-sm leading-relaxed">
-                                    <strong>Espera Zero.</strong> Enquanto agências tradicionais pedem 45 dias, a Hub Symples coloca a sua Marca de Autoridade no ar em exatas 96 horas úteis.
+                                    <strong>Espera Zero.</strong> Em exatas 96h úteis, seu site de luxo entra no ar e você recebe as chaves do **Portal Hub** com todo o ecossistema de gestão de negócios ativo.
                                 </p>
                             </div>
                             <div class="mt-6 flex items-center gap-2 text-xs text-slate-500 font-medium select-none">
-                                <i class="fas fa-check-circle text-green-500"></i> Entrega em 96h úteis
+                                <i class="fas fa-check-circle text-green-500"></i> Liberação em 96h úteis
                             </div>
                         </div>
                     </div>
@@ -700,6 +700,277 @@
                     </div>
                 </div>
             </section>
+
+            <!-- ========================================== -->
+            <!-- NOVA SEÇÃO: O PORTAL HUB - SISTEMA DE GESTÃO -->
+            <!-- ========================================== -->
+            <section class="py-16 md:py-24 bg-darker relative z-10 border-t border-slate-900 overflow-hidden" id="secao-portal">
+                <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-accent/5 blur-[120px] rounded-full pointer-events-none"></div>
+                <div class="container mx-auto px-6 max-w-6xl relative z-10">
+                    <div class="text-center mb-16">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/30 bg-accent/10 text-accent text-xs md:text-sm font-semibold mb-6">
+                            <i class="fas fa-cubes"></i> Sistema All-in-One Incluso
+                        </div>
+                        <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white">A Sala de Controle do seu Negócio.</h2>
+                        <p class="text-lg text-slate-400 max-w-3xl mx-auto">Mais do que um site luxuoso. Todos os planos dão acesso completo ao **Portal Hub**, a ferramenta de gestão que automatiza a rotina da sua empresa.</p>
+                    </div>
+
+                    <!-- Interface do Dashboard Simulada -->
+                    <div class="bg-black border border-slate-800 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row min-h-[500px]">
+                        
+                        <!-- Sidebar Lateral do Mockup -->
+                        <div class="w-full md:w-64 bg-[#050505] border-r border-slate-900 p-6 flex flex-col gap-6 flex-shrink-0">
+                            <!-- Logo / Nome no Portal -->
+                            <div class="flex items-center gap-2 pb-6 border-b border-slate-900">
+                                <div class="w-8 h-8 rounded-lg bg-accent flex items-center justify-center text-white font-black text-sm">H</div>
+                                <span class="text-white font-extrabold tracking-tight text-base">Portal Hub</span>
+                                <span class="text-[9px] font-bold text-accent bg-accent/10 border border-accent/20 px-1.5 py-0.5 rounded-full uppercase ml-auto">VIP</span>
+                            </div>
+                            
+                            <!-- Links de Menu (Abas Clicáveis) -->
+                            <nav class="flex flex-col gap-1.5">
+                                <button onclick="trocarAbaPortal(event, 'financeiro')" class="portal-tab-btn flex items-center gap-3 text-slate-400 hover:text-white px-4 py-3 rounded-xl transition-all text-sm font-semibold text-left w-full hover:bg-slate-900 border border-transparent hover:border-slate-800 active-portal-tab bg-slate-900 text-white border-slate-800/80">
+                                    <i class="fas fa-calendar-check text-accent text-base"></i>
+                                    <span>Agenda & Finanças</span>
+                                </button>
+                                <button onclick="trocarAbaPortal(event, 'estoque')" class="portal-tab-btn flex items-center gap-3 text-slate-400 hover:text-white px-4 py-3 rounded-xl transition-all text-sm font-semibold text-left w-full hover:bg-slate-900 border border-transparent hover:border-slate-800">
+                                    <i class="fas fa-calculator text-blue-400 text-base"></i>
+                                    <span>Estoque & Orçamentos</span>
+                                </button>
+                                <button onclick="trocarAbaPortal(event, 'crescimento')" class="portal-tab-btn flex items-center gap-3 text-slate-400 hover:text-white px-4 py-3 rounded-xl transition-all text-sm font-semibold text-left w-full hover:bg-slate-900 border border-transparent hover:border-slate-800">
+                                    <i class="fas fa-chart-line text-purple-400 text-base"></i>
+                                    <span>Hub de Crescimento</span>
+                                </button>
+                                <button onclick="trocarAbaPortal(event, 'suporte')" class="portal-tab-btn flex items-center gap-3 text-slate-400 hover:text-white px-4 py-3 rounded-xl transition-all text-sm font-semibold text-left w-full hover:bg-slate-900 border border-transparent hover:border-slate-800">
+                                    <i class="fas fa-user-shield text-green-400 text-base"></i>
+                                    <span>Suporte & Perfil</span>
+                                </button>
+                            </nav>
+
+                            <!-- Mini Card do Perfil Sincronizado -->
+                            <div class="mt-auto bg-slate-950 border border-slate-900/60 p-3 rounded-xl flex items-center gap-2.5">
+                                <div class="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent text-xs font-bold"><i class="fas fa-user"></i></div>
+                                <div class="flex flex-col min-w-0">
+                                    <span class="text-xs font-bold text-white truncate">Seu Negócio</span>
+                                    <span class="text-[9px] text-slate-500 truncate" id="portal-profile-phone">+55 (11) 99999-9999</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Painel de Exibição Dinâmico -->
+                        <div class="flex-grow p-6 md:p-8 bg-[#09090b] relative flex flex-col justify-center overflow-hidden min-h-[400px]">
+                            
+                            <!-- Efeitos de iluminação de fundo no painel -->
+                            <div class="absolute inset-0 bg-gradient-to-tr from-accent/5 via-transparent to-transparent pointer-events-none"></div>
+
+                            <!-- PAINEL 1: AGENDA & FINANÇAS -->
+                            <div id="portal-panel-financeiro" class="portal-panel space-y-6 transition-all duration-300 transform opacity-100 translate-x-0 relative z-10">
+                                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white flex items-center gap-2"><i class="fas fa-calendar-check text-accent"></i> Sincronização Inteligente de Agendamento</h3>
+                                        <p class="text-xs text-slate-400 mt-1">Conclua o serviço na sua agenda e o financeiro é atualizado automaticamente.</p>
+                                    </div>
+                                    <span class="bg-accent/10 border border-accent/20 text-accent text-[10px] font-bold px-2 py-1 rounded-md self-start md:self-auto flex items-center gap-1"><i class="fas fa-sync fa-spin"></i> Integração Ativa</span>
+                                </div>
+
+                                <!-- Grid de Demonstração -->
+                                <div class="grid md:grid-cols-12 gap-5 items-stretch">
+                                    <!-- Bloco 1: Agenda -->
+                                    <div class="md:col-span-7 bg-[#050505]/60 border border-slate-900 rounded-2xl p-5 flex flex-col justify-between">
+                                        <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-4">Agenda do Dia</span>
+                                        <div class="space-y-3">
+                                            <div class="flex items-center justify-between bg-slate-950 border border-slate-900 rounded-xl p-3">
+                                                <div class="flex items-center gap-3">
+                                                    <div class="w-2.5 h-2.5 rounded-full bg-yellow-500 animate-pulse"></div>
+                                                    <div>
+                                                        <h4 class="text-xs font-bold text-white">Roberto Albuquerque</h4>
+                                                        <span class="text-[10px] text-slate-500">14:00 - Serviço Premium</span>
+                                                    </div>
+                                                </div>
+                                                <span class="text-xs font-extrabold text-white">R$ 150,00</span>
+                                            </div>
+                                            <!-- Agendamento que será concluído em simulação -->
+                                            <div class="flex items-center justify-between bg-slate-950 border border-slate-800 rounded-xl p-3 relative overflow-hidden group">
+                                                <div class="flex items-center gap-3">
+                                                    <div class="w-2.5 h-2.5 rounded-full bg-accent" id="agenda-status-dot"></div>
+                                                    <div>
+                                                        <h4 class="text-xs font-bold text-white">Marina Silva</h4>
+                                                        <span class="text-[10px] text-slate-500">16:30 - Harmonização Sutil</span>
+                                                    </div>
+                                                </div>
+                                                <div class="flex items-center gap-3">
+                                                    <span class="text-xs font-extrabold text-white" id="agenda-price">R$ 450,00</span>
+                                                    <button onclick="simularConclusaoServico(this)" class="bg-accent hover:bg-accent/80 text-white font-bold text-[10px] px-3 py-1.5 rounded-lg transition-all shadow-md hover:scale-[1.03] active:scale-[0.97]" id="btn-concluir-servico">Concluir</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="text-[10px] text-slate-500 mt-4"><i class="fas fa-info-circle"></i> Clique no botão <strong>Concluir</strong> acima para simular a sincronização.</p>
+                                    </div>
+                                    
+                                    <!-- Bloco 2: Financeiro -->
+                                    <div class="md:col-span-5 bg-[#050505]/60 border border-slate-900 rounded-2xl p-5 flex flex-col justify-between">
+                                        <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-4">Painel Financeiro</span>
+                                        <div class="space-y-4">
+                                            <div class="bg-slate-950 border border-slate-900/60 p-4 rounded-xl">
+                                                <span class="text-[10px] text-slate-500 block">Faturamento Mensal</span>
+                                                <span class="text-2xl font-black text-white mt-1 block transition-all duration-500" id="fin-faturamento">R$ 4.250,00</span>
+                                            </div>
+                                            <div class="bg-slate-950 border border-slate-900/60 p-4 rounded-xl">
+                                                <span class="text-[10px] text-slate-500 block">Lucro Líquido (Real)</span>
+                                                <span class="text-2xl font-black text-green-400 mt-1 block transition-all duration-500" id="fin-lucro">R$ 2.975,00</span>
+                                            </div>
+                                        </div>
+                                        <span class="text-[9px] text-green-500/80 font-bold block mt-4"><i class="fas fa-check"></i> Impostos e custos deduzidos na tela.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PAINEL 2: ESTOQUE & ORÇAMENTOS -->
+                            <div id="portal-panel-estoque" class="portal-panel space-y-6 transition-all duration-300 transform opacity-0 translate-x-10 absolute inset-0 p-6 md:p-8 hidden relative z-10">
+                                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white flex items-center gap-2"><i class="fas fa-calculator text-blue-400"></i> Orçamentação Inteligente de Insumos</h3>
+                                        <p class="text-xs text-slate-400 mt-1">Selecione insumos do estoque e calcule o valor exato a ser cobrado.</p>
+                                    </div>
+                                    <span class="bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold px-2 py-1 rounded-md self-start md:self-auto flex items-center gap-1"><i class="fas fa-boxes"></i> Estoque Integrado</span>
+                                </div>
+
+                                <div class="grid md:grid-cols-12 gap-5 items-stretch">
+                                    <!-- Bloco 1: Formulário Calculadora -->
+                                    <div class="md:col-span-7 bg-[#050505]/60 border border-slate-900 rounded-2xl p-5 space-y-4">
+                                        <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest block">Calculadora de Orçamento</span>
+                                        <div class="grid grid-cols-2 gap-3">
+                                            <div class="flex flex-col gap-1.5">
+                                                <label class="text-[10px] text-slate-400 font-bold">Mão de Obra (R$)</label>
+                                                <input type="number" id="calc-mao-obra" value="120" oninput="calcularOrcamentoPortal()" class="bg-slate-950 border border-slate-800 text-white text-xs rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500 transition-colors">
+                                            </div>
+                                            <div class="flex flex-col gap-1.5">
+                                                <label class="text-[10px] text-slate-400 font-bold">Margem Lucro (%)</label>
+                                                <input type="number" id="calc-margem" value="40" oninput="calcularOrcamentoPortal()" class="bg-slate-950 border border-slate-800 text-white text-xs rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500 transition-colors">
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col gap-1.5">
+                                            <label class="text-[10px] text-slate-400 font-bold">Selecionar Insumo do Estoque</label>
+                                            <select id="calc-insumo" onchange="calcularOrcamentoPortal()" class="bg-slate-950 border border-slate-800 text-slate-300 text-xs rounded-lg px-3 py-2.5 focus:outline-none focus:border-blue-500 transition-colors">
+                                                <option value="45.00">Ácido Hialurônico (1 ampola) — R$ 45,00 em estoque</option>
+                                                <option value="95.00">Toxina Botulínica (1 dose) — R$ 95,00 em estoque</option>
+                                                <option value="15.00">Luvas & Seringas Estéreis — R$ 15,00 em estoque</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Bloco 2: Resultado -->
+                                    <div class="md:col-span-5 bg-[#050505]/60 border border-slate-900 rounded-2xl p-5 flex flex-col justify-between">
+                                        <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-4">Preço Recomendado</span>
+                                        <div class="bg-slate-950 border border-blue-500/20 p-5 rounded-xl text-center shadow-lg relative overflow-hidden">
+                                            <div class="absolute inset-0 bg-blue-500/[0.02] pointer-events-none"></div>
+                                            <span class="text-[10px] text-blue-400 font-bold block mb-1">Preço Sugerido de Venda</span>
+                                            <span class="text-3xl font-black text-white block tracking-tight" id="calc-preco-final">R$ 231,00</span>
+                                            <div class="flex justify-between items-center text-[9px] text-slate-500 mt-4 border-t border-slate-900 pt-3">
+                                                <span>Custo do Insumo:</span>
+                                                <span id="calc-custo-insumo">R$ 45,00</span>
+                                            </div>
+                                            <div class="flex justify-between items-center text-[9px] text-slate-500 mt-1">
+                                                <span>Lucro Bruto:</span>
+                                                <span class="text-green-400" id="calc-lucro-bruto">R$ 66,00</span>
+                                            </div>
+                                        </div>
+                                        <span class="text-[9px] text-slate-500 text-center block mt-4"><i class="fas fa-shield-alt"></i> Cálculo baseado na margem sobre o custo total.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PAINEL 3: HUB DE CRESCIMENTO -->
+                            <div id="portal-panel-crescimento" class="portal-panel space-y-6 transition-all duration-300 transform opacity-0 translate-x-10 absolute inset-0 p-6 md:p-8 hidden relative z-10">
+                                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white flex items-center gap-2"><i class="fas fa-chart-line text-purple-400"></i> Hub de Crescimento & Arsenal</h3>
+                                        <p class="text-xs text-slate-400 mt-1">Sua caixa de ferramentas com recursos e templates de atendimento rápidos.</p>
+                                    </div>
+                                    <span class="bg-purple-500/10 border border-purple-500/20 text-purple-400 text-[10px] font-bold px-2 py-1 rounded-md self-start md:self-auto flex items-center gap-1"><i class="fas fa-rocket"></i> Aceleração Digital</span>
+                                </div>
+
+                                <div class="grid md:grid-cols-3 gap-4">
+                                    <!-- Recurso 1 -->
+                                    <div class="bg-[#050505]/60 border border-slate-900 hover:border-purple-500/30 transition-all rounded-2xl p-5 flex flex-col justify-between group">
+                                        <div>
+                                            <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 text-sm mb-4 group-hover:scale-105 transition-transform"><i class="fas fa-photo-video"></i></div>
+                                            <h4 class="text-xs font-bold text-white">Mídias & Logos</h4>
+                                            <p class="text-[10px] text-slate-400 leading-relaxed mt-1">Suas identidades visuais estruturadas e logos em SVG/PNG transparente sempre à mão.</p>
+                                        </div>
+                                        <button class="w-full mt-4 bg-slate-950 border border-slate-800 hover:bg-slate-900 text-[9px] font-bold text-slate-300 py-2 rounded-lg transition-colors flex items-center justify-center gap-1" onclick="event.preventDefault(); alert('Simulação: Download do Kit de mídias iniciado.');"><i class="fas fa-download"></i> Baixar Kit Completo</button>
+                                    </div>
+                                    
+                                    <!-- Recurso 2 -->
+                                    <div class="bg-[#050505]/60 border border-slate-900 hover:border-purple-500/30 transition-all rounded-2xl p-5 flex flex-col justify-between group">
+                                        <div>
+                                            <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 text-sm mb-4 group-hover:scale-105 transition-transform"><i class="fas fa-comments"></i></div>
+                                            <h4 class="text-xs font-bold text-white">Templates de Vendas</h4>
+                                            <p class="text-[10px] text-slate-400 leading-relaxed mt-1">Scripts prontos de abordagem e mensagens prontas para enviar a clientes no WhatsApp.</p>
+                                        </div>
+                                        <button class="w-full mt-4 bg-slate-950 border border-slate-800 hover:bg-slate-900 text-[9px] font-bold text-slate-300 py-2 rounded-lg transition-colors flex items-center justify-center gap-1" onclick="event.preventDefault(); alert('Simulação: Scripts copiados para a área de transferência.');"><i class="far fa-copy"></i> Copiar Scripts</button>
+                                    </div>
+                                    
+                                    <!-- Recurso 3 -->
+                                    <div class="bg-[#050505]/60 border border-slate-900 hover:border-purple-500/30 transition-all rounded-2xl p-5 flex flex-col justify-between group">
+                                        <div>
+                                            <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 text-sm mb-4 group-hover:scale-105 transition-transform"><i class="fas fa-graduation-cap"></i></div>
+                                            <h4 class="text-xs font-bold text-white">Aulas Práticas</h4>
+                                            <p class="text-[10px] text-slate-400 leading-relaxed mt-1">Treinamentos dinâmicos de marketing, tráfego local e gestão de pequenos negócios.</p>
+                                        </div>
+                                        <button class="w-full mt-4 bg-slate-950 border border-slate-800 hover:bg-slate-900 text-[9px] font-bold text-slate-300 py-2 rounded-lg transition-colors flex items-center justify-center gap-1" onclick="event.preventDefault(); alert('Simulação: Direcionando para área de aulas práticas.');"><i class="fas fa-play"></i> Acessar Aulas</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PAINEL 4: SUPORTE & PERFIL -->
+                            <div id="portal-panel-suporte" class="portal-panel space-y-6 transition-all duration-300 transform opacity-0 translate-x-10 absolute inset-0 p-6 md:p-8 hidden relative z-10">
+                                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white flex items-center gap-2"><i class="fas fa-user-shield text-green-400"></i> Perfil & Suporte Integrado</h3>
+                                        <p class="text-xs text-slate-400 mt-1">Mantenha seus dados atualizados e solicite alterações no site com um clique.</p>
+                                    </div>
+                                    <span class="bg-green-500/10 border border-green-500/20 text-green-400 text-[10px] font-bold px-2 py-1 rounded-md self-start md:self-auto flex items-center gap-1"><i class="fas fa-check"></i> Dados Sincronizados</span>
+                                </div>
+
+                                <div class="grid md:grid-cols-12 gap-5 items-stretch">
+                                    <!-- Bloco 1: Perfil (Telefone) -->
+                                    <div class="md:col-span-6 bg-[#050505]/60 border border-slate-900 rounded-2xl p-5 flex flex-col justify-between">
+                                        <div class="space-y-4">
+                                            <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest block">Editar Perfil do Negócio</span>
+                                            <div class="flex flex-col gap-1.5">
+                                                <label class="text-[10px] text-slate-400 font-bold">WhatsApp Comercial (Sincronizado no CRM)</label>
+                                                <div class="flex gap-2">
+                                                    <input type="text" id="perfil-telefone" placeholder="+55 (11) 95292-4208" class="flex-grow bg-slate-950 border border-slate-800 text-white text-xs rounded-lg px-3 py-2 focus:outline-none focus:border-green-500 transition-colors">
+                                                    <button onclick="atualizarTelefonePortal()" class="bg-green-500 hover:bg-green-600 text-white font-bold text-xs px-4 py-2 rounded-lg transition-colors hover:scale-[1.02] active:scale-[0.98]">Salvar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="text-[9px] text-green-400/90 font-bold block mt-4" id="perfil-sync-aviso"><i class="fas fa-sync"></i> Insira o telefone e salve para atualizar no CRM.</span>
+                                    </div>
+                                    
+                                    <!-- Bloco 2: Suporte (Chamados) -->
+                                    <div class="md:col-span-6 bg-[#050505]/60 border border-slate-900 rounded-2xl p-5 flex flex-col justify-between">
+                                        <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-4">Solicitar Atualização no Site</span>
+                                        <div class="space-y-3">
+                                            <div class="flex flex-col gap-1">
+                                                <label class="text-[9px] text-slate-400 font-bold">Qual alteração você precisa?</label>
+                                                <textarea id="suporte-mensagem" rows="2" placeholder="Ex: Alterar meu endereço ou mandar fotos novas da clínica..." class="bg-slate-950 border border-slate-800 text-white text-xs rounded-lg px-3 py-2 focus:outline-none focus:border-green-500 transition-colors resize-none"></textarea>
+                                            </div>
+                                            <button onclick="enviarChamadoSuporte(this)" class="w-full bg-slate-900 border border-slate-800 hover:bg-slate-800 hover:border-slate-700 text-white font-bold text-xs py-2 rounded-lg transition-colors">Enviar Chamado para Suporte</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================================== -->
+            <!-- NOVA SEÇÃO: INFLUENCIADORES & CRIADORES -->
+            <!-- ========================================== -->
 
 
             <!-- ========================================== -->
@@ -1109,6 +1380,7 @@
                                 <li class="flex items-start gap-3"><i class="fas fa-rocket text-green-500 mt-1"></i> <span class="text-slate-200 font-medium">Site Premium de Alta Conversão</span></li>
                                 <li class="flex items-start gap-3"><i class="fas fa-pen-nib text-green-500 mt-1"></i> <span class="text-slate-200 font-medium">Copywriting Persuasivo</span></li>
                                 <li class="flex items-start gap-3"><i class="fas fa-mobile-alt text-green-500 mt-1"></i> <span class="text-slate-200 font-medium">Design Mobile-First</span></li>
+                                <li class="flex items-start gap-3 bg-green-500/10 p-2 rounded -mx-2 border border-green-500/20"><i class="fas fa-cubes text-green-400 mt-1"></i> <span class="text-white font-semibold">Portal Hub de Gestão (Incluso)</span></li>
     
                                 <li class="pt-2 pb-1"><div class="h-px w-full bg-slate-800"></div></li>
     
@@ -1144,6 +1416,7 @@
                             <ul class="space-y-3 mb-8 flex-grow">
                                 <li class="flex items-start gap-3"><i class="fas fa-star text-accent mt-1"></i> <span class="font-bold text-white">Tudo da Fase 1 (Start) +</span></li>
                                 <li class="flex items-start gap-3 bg-accent/10 p-2 rounded -mx-2 border border-accent/20"><i class="fas fa-globe text-accent mt-1"></i> <span class="text-white font-semibold">Domínio Próprio (.com.br)</span></li>
+                                <li class="flex items-start gap-3 bg-accent/10 p-2 rounded -mx-2 border border-accent/20"><i class="fas fa-cubes text-accent mt-1"></i> <span class="text-white font-semibold">Portal Hub de Gestão (Incluso)</span></li>
                                 <li class="flex items-start gap-3"><i class="fas fa-envelope-open-text text-accent mt-1"></i> <span class="text-slate-200 font-medium">E-mail Profissional (contato@)</span></li>
                                 <li class="flex items-start gap-3"><i class="fas fa-search text-accent mt-1"></i> <span class="text-slate-200 font-medium">Otimização Básica SEO</span></li>
     
@@ -1179,6 +1452,7 @@
                             <ul class="space-y-3 mb-8 flex-grow">
                                 <li class="flex items-start gap-3"><i class="fas fa-star text-purple-500 mt-1"></i> <span class="font-bold text-white">Tudo da Fase 2 (Pro) +</span></li>
                                 <li class="flex items-start gap-3 bg-purple-500/10 p-2 rounded -mx-2 border border-purple-500/20"><i class="fas fa-robot text-purple-400 mt-1"></i> <span class="text-white font-semibold">Automação de WhatsApp (Robô)</span></li>
+                                <li class="flex items-start gap-3 bg-purple-500/10 p-2 rounded -mx-2 border border-purple-500/20"><i class="fas fa-cubes text-purple-400 mt-1"></i> <span class="text-white font-semibold">Portal Hub de Gestão (Incluso)</span></li>
                                 <li class="flex items-start gap-3"><i class="fas fa-calendar-check text-purple-400 mt-1"></i> <span class="text-slate-200 font-medium">Agendamento Automático 24h</span></li>
                                 <li class="flex items-start gap-3"><i class="fas fa-filter text-purple-400 mt-1"></i> <span class="text-slate-200 font-medium">Triagem de Clientes e Marcas</span></li>
     
@@ -1244,6 +1518,19 @@
                             <div class="faq-collapse max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out">
                                 <p class="px-6 pb-6 text-slate-400 text-sm md:text-base leading-relaxed border-t border-slate-900 pt-4">
                                     Com a Hub Symples você nunca fica desamparado. Você ganha acesso exclusivo ao <strong>Portal do Assinante</strong>, um painel interativo onde pode solicitar qualquer alteração de textos, fotos, botões ou novas informações a qualquer momento, sem limites e sem custos adicionais. Nossa equipe realiza as alterações para você de forma ágil e proativa.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Pergunta 4 -->
+                        <div class="faq-item bg-black/50 border border-slate-800 rounded-2xl overflow-hidden shadow-lg transition-colors duration-300 hover:border-slate-700">
+                            <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 outline-none focus:outline-none">
+                                <span class="font-bold text-base md:text-lg text-white group-hover:text-accent transition-colors">O que é o Portal Hub de gestão e ele tem custo extra?</span>
+                                <span class="faq-icon w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center text-slate-400 transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                            </button>
+                            <div class="faq-collapse max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <p class="px-6 pb-6 text-slate-400 text-sm md:text-base leading-relaxed border-t border-slate-900 pt-4">
+                                    O <strong>Portal Hub</strong> é a sua plataforma exclusiva de gestão empresarial e crescimento. Todos os planos da Hub Symples têm acesso completo a todos os módulos: sistema de agendamento de serviços, CRM financeiro integrado (que adiciona faturamento automaticamente quando o serviço é concluído na agenda), calculadora de orçamentos vinculada ao estoque de insumos, e o Hub de Crescimento & Arsenal de Vendas (com templates de atendimento, vídeo-aulas e arquivos de mídia). **Não há nenhum custo adicional ou mensalidades extras** para usar todo esse ecossistema.
                                 </p>
                             </div>
                         </div>
@@ -2215,7 +2502,7 @@
               };
               animateId = requestAnimationFrame(update);
 
-              // ResizeObserver para monitorar o tamanho real e lidar com display: none -> block de forma instantânea
+             // ResizeObserver para monitorar o tamanho real e lidar com display: none -> block de forma instantânea
               const resizeObserver = new ResizeObserver(entries => {
                 for (let entry of entries) {
                   const width = entry.contentRect.width || ctn.offsetWidth;
@@ -2237,6 +2524,143 @@
               initAurora();
             }
         })();
+
+        // Gerenciador de Abas do Portal Hub
+        function trocarAbaPortal(event, abaId) {
+            if (event) event.preventDefault();
+            
+            // Atualiza estados dos botões
+            const botoes = document.querySelectorAll('.portal-tab-btn');
+            botoes.forEach(btn => {
+                btn.className = "portal-tab-btn flex items-center gap-3 text-slate-400 hover:text-white px-4 py-3 rounded-xl transition-all text-sm font-semibold text-left w-full hover:bg-slate-900 border border-transparent hover:border-slate-800";
+            });
+            
+            const btnAtivo = event ? event.currentTarget : document.querySelector(`button[onclick*="${abaId}"]`);
+            if (btnAtivo) {
+                let colorClass = "text-accent";
+                if (abaId === 'estoque') colorClass = "text-blue-400";
+                if (abaId === 'crescimento') colorClass = "text-purple-400";
+                if (abaId === 'suporte') colorClass = "text-green-400";
+                
+                btnAtivo.className = `portal-tab-btn flex items-center gap-3 bg-slate-900 text-white border border-slate-800/80 px-4 py-3 rounded-xl transition-all text-sm font-semibold text-left w-full`;
+                const icon = btnAtivo.querySelector('i');
+                if (icon) {
+                    icon.className = icon.className.replace(/text-\w+-\d+/, colorClass);
+                }
+            }
+            
+            // Esconde todos os painéis
+            const paineis = document.querySelectorAll('.portal-panel');
+            paineis.forEach(painel => {
+                painel.classList.add('hidden', 'opacity-0', 'translate-x-10');
+                painel.classList.remove('opacity-100', 'translate-x-0');
+            });
+            
+            // Exibe o painel selecionado com animação
+            const painelAtivo = document.getElementById(`portal-panel-${abaId}`);
+            if (painelAtivo) {
+                painelAtivo.classList.remove('hidden');
+                setTimeout(() => {
+                    painelAtivo.classList.remove('opacity-0', 'translate-x-10');
+                    painelAtivo.classList.add('opacity-100', 'translate-x-0');
+                }, 50);
+            }
+        }
+
+        // Simulação de Conclusão de Serviço para atualização financeira
+        function simularConclusaoServico(btn) {
+            if (btn.disabled) return;
+            btn.disabled = true;
+            btn.textContent = "Concluído";
+            btn.className = "bg-green-500/20 text-green-400 border border-green-500/30 font-bold text-[10px] px-3 py-1.5 rounded-lg cursor-default";
+            
+            const dot = document.getElementById('agenda-status-dot');
+            if (dot) {
+                dot.classList.remove('bg-accent');
+                dot.classList.add('bg-green-500');
+            }
+            
+            // Animação dos números do financeiro
+            const faturamentoEl = document.getElementById('fin-faturamento');
+            const lucroEl = document.getElementById('fin-lucro');
+            
+            if (faturamentoEl && lucroEl) {
+                faturamentoEl.classList.add('text-green-400', 'scale-105');
+                lucroEl.classList.add('text-green-500', 'scale-105');
+                
+                setTimeout(() => {
+                    faturamentoEl.textContent = "R$ 4.700,00";
+                    lucroEl.textContent = "R$ 3.290,00";
+                }, 300);
+                
+                setTimeout(() => {
+                    faturamentoEl.classList.remove('text-green-400', 'scale-105');
+                    lucroEl.classList.remove('text-green-500', 'scale-105');
+                }, 800);
+            }
+        }
+
+        // Simulação de Cálculo de Orçamento integrado no Portal
+        function calcularOrcamentoPortal() {
+            const maoObra = parseFloat(document.getElementById('calc-mao-obra').value) || 0;
+            const margem = parseFloat(document.getElementById('calc-margem').value) || 0;
+            const custoInsumo = parseFloat(document.getElementById('calc-insumo').value) || 0;
+            
+            const custoTotal = maoObra + custoInsumo;
+            const precoSugerido = custoTotal * (1 + (margem / 100));
+            const lucroBruto = precoSugerido - custoTotal;
+            
+            const finalPriceEl = document.getElementById('calc-preco-final');
+            const insumoPriceEl = document.getElementById('calc-custo-insumo');
+            const brutoPriceEl = document.getElementById('calc-lucro-bruto');
+            
+            if (finalPriceEl) finalPriceEl.textContent = "R$ " + precoSugerido.toFixed(2).replace('.', ',');
+            if (insumoPriceEl) insumoPriceEl.textContent = "R$ " + custoInsumo.toFixed(2).replace('.', ',');
+            if (brutoPriceEl) brutoPriceEl.textContent = "R$ " + lucroBruto.toFixed(2).replace('.', ',');
+        }
+
+        // Simulação de atualização de telefone perfil -> CRM
+        function atualizarTelefonePortal() {
+            const telInput = document.getElementById('perfil-telefone');
+            const syncAviso = document.getElementById('perfil-sync-aviso');
+            const profilePhoneEl = document.getElementById('portal-profile-phone');
+            
+            if (telInput && telInput.value.trim() !== '') {
+                const novoTel = telInput.value.trim();
+                if (profilePhoneEl) profilePhoneEl.textContent = novoTel;
+                
+                if (syncAviso) {
+                    syncAviso.innerHTML = `<i class="fas fa-check-circle text-green-400"></i> Telefone sincronizado com o CRM e site!`;
+                    syncAviso.className = "text-[9px] text-green-400 font-bold block mt-4 animate-bounce";
+                    
+                    setTimeout(() => {
+                        syncAviso.classList.remove('animate-bounce');
+                    }, 1500);
+                }
+            }
+        }
+
+        // Simulação de envio de chamado de suporte
+        function enviarChamadoSuporte(btn) {
+            const msgArea = document.getElementById('suporte-mensagem');
+            if (!msgArea || msgArea.value.trim() === '') return;
+            
+            const originalText = btn.textContent;
+            btn.disabled = true;
+            btn.textContent = "Enviando Chamado...";
+            
+            setTimeout(() => {
+                btn.textContent = "Chamado Aberto!";
+                btn.className = "w-full bg-green-500/20 text-green-400 border border-green-500/30 font-bold text-xs py-2 rounded-lg cursor-default";
+                msgArea.value = '';
+                
+                setTimeout(() => {
+                    btn.disabled = false;
+                    btn.textContent = originalText;
+                    btn.className = "w-full bg-slate-900 border border-slate-800 hover:bg-slate-800 hover:border-slate-700 text-white font-bold text-xs py-2 rounded-lg transition-colors";
+                }, 3000);
+            }, 1200);
+        }
     </script>
 </body>
 </html>
