@@ -60,6 +60,38 @@
             color: #111827;
         }
 
+        /* Textura de ruído de papel clássico de jornal */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.055;
+            mix-blend-mode: multiply;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* Borda Oxford clássica (linha dupla de imprensa) */
+        .border-oxford-y {
+            border-top: 4px double #000;
+            border-bottom: 4px double #000;
+        }
+        .border-oxford-b {
+            border-bottom: 4px double #000;
+        }
+        .border-oxford-t {
+            border-top: 4px double #000;
+        }
+
+        /* Efeito de gravura de jornal antigo */
+        .newspaper-gravura {
+            filter: grayscale(1) contrast(1.2) brightness(0.95);
+        }
+
         .number-transition {
             transition: all 0.3s ease-out;
         }
@@ -114,7 +146,7 @@
                 
                 <header class="mb-10 text-center">
                     <h2 class="text-5xl md:text-7xl lg:text-[6rem] font-newsTitle font-black tracking-tight mb-4 text-gray-900">O Diário do Mercado</h2>
-                    <div class="flex flex-col md:flex-row justify-between items-center border-y-4 border-double border-gray-800 py-3 mt-2 text-xs md:text-sm font-bold uppercase tracking-widest gap-2 font-sans text-gray-700">
+                    <div class="flex flex-col md:flex-row justify-between items-center border-oxford-y py-3 mt-2 text-xs md:text-sm font-bold uppercase tracking-widest gap-2 font-sans text-gray-700">
                         <span>Edição Especial: Presença Oficial</span>
                         <span>Sua Estrutura de Vendas Fora das Redes</span>
                         <span id="data-jornal" class="text-gray-900 font-black">Edição de Hoje</span>
@@ -162,13 +194,13 @@
                 <div class="text-center mt-auto relative z-30">
                     <p class="font-sans font-bold text-sm uppercase tracking-widest text-red-600 mb-4">Chega de depender de curtidas frias</p>
                     <a href="#" onclick="revelarNovaEra(event)" class="inline-flex items-center gap-3 bg-black text-white font-sans font-black text-lg md:text-xl px-10 py-5 rounded-none hover:bg-gray-800 transition-all transform hover:scale-105 shadow-2xl">
-                        REVELE A SUA NOVA ERA <i class="fas fa-arrow-up animate-bounce"></i>
+                        REVELE A SUA NOVA ERA ✦
                     </a>
                 </div>
             </div>
 
             <div class="container mx-auto max-w-6xl px-6 md:px-12 my-8">
-                <div class="border-t-4 border-double border-gray-800"></div>
+                <div class="border-oxford-t"></div>
             </div>
         </section>
 
@@ -205,12 +237,17 @@
                     <div class="grid lg:grid-cols-2 gap-12 items-center">
                         <div class="border-b lg:border-b-0 lg:border-r border-gray-400 pb-10 lg:pb-0 lg:pr-12">
                             <div class="inline-flex items-center gap-2 px-3 py-1 border border-black bg-black/5 text-black text-xs font-bold uppercase tracking-wider mb-6">
-                                <i class="fas fa-scroll"></i> O Manifesto da Autoridade
+                                <span>❦</span> O Manifesto da Autoridade
                             </div>
-                            <h2 class="text-3xl md:text-5xl font-newsTitle font-black mb-6 leading-tight text-gray-900 border-b border-black pb-4">Você estudou anos para ser um especialista, não um escravo do algoritmo.</h2>
-                            <p class="text-lg text-gray-800 mb-6 leading-relaxed font-serif text-justify">
+                            <h2 class="text-3xl md:text-5xl font-newsTitle font-black mb-6 leading-tight text-gray-900 border-oxford-b pb-4">Você estudou anos para ser um especialista, não um escravo do algoritmo.</h2>
+                            <p class="text-lg text-gray-800 mb-6 leading-relaxed font-serif text-justify drop-cap">
                                 Não é justo que o seu conhecimento técnico e anos de dedicação sejam reduzidos a um post quadrado que expira em 24 horas. O mercado ensinou você a ser refém do reels, a produzir conteúdo sem parar e a disputar atenção com entretenimento barato, enquanto seu verdadeiro valor é ignorado.
                             </p>
+                            <div class="flex items-center justify-center my-6 text-gray-500">
+                                <span class="h-px bg-gray-300 w-12 mr-3"></span>
+                                <span class="text-lg select-none">❦</span>
+                                <span class="h-px bg-gray-300 w-12 ml-3"></span>
+                            </div>
                             <p class="text-lg text-gray-800 mb-8 leading-relaxed font-serif text-justify">
                                 Nós acreditamos que profissionais de excelência merecem uma estrutura de excelência. O seu Hub de Autoridade é a sua <strong>declaração de independência das redes sociais</strong>. É onde você dita as regras, cobra o preço justo e atrai o cliente que busca qualidade.
                             </p>
@@ -218,23 +255,36 @@
 
                         <div class="space-y-6 lg:pl-4">
                             <!-- Cards de Filosofia (Estilo Classificados Antigos) -->
-                            <div class="bg-white border-2 border-gray-800 p-6 flex gap-4 items-start shadow-md relative">
-                                <div class="w-10 h-10 bg-black text-white flex items-center justify-center text-lg flex-shrink-0 mt-1">
-                                    <i class="fas fa-crown"></i>
+                            <div class="bg-white border-2 border-dashed border-black p-6 flex gap-4 items-start shadow-none relative text-black">
+                                <div class="w-10 h-10 border-2 border-black bg-white text-black flex items-center justify-center text-lg font-black flex-shrink-0 mt-1 rounded-none font-newsTitle select-none">
+                                    I
                                 </div>
                                 <div>
-                                    <h4 class="text-lg font-newsTitle font-black text-gray-900 mb-2 uppercase tracking-tight">I. Território Próprio</h4>
+                                    <h4 class="text-lg font-newsTitle font-black text-black mb-2 uppercase tracking-tight">I. Território Próprio</h4>
                                     <p class="text-gray-700 text-sm leading-relaxed font-serif">Tenha uma estrutura premium sob o seu próprio domínio. Aqui, o cliente avalia você pela sua competência real, e não pelo número de visualizações do seu último reels.</p>
                                 </div>
                             </div>
-                            <div class="bg-white border-2 border-gray-800 p-6 flex gap-4 items-start shadow-md relative">
-                                <div class="w-10 h-10 bg-black text-white flex items-center justify-center text-lg flex-shrink-0 mt-1">
-                                    <i class="fas fa-bullseye"></i>
+                            <div class="bg-white border-2 border-dashed border-black p-6 flex gap-4 items-start shadow-none relative text-black">
+                                <div class="w-10 h-10 border-2 border-black bg-white text-black flex items-center justify-center text-lg font-black flex-shrink-0 mt-1 rounded-none font-newsTitle select-none">
+                                    II
                                 </div>
                                 <div>
-                                    <h4 class="text-lg font-newsTitle font-black text-gray-900 mb-2 uppercase tracking-tight">II. Foco no seu Negócio</h4>
+                                    <h4 class="text-lg font-newsTitle font-black text-black mb-2 uppercase tracking-tight">II. Foco no seu Negócio</h4>
                                     <p class="text-gray-700 text-sm leading-relaxed font-serif">Deixe a atração qualificada de clientes rodando no piloto automático. Gaste o seu tempo faturando e entregando resultados, não editando vídeos.</p>
                                 </div>
+                            </div>
+                            <!-- Anúncio de Classificado Vintage Fictício -->
+                            <div class="bg-[#fcfbf7] border-2 border-dashed border-black p-6 flex flex-col gap-3 relative select-none">
+                                <div class="absolute -top-3 left-6 bg-black text-white text-[9px] font-black uppercase tracking-widest px-2.5 py-0.5 font-sans">
+                                    Aviso de Utilidade Pública
+                                </div>
+                                <div class="text-xs font-bold font-sans uppercase tracking-wider text-black border-b border-black pb-2 mt-1 flex justify-between">
+                                    <span>Seção: Resistência Digital</span>
+                                    <span>Nº 1889</span>
+                                </div>
+                                <p class="text-xs text-gray-800 leading-relaxed font-serif text-justify">
+                                    <strong>PROCURA-SE:</strong> Empreendedores e profissionais de excelência que estejam cansados de produzir dancinhas diárias e disputar a atenção com conteúdos fúteis. <em>Oferecemos refúgio imediato:</em> um endereço oficial de alta conversão, entregue pronto em 4 dias. Tratar diretamente no botão de WhatsApp abaixo.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -245,12 +295,12 @@
                 <div class="container mx-auto px-6 max-w-6xl">
                     <div class="text-center mb-12 md:mb-16">
                         <div class="inline-flex items-center gap-2 px-3 py-1 border border-black bg-black/5 text-black text-xs font-bold uppercase tracking-wider mb-6">
-                            <i class="fas fa-balance-scale"></i> A grande diferença
+                            <span>⚖</span> A grande diferença
                         </div>
                         <h2 class="text-3xl md:text-5xl font-newsTitle font-black mb-4 text-gray-900 leading-tight">Por que apenas ter Instagram está matando suas vendas?</h2>
                         <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-8 font-serif">Entenda a diferença entre um catálogo que faz o cliente pedir desconto, e um ambiente projetado para vender pelo seu valor real.</p>
                         <div class="bg-[#8b0000]/5 border border-[#8b0000]/30 p-4 max-w-3xl mx-auto rounded-none">
-                            <p class="text-xs md:text-sm text-[#8b0000] font-sans font-bold uppercase tracking-widest leading-relaxed"><i class="fas fa-exclamation-triangle mr-2"></i><strong>A dura verdade:</strong> A cada dia que você adia a criação do seu Hub, você está entregando clientes e parcerias para concorrentes que já possuem presença profissional.</p>
+                            <p class="text-xs md:text-sm text-[#8b0000] font-sans font-bold uppercase tracking-widest leading-relaxed"><strong>✦ A dura verdade:</strong> A cada dia que você adia a criação do seu Hub, você está entregando clientes e parcerias para concorrentes que já possuem presença profissional.</p>
                         </div>
                     </div>
 
@@ -334,7 +384,7 @@
                         <div class="relative w-full h-full bg-[#050505] overflow-hidden">
                             
                             <!-- LADO ANTES: A Vitrine Fria do Instagram (Fundo) -->
-                            <div class="absolute inset-0 w-full h-full bg-[#050505] text-white flex flex-col font-sans">
+                            <div class="absolute inset-0 w-full h-full bg-[#050505] text-white flex flex-col font-sans newspaper-gravura">
                                 
                                 <!-- Barra de Status do Celular -->
                                 <div class="flex justify-between items-center px-6 pt-3 pb-1 text-[9px] text-slate-400 font-semibold bg-[#050505] select-none">
@@ -454,7 +504,7 @@
                             <!-- LADO DEPOIS: O Hub de Autoridade da Symples (Sobreposição) -->
                             <div id="after-image" class="absolute inset-y-0 left-0 w-1/2 h-full overflow-hidden border-r-2 border-accent/70 shadow-[5px_0_15px_rgba(0,85,255,0.2)] z-10">
                                 <!-- Wrapper de largura fixa para evitar esmagamento/deformidade do conteúdo ao arrastar o slider -->
-                                <div class="absolute inset-y-0 left-0 w-[320px] h-full bg-slate-950 text-white flex flex-col font-sans">
+                                <div class="absolute inset-y-0 left-0 w-[320px] h-full bg-slate-950 text-white flex flex-col font-sans newspaper-gravura">
                                     
                                     <!-- Barra de Status do Celular -->
                                 <div class="flex justify-between items-center px-6 pt-3 pb-1 text-[9px] text-slate-500 font-semibold bg-[#030712] select-none">
@@ -621,9 +671,9 @@
                             <input type="range" min="0" max="100" value="50" id="comparison-slider" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30">
                             
                             <!-- LINHA GUIA VISUAL E ALÇA -->
-                            <div id="slider-bar" class="absolute inset-y-0 w-0.5 bg-accent pointer-events-none z-20 shadow-[0_0_10px_rgba(0,85,255,0.8)]" style="left: 50%;">
-                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center border border-white shadow-2xl pointer-events-none text-xs">
-                                    <i class="fas fa-arrows-alt-h text-sm"></i>
+                            <div id="slider-bar" class="absolute inset-y-0 w-0.5 bg-black pointer-events-none z-20" style="left: 50%;">
+                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-none bg-white text-black flex items-center justify-center border-2 border-black shadow-md pointer-events-none text-xs select-none">
+                                    ◀▶
                                 </div>
                             </div>
                         </div>
@@ -638,7 +688,7 @@
                 <div class="container mx-auto px-6 max-w-6xl relative z-10">
                     <div class="text-center mb-16">
                         <div class="inline-flex items-center gap-2 px-3 py-1 border border-black bg-black/5 text-black text-xs font-bold uppercase tracking-wider mb-6">
-                            <i class="fas fa-bolt"></i> O Método Hub Symples
+                            <span>✦</span> O Método Hub Symples
                         </div>
                         <h2 class="text-3xl md:text-5xl font-newsTitle font-black mb-4 text-gray-900 leading-tight">Tiramos todo o peso das suas costas.</h2>
                         <p class="text-lg text-gray-700 max-w-3xl mx-auto font-serif">Você assina, fala e nós trabalhamos. Sem formulários complexos. Construímos o seu Hub de Autoridade em 3 passos simples:</p>
@@ -651,8 +701,8 @@
                         <!-- Passo 1 -->
                         <div class="bg-white border-2 border-gray-800 p-8 rounded-none relative z-10 flex flex-col justify-between hover:border-black transition-colors shadow-md group">
                             <div>
-                                <div class="w-12 h-12 bg-black text-white flex items-center justify-center text-xl mb-6">
-                                    <i class="fab fa-whatsapp"></i>
+                                <div class="w-12 h-12 bg-black text-white flex items-center justify-center text-xl font-bold font-newsTitle mb-6 select-none">
+                                    I
                                 </div>
                                 <span class="text-xs font-bold text-gray-500 uppercase tracking-widest block mb-2">Passo 1</span>
                                 <h3 class="text-xl font-newsTitle font-black uppercase tracking-tight text-gray-900 mb-4">Você fala, nós escrevemos</h3>
@@ -661,15 +711,15 @@
                                 </p>
                             </div>
                             <div class="mt-6 flex items-center gap-2 text-xs text-gray-600 font-medium select-none">
-                                <i class="fas fa-clock"></i> Leva menos de 10 min
+                                <span>✦</span> Leva menos de 10 min
                             </div>
                         </div>
 
                         <!-- Passo 2 -->
                         <div class="bg-white border-2 border-gray-800 p-8 rounded-none relative z-10 flex flex-col justify-between hover:border-black transition-colors shadow-md group font-sans">
                             <div>
-                                <div class="w-12 h-12 bg-black text-white flex items-center justify-center text-xl mb-6">
-                                    <i class="fas fa-magic"></i>
+                                <div class="w-12 h-12 bg-black text-white flex items-center justify-center text-xl font-bold font-newsTitle mb-6 select-none">
+                                    II
                                 </div>
                                 <span class="text-xs font-bold text-gray-500 uppercase tracking-widest block mb-2">Passo 2</span>
                                 <h3 class="text-xl font-newsTitle font-black uppercase tracking-tight text-gray-900 mb-4">Design de Autoridade</h3>
@@ -678,15 +728,15 @@
                                 </p>
                             </div>
                             <div class="mt-6 flex items-center gap-2 text-xs text-gray-600 font-medium select-none">
-                                <i class="fas fa-user-shield"></i> Trabalho 100% nosso
+                                <span>✦</span> Trabalho 100% nosso
                             </div>
                         </div>
 
                         <!-- Passo 3 -->
                         <div class="bg-white border-2 border-gray-800 p-8 rounded-none relative z-10 flex flex-col justify-between hover:border-black transition-colors shadow-md group">
                             <div>
-                                <div class="w-12 h-12 bg-black text-white flex items-center justify-center text-xl mb-6">
-                                    <i class="fas fa-rocket"></i>
+                                <div class="w-12 h-12 bg-black text-white flex items-center justify-center text-xl font-bold font-newsTitle mb-6 select-none">
+                                    III
                                 </div>
                                 <span class="text-xs font-bold text-gray-500 uppercase tracking-widest block mb-2">Passo 3</span>
                                 <h3 class="text-xl font-newsTitle font-black uppercase tracking-tight text-gray-900 mb-4">Site + Portal Hub Ativos</h3>
@@ -695,7 +745,7 @@
                                 </p>
                             </div>
                             <div class="mt-6 flex items-center gap-2 text-xs text-gray-600 font-medium select-none">
-                                <i class="fas fa-check-circle text-green-600"></i> Liberação em 4 dias
+                                <span>✔</span> Liberação em 4 dias
                             </div>
                         </div>
                     </div>
@@ -703,7 +753,7 @@
                     <!-- Botão de Ação Auxiliar -->
                     <div class="text-center mt-12">
                         <button onclick="abrirChat(event, 'Geral')" class="inline-flex items-center gap-2 bg-black hover:bg-gray-800 text-white font-bold text-xs uppercase tracking-widest px-8 py-4 rounded-none shadow-md">
-                            Quero Seguir Esse Plano <i class="fas fa-arrow-right text-xs"></i>
+                            Quero Seguir Esse Plano ☞
                         </button>
                     </div>
                 </div>
@@ -1366,27 +1416,27 @@
                             </div>
                             
                             <ul class="space-y-3 mb-8 flex-grow">
-                                <li class="flex items-start gap-3 font-serif"><i class="fas fa-rocket text-black mt-1 text-xs"></i> <span class="text-gray-800 font-medium">Hub de Autoridade Premium</span></li>
-                                <li class="flex items-start gap-3 font-serif"><i class="fas fa-pen-nib text-black mt-1 text-xs"></i> <span class="text-gray-800 font-medium">Copywriting Persuasivo de Autoridade</span></li>
-                                <li class="flex items-start gap-3 font-serif"><i class="fas fa-mobile-alt text-black mt-1 text-xs"></i> <span class="text-gray-800 font-medium">Otimização Perfeita para Celular</span></li>
+                                <li class="flex items-start gap-3 font-serif"><span class="text-black select-none">✦</span> <span class="text-gray-800 font-medium">Hub de Autoridade Premium</span></li>
+                                <li class="flex items-start gap-3 font-serif"><span class="text-black select-none">✦</span> <span class="text-gray-800 font-medium">Copywriting Persuasivo de Autoridade</span></li>
+                                <li class="flex items-start gap-3 font-serif"><span class="text-black select-none">✦</span> <span class="text-gray-800 font-medium">Otimização Perfeita para Celular</span></li>
                                 
                                 <!-- Destaque do Portal Hub -->
                                 <li class="flex flex-col gap-1 bg-gray-50 p-3 rounded-none -mx-2 border border-gray-300">
                                     <div class="flex items-start gap-3 font-sans">
-                                        <i class="fas fa-cubes text-black mt-1 text-xs"></i>
+                                        <span class="text-black select-none">❖</span>
                                         <span class="text-black font-bold uppercase tracking-wider text-xs">Portal Hub de Gestão (Incluso)</span>
                                     </div>
                                     <span class="text-[11px] text-gray-700 ml-6 leading-relaxed font-serif">Painel com fluxo de caixa, controle de estoque com alertas, calculadora de orçamentos e relatórios em PDF.</span>
                                 </li>
                                 
-                                <li class="flex items-start gap-3 font-serif"><i class="fas fa-link text-black mt-1 text-xs"></i> <span class="text-gray-800 font-medium">Mini-Site Bio-Link (Instagram/TikTok)</span></li>
-                                <li class="flex items-start gap-3 font-serif"><i class="fas fa-calendar-check text-black mt-1 text-xs"></i> <span class="text-gray-800 font-medium">Agendamento Online Público 24h Integrado</span></li>
+                                <li class="flex items-start gap-3 font-serif"><span class="text-black select-none">✦</span> <span class="text-gray-800 font-medium">Mini-Site Bio-Link (Instagram/TikTok)</span></li>
+                                <li class="flex items-start gap-3 font-serif"><span class="text-black select-none">✦</span> <span class="text-gray-800 font-medium">Agendamento Online Público 24h Integrado</span></li>
     
                                 <li class="pt-2 pb-1"><div class="h-px w-full bg-gray-300"></div></li>
     
-                                <li class="flex items-start gap-2 text-sm text-gray-600 font-serif"><i class="fas fa-server mt-0.5 text-gray-400"></i> <span>Hospedagem Ultra Rápida</span></li>
-                                <li class="flex items-start gap-2 text-sm text-gray-600 font-serif"><i class="fas fa-lock mt-0.5 text-gray-400"></i> <span>Certificado SSL Incluso</span></li>
-                                <li class="flex items-start gap-2 text-sm text-gray-600 font-serif"><i class="fas fa-tools mt-0.5 text-gray-400"></i> <span>Suporte e Manutenção Inclusos</span></li>
+                                <li class="flex items-start gap-2 text-sm text-gray-600 font-serif"><span class="text-gray-400 select-none">•</span> <span>Hospedagem Ultra Rápida</span></li>
+                                <li class="flex items-start gap-2 text-sm text-gray-600 font-serif"><span class="text-gray-400 select-none">•</span> <span>Certificado SSL Incluso</span></li>
+                                <li class="flex items-start gap-2 text-sm text-gray-600 font-serif"><span class="text-gray-400 select-none">•</span> <span>Suporte e Manutenção Inclusos</span></li>
                             </ul>
                             
                             <button onclick="abrirChat(event, 'Fase 1 (Start)')" class="w-full text-center bg-black hover:bg-gray-800 text-white border-2 border-black py-4 rounded-none font-bold transition-colors mt-auto flex justify-center items-center gap-2 font-sans uppercase tracking-wider">
@@ -1411,19 +1461,19 @@
                             </div>
                             
                             <ul class="space-y-3 mb-8 flex-grow">
-                                <li class="flex items-start gap-3 font-sans"><i class="fas fa-star text-black mt-1 text-xs"></i> <span class="font-bold text-black uppercase tracking-wider text-xs">Tudo da Fase 1 (Start) +</span></li>
+                                <li class="flex items-start gap-3 font-sans"><span class="text-black select-none">✦</span> <span class="font-bold text-black uppercase tracking-wider text-xs">Tudo da Fase 1 (Start) +</span></li>
                                 <li class="flex flex-col gap-1 bg-gray-50 p-3 rounded-none -mx-2 border border-gray-300">
                                     <div class="flex items-start gap-3 font-sans">
-                                        <i class="fas fa-globe text-black mt-1 text-xs"></i>
+                                        <span class="text-black select-none">❖</span>
                                         <span class="text-black font-bold uppercase tracking-wider text-xs">Domínio Próprio (.com.br) Incluso</span>
                                     </div>
                                     <span class="text-[11px] text-gray-700 ml-6 leading-relaxed font-serif">Seu domínio profissional grátis durante o primeiro ano de assinatura.</span>
                                 </li>
-                                <li class="flex items-start gap-3 font-serif"><i class="fas fa-envelope-open-text text-black mt-1 text-xs"></i> <span class="text-gray-800 font-medium">E-mail Profissional Corporativo (contato@)</span></li>
-                                <li class="flex items-start gap-3 font-serif"><i class="fas fa-search text-black mt-1 text-xs"></i> <span class="text-gray-800 font-medium">Otimização Avançada de SEO (Google)</span></li>
-                                <li class="flex items-start gap-3 font-serif"><i class="fas fa-images text-black mt-1 text-xs"></i> <span class="text-gray-800 font-medium">Galeria de Portfólio Premium</span></li>
-                                <li class="flex items-start gap-3 font-serif"><i class="fas fa-crosshairs text-black mt-1 text-xs"></i> <span class="text-gray-800 font-medium">Instalação de Pixels (Anúncios)</span></li>
-                                <li class="flex items-start gap-3 font-serif"><i class="fas fa-headset text-black mt-1 text-xs"></i> <span class="text-gray-800 font-medium">Atendimento de Suporte VIP no Portal</span></li>
+                                <li class="flex items-start gap-3 font-serif"><span class="text-black select-none">✦</span> <span class="text-gray-800 font-medium">E-mail Profissional Corporativo (contato@)</span></li>
+                                <li class="flex items-start gap-3 font-serif"><span class="text-black select-none">✦</span> <span class="text-gray-800 font-medium">Otimização Avançada de SEO (Google)</span></li>
+                                <li class="flex items-start gap-3 font-serif"><span class="text-black select-none">✦</span> <span class="text-gray-800 font-medium">Galeria de Portfólio Premium</span></li>
+                                <li class="flex items-start gap-3 font-serif"><span class="text-black select-none">✦</span> <span class="text-gray-800 font-medium">Instalação de Pixels (Anúncios)</span></li>
+                                <li class="flex items-start gap-3 font-serif"><span class="text-black select-none">✦</span> <span class="text-gray-800 font-medium">Atendimento de Suporte VIP no Portal</span></li>
                             </ul>
                             
                             <button onclick="abrirChat(event, 'Fase 2 (Pro)')" class="w-full text-center bg-black hover:bg-gray-800 text-white border-2 border-black py-4 rounded-none font-bold transition-colors mt-auto flex justify-center items-center gap-2 font-sans uppercase tracking-wider">
@@ -1449,24 +1499,24 @@
                             </div>
                             
                             <ul class="space-y-3 mb-8 flex-grow">
-                                <li class="flex items-start gap-3 font-sans"><i class="fas fa-star text-black mt-1 text-xs"></i> <span class="font-bold text-black uppercase tracking-wider text-xs">Tudo da Fase 2 (Pro) +</span></li>
+                                <li class="flex items-start gap-3 font-sans"><span class="text-black select-none">✦</span> <span class="font-bold text-black uppercase tracking-wider text-xs">Tudo da Fase 2 (Pro) +</span></li>
                                 
                                 <!-- Destaque da Automação de WhatsApp -->
                                 <li class="flex flex-col gap-1 bg-gray-50 p-3 rounded-none -mx-2 border border-gray-300">
                                     <div class="flex items-start gap-3 font-sans">
-                                        <i class="fas fa-robot text-black mt-1 text-xs"></i>
+                                        <span class="text-black select-none">❖</span>
                                         <span class="text-black font-bold uppercase tracking-wider text-xs">Robô de WhatsApp Integrado</span>
                                     </div>
                                     <span class="text-[11px] text-gray-700 ml-6 leading-relaxed font-serif">Disparo de lembretes automáticos de confirmação de agendamento e mensagens de pós-atendimento para zerar faltas (no-show).</span>
                                 </li>
                                 
-                                <li class="flex items-start gap-3 font-serif"><i class="fas fa-magic text-black mt-1 text-xs"></i> <span class="text-gray-800 font-medium">Automação de Agendamentos & Escala</span></li>
-                                <li class="flex items-start gap-3 font-serif"><i class="fas fa-filter text-black mt-1 text-xs"></i> <span class="text-gray-800 font-medium">Triagem Inteligente de Contatos Qualificados</span></li>
+                                <li class="flex items-start gap-3 font-serif"><span class="text-black select-none">✦</span> <span class="text-gray-800 font-medium">Automação de Agendamentos & Escala</span></li>
+                                <li class="flex items-start gap-3 font-serif"><span class="text-black select-none">✦</span> <span class="text-gray-800 font-medium">Triagem Inteligente de Contatos Qualificados</span></li>
     
                                 <li class="pt-2 pb-1"><div class="h-px w-full bg-gray-300"></div></li>
     
-                                <li class="flex items-start gap-2 text-sm text-gray-600 font-serif"><i class="fas fa-tachometer-alt mt-0.5 text-gray-400"></i> <span>Servidor com Prioridade Máxima</span></li>
-                                <li class="flex items-start gap-2 text-sm text-gray-600 font-serif"><i class="fas fa-crown mt-0.5 text-gray-400"></i> <span>Fila de Suporte Expressa</span></li>
+                                <li class="flex items-start gap-2 text-sm text-gray-600 font-serif"><span class="text-gray-400 select-none">•</span> <span>Servidor com Prioridade Máxima</span></li>
+                                <li class="flex items-start gap-2 text-sm text-gray-600 font-serif"><span class="text-gray-400 select-none">•</span> <span>Fila de Suporte Expressa</span></li>
                             </ul>
                             
                             <button onclick="abrirChat(event, 'Fase 3 (Elite)')" class="w-full text-center bg-black hover:bg-gray-800 text-white border-2 border-black py-4 rounded-none font-bold transition-colors mt-auto flex justify-center items-center gap-2 font-sans uppercase tracking-wider">
@@ -1482,7 +1532,7 @@
                 <div class="container mx-auto px-6 max-w-4xl">
                     <div class="text-center mb-12 md:mb-16">
                         <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-none border border-black bg-black/5 text-black text-xs md:text-sm font-semibold mb-6 uppercase tracking-wider font-sans">
-                            <i class="fas fa-question-circle"></i> FAQ
+                            <span>⚜</span> FAQ
                         </div>
                         <h2 class="text-3xl md:text-5xl font-black mb-4 text-black font-newsTitle uppercase">Restou alguma dúvida?</h2>
                         <p class="text-lg text-gray-700 max-w-2xl mx-auto font-serif">Respondemos às perguntas mais comuns para que você tome a decisão de dar o próximo passo com total clareza.</p>
@@ -1494,7 +1544,7 @@
                         <div class="faq-item bg-white border-2 border-black rounded-none overflow-hidden shadow-none transition-colors duration-300 text-black">
                             <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 outline-none focus:outline-none">
                                 <span class="font-bold text-base md:text-lg text-black font-newsTitle">Como funciona o processo de criação por áudio?</span>
-                                <span class="faq-icon w-8 h-8 rounded-none bg-black flex items-center justify-center text-white transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                                <span class="faq-icon w-8 h-8 rounded-none bg-black flex items-center justify-center text-white transition-transform duration-300">▼</span>
                             </button>
                             <div class="faq-collapse max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out">
                                 <p class="px-6 pb-6 text-gray-800 text-sm md:text-base leading-relaxed border-t-2 border-black pt-4 font-serif">
@@ -1507,7 +1557,7 @@
                         <div class="faq-item bg-white border-2 border-black rounded-none overflow-hidden shadow-none transition-colors duration-300 text-black">
                             <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 outline-none focus:outline-none">
                                 <span class="font-bold text-base md:text-lg text-black font-newsTitle">Eu preciso pagar domínio e hospedagem separadamente?</span>
-                                <span class="faq-icon w-8 h-8 rounded-none bg-black flex items-center justify-center text-white transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                                <span class="faq-icon w-8 h-8 rounded-none bg-black flex items-center justify-center text-white transition-transform duration-300">▼</span>
                             </button>
                             <div class="faq-collapse max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out">
                                 <p class="px-6 pb-6 text-gray-800 text-sm md:text-base leading-relaxed border-t-2 border-black pt-4 font-serif">
@@ -1520,7 +1570,7 @@
                         <div class="faq-item bg-white border-2 border-black rounded-none overflow-hidden shadow-none transition-colors duration-300 text-black">
                             <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 outline-none focus:outline-none">
                                 <span class="font-bold text-base md:text-lg text-black font-newsTitle">O que acontece se eu precisar alterar o meu site depois?</span>
-                                <span class="faq-icon w-8 h-8 rounded-none bg-black flex items-center justify-center text-white transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                                <span class="faq-icon w-8 h-8 rounded-none bg-black flex items-center justify-center text-white transition-transform duration-300">▼</span>
                             </button>
                             <div class="faq-collapse max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out">
                                 <p class="px-6 pb-6 text-gray-800 text-sm md:text-base leading-relaxed border-t-2 border-black pt-4 font-serif">
@@ -1533,7 +1583,7 @@
                         <div class="faq-item bg-white border-2 border-black rounded-none overflow-hidden shadow-none transition-colors duration-300 text-black">
                             <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 outline-none focus:outline-none">
                                 <span class="font-bold text-base md:text-lg text-black font-newsTitle">O que é o Portal Hub de gestão e ele tem custo extra?</span>
-                                <span class="faq-icon w-8 h-8 rounded-none bg-black flex items-center justify-center text-white transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                                <span class="faq-icon w-8 h-8 rounded-none bg-black flex items-center justify-center text-white transition-transform duration-300">▼</span>
                             </button>
                             <div class="faq-collapse max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out">
                                 <p class="px-6 pb-6 text-gray-800 text-sm md:text-base leading-relaxed border-t-2 border-black pt-4 font-serif">
@@ -1546,7 +1596,7 @@
                         <div class="faq-item bg-white border-2 border-black rounded-none overflow-hidden shadow-none transition-colors duration-300 text-black">
                             <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 outline-none focus:outline-none">
                                 <span class="font-bold text-base md:text-lg text-black font-newsTitle">O site é otimizado para celulares (Mobile-First)?</span>
-                                <span class="faq-icon w-8 h-8 rounded-none bg-black flex items-center justify-center text-white transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                                <span class="faq-icon w-8 h-8 rounded-none bg-black flex items-center justify-center text-white transition-transform duration-300">▼</span>
                             </button>
                             <div class="faq-collapse max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out">
                                 <p class="px-6 pb-6 text-gray-800 text-sm md:text-base leading-relaxed border-t-2 border-black pt-4 font-serif">
@@ -1559,7 +1609,7 @@
                         <div class="faq-item bg-white border-2 border-black rounded-none overflow-hidden shadow-none transition-colors duration-300 text-black">
                             <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 outline-none focus:outline-none">
                                 <span class="font-bold text-base md:text-lg text-black font-newsTitle">Há fidelidade ou contrato que me prende no serviço?</span>
-                                <span class="faq-icon w-8 h-8 rounded-none bg-black flex items-center justify-center text-white transition-transform duration-300"><i class="fas fa-chevron-down text-xs"></i></span>
+                                <span class="faq-icon w-8 h-8 rounded-none bg-black flex items-center justify-center text-white transition-transform duration-300">▼</span>
                             </button>
                             <div class="faq-collapse max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out">
                                 <p class="px-6 pb-6 text-gray-800 text-sm md:text-base leading-relaxed border-t-2 border-black pt-4 font-serif">
@@ -1572,7 +1622,7 @@
                 </div>
             </section>
 
-            <footer class="bg-jornalBg pt-16 pb-8 border-t-4 border-double border-black relative z-10" id="footer-principal">
+            <footer class="bg-jornalBg pt-16 pb-8 border-oxford-t relative z-10" id="footer-principal">
                 <div class="container mx-auto px-6 max-w-6xl text-black">
                     <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
                         
@@ -2686,8 +2736,8 @@
 
     <!-- NOTIFICAÇÕES DE VENDAS DINÂMICAS -->
     <div id="vendas-notification" class="fixed bottom-6 left-6 z-[90] bg-white border-2 border-black rounded-none p-4 flex items-center gap-3.5 shadow-none max-w-sm w-[calc(100vw-3rem)] transform translate-y-20 opacity-0 pointer-events-none transition-all duration-500 ease-out text-black">
-        <div class="w-10 h-10 rounded-none bg-black flex items-center justify-center text-white text-base flex-shrink-0">
-            <i class="fas fa-newspaper animate-pulse"></i>
+        <div class="w-10 h-10 rounded-none bg-black flex items-center justify-center text-white text-base flex-shrink-0 select-none">
+            <span>📰</span>
         </div>
         <div class="flex-grow min-w-0 font-sans text-black">
             <span class="text-[9px] font-black text-black uppercase tracking-widest block font-sans">Última Hora / Nova Assinatura</span>
@@ -2696,8 +2746,8 @@
             </p>
             <span class="text-[9px] text-gray-500 mt-1 block font-serif" id="vendas-notification-time">há 2 minutos</span>
         </div>
-        <button onclick="fecharNotificacaoVendas()" class="text-black hover:text-gray-700 transition-colors flex-shrink-0 self-start text-xs border border-black w-5 h-5 flex items-center justify-center rounded-none bg-gray-100">
-            <i class="fas fa-times"></i>
+        <button onclick="fecharNotificacaoVendas()" class="text-black hover:text-gray-700 transition-colors flex-shrink-0 self-start text-xs border border-black w-5 h-5 flex items-center justify-center rounded-none bg-gray-100 font-sans font-bold">
+            ✕
         </button>
     </div>
 </body>

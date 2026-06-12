@@ -79,4 +79,13 @@ Como o projeto preza pelo minimalismo e máxima performance:
   * Remoção completa de fundos escuros, gradientes neon e cantos arredondados, unificando o design em um estilo limpo de jornal de alta autoridade (*Wall Street Journal* vintage).
   * Reestilização de todas as seções interativas (incluindo o comparador móvel, tabelas de planos, chatbot e área de notificações de vendas) com bordas retas pretas, fundos brancos/sépia e tipografia clássica (Merriweather e Playfair Display).
   * Criada e disponibilizada a tag Git de controle `retorno-antes-jornal-completo`.
+* **[Junho/2026] Refinamentos Visuais Avançados do Jornal Clássico (Estética Impressa Realista)**:
+  * Textura de papel realista através de ruído sutil procedural SVG acoplado de forma fixa com `pointer-events-none` e `mix-blend-mode: multiply`.
+  * Letra Capitular (Drop Cap) e florão divisor (`❦`) de alta elegância na seção do Manifesto.
+  * Substituição de bordas e divisores por filetes Oxford duplos clássicos de imprensa nas divisórias principais.
+  * Efeito de gravura no smartphone comparador através de filtros de escala de cinza e contraste adaptados.
+  * Inclusão de coluna lateral de Classificados de Época com bordas tracejadas e anúncios satíricos fictícios da resistência digital.
+  * Substituição de ícones puramente tecnológicos e modernos do FontAwesome por marcadores tipográficos clássicos (`✦`, `❖`, `•`, `▼`, `☞`) no site principal, preservando apenas ícones nativos de ações (como WhatsApp e links).
+  * Harmonização da alça do slider comparador em preto e branco, utilizando a alça quadrada e caractere tipográfico `◀▶`.
+
 
