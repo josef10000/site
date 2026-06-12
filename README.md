@@ -68,3 +68,6 @@ Como o projeto preza pelo minimalismo e máxima performance:
 * **[Junho/2026] Redesenho da Fase 1 (Regra dos 5 Segundos de Martin)**:
   * Reformulação da manchete e subtítulo da primeira dobra para esclarecer a dor, o problema e a nossa solução de forma instantânea.
   * Reorganização do conteúdo em 3 colunas de jornal responsivas dividindo de forma equilibrada a *Dor*, a *Invisibilidade* e a *Solução Hub Symples*.
+* **[Junho/2026] Atualização da Ancoragem Comercial (Opção A)**:
+  * Reajuste do valor percebido de R$ 2.000,00 para R$ 3.500,00 na tabela de comparação do mercado para refletir a integração do novo Portal Hub (com CRM Financeiro, Gestão de Clientes e módulo de controle de estoque e vendas).
+
