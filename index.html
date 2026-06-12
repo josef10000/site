@@ -487,9 +487,11 @@
                             </div>
 
                             <!-- LADO DEPOIS: O Hub de Autoridade da Symples (Sobreposição) -->
-                            <div id="after-image" class="absolute inset-y-0 left-0 w-1/2 h-full bg-slate-950 text-white flex flex-col font-sans overflow-hidden border-r-2 border-accent/70 shadow-[5px_0_15px_rgba(0,85,255,0.2)] z-10">
-                                
-                                <!-- Barra de Status do Celular -->
+                            <div id="after-image" class="absolute inset-y-0 left-0 w-1/2 h-full overflow-hidden border-r-2 border-accent/70 shadow-[5px_0_15px_rgba(0,85,255,0.2)] z-10">
+                                <!-- Wrapper de largura fixa para evitar esmagamento/deformidade do conteúdo ao arrastar o slider -->
+                                <div class="absolute inset-y-0 left-0 w-[320px] h-full bg-slate-950 text-white flex flex-col font-sans">
+                                    
+                                    <!-- Barra de Status do Celular -->
                                 <div class="flex justify-between items-center px-6 pt-3 pb-1 text-[9px] text-slate-500 font-semibold bg-[#030712] select-none">
                                     <span>9:41</span>
                                     <div class="flex items-center gap-1.5">
@@ -648,6 +650,7 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
                             <!-- SLIDER CONTROLLER (INPUT RANGE) -->
                             <input type="range" min="0" max="100" value="50" id="comparison-slider" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30">
@@ -1486,15 +1489,23 @@
                             
                             <ul class="space-y-3 mb-8 flex-grow">
                                 <li class="flex items-start gap-3"><i class="fas fa-star text-purple-500 mt-1"></i> <span class="font-bold text-white">Tudo da Fase 2 (Pro) +</span></li>
-                                <li class="flex items-start gap-3 bg-purple-500/10 p-2 rounded -mx-2 border border-purple-500/20"><i class="fas fa-robot text-purple-400 mt-1"></i> <span class="text-white font-semibold">Automação de WhatsApp (Robô)</span></li>
-                                <li class="flex items-start gap-3 bg-purple-500/10 p-2 rounded -mx-2 border border-purple-500/20"><i class="fas fa-cubes text-purple-400 mt-1"></i> <span class="text-white font-semibold">Portal Hub de Gestão (Incluso)</span></li>
-                                <li class="flex items-start gap-3"><i class="fas fa-calendar-check text-purple-400 mt-1"></i> <span class="text-slate-200 font-medium">Agendamento Automático 24h</span></li>
-                                <li class="flex items-start gap-3"><i class="fas fa-filter text-purple-400 mt-1"></i> <span class="text-slate-200 font-medium">Triagem de Clientes e Marcas</span></li>
+                                
+                                <!-- Destaque da Automação de WhatsApp -->
+                                <li class="flex flex-col gap-1 bg-purple-500/10 p-3 rounded -mx-2 border border-purple-500/20">
+                                    <div class="flex items-start gap-3">
+                                        <i class="fas fa-robot text-purple-400 mt-1"></i>
+                                        <span class="text-white font-semibold">Robô de WhatsApp Integrado</span>
+                                    </div>
+                                    <span class="text-xs text-slate-300 ml-8 leading-relaxed font-sans">Disparo de lembretes automáticos de confirmação de agendamento e mensagens de pós-atendimento para zerar faltas (no-show).</span>
+                                </li>
+                                
+                                <li class="flex items-start gap-3"><i class="fas fa-magic text-purple-500 mt-1"></i> <span class="text-slate-200 font-medium">Automação de Agendamentos & Escala</span></li>
+                                <li class="flex items-start gap-3"><i class="fas fa-filter text-purple-500 mt-1"></i> <span class="text-slate-200 font-medium">Triagem Inteligente de Contatos Qualificados</span></li>
     
                                 <li class="pt-2 pb-1"><div class="h-px w-full bg-slate-800"></div></li>
     
                                 <li class="flex items-start gap-2 text-sm text-slate-300"><i class="fas fa-tachometer-alt mt-0.5 text-purple-400/70"></i> <span>Servidor com Prioridade Máxima</span></li>
-                                <li class="flex items-start gap-2 text-sm text-slate-300"><i class="fas fa-crown mt-0.5 text-purple-400/70"></i> <span>Fila Expressa no Portal</span></li>
+                                <li class="flex items-start gap-2 text-sm text-slate-300"><i class="fas fa-crown mt-0.5 text-purple-400/70"></i> <span>Fila de Suporte Expressa</span></li>
                             </ul>
                             
                             <button onclick="abrirChat(event, 'Fase 3 (Elite)')" class="w-full text-center bg-purple-600 hover:bg-purple-700 text-white py-4 rounded-lg font-bold transition-colors shadow-lg shadow-purple-500/30 mt-auto flex justify-center items-center gap-2">
