@@ -8,28 +8,28 @@ O projeto é estruturado de forma ultra eficiente em um único arquivo de códig
 
 ## 🌟 Estrutura do Site
 
-O site é dividido em duas fases distintas com forte contraste visual para gerar uma experiência de usuário (UX) inesquecível:
+O site é estruturado como um **fluxo contínuo, rolável e unificado na estética elegante de um jornal clássico impresso de alta autoridade** (`bg-jornalBg` / `#f4f3ed`), eliminando por completo fundos escuros e decorações futuristas para focar na autoridade do conteúdo:
 
-### 🗞️ Fase 1: O Diário do Mercado (Jornal da Invisibilidade)
-Uma seção estilizada como um jornal impresso antigo (`bg-jornalBg`), com tipografia clássica e diagramação em colunas.
+### 🗞️ Primeira Dobra: O Diário do Mercado (Jornal da Invisibilidade)
+Uma seção estilizada como a capa de um jornal impresso antigo, com tipografia clássica, diagramação em colunas e bordas pretas.
 * **Objetivo**: Conectar imediatamente com a dor do cliente através de uma estética nostálgica de alta credibilidade.
 * **Regra dos 5 Segundos (Martin)**: Estruturada para que o visitante compreenda instantaneamente três pilares em menos de 5 segundos de leitura na primeira dobra:
   1. **A Dor que Atacamos**: O feed de fotos do Instagram não gera vendas estruturadas.
   2. **O Problema que Resolvemos**: A falta de um site oficial gera invisibilidade comercial e faz o profissional perder contratos valiosos para a concorrência.
   3. **A Solução / Serviço Oferecido**: A criação de um Hub de Autoridade premium em 96h úteis, sem formulários chatos — apenas mandando um áudio no WhatsApp.
-* **Efeito Fade-Blur**: Ao clicar no CTA de transição, a seção ganha um desfoque cinematográfico e um fade-out suave de opacidade em sincronia com o deslize vertical.
+* **Scroll Suave**: Ao clicar no CTA de transição ("Ler Matéria Completa"), a página realiza um scroll suave diretamente para o editorial filosófico.
 
-### ⚡ Fase 2: A Nova Era (Universo Hub Symples)
-Quando o visitante clica no CTA da Fase 1, o "jornal" desliza suavemente para cima, revelando uma interface escura futurista (`bg-black`), moderna e repleta de elementos premium:
-* **Banner Inteligente de Urgência**: Uma faixa elegante fixada no topo que exibe vagas de ativação escassas de forma dinâmica baseada no dia da semana do visitante.
-* **Slider Interativo "Antes vs. Depois" (Hiper-realista)**: Um comparador deslizante simulando fisicamente um smartphone premium com status bar. Contrasta um feed de Instagram confuso e dependente de algoritmo (Antes) com uma Landing Page médica de luxo completa, rolável e de altíssima autoridade com CRM, especialidades, diferenciais técnicos e selo de segurança SSL (Depois).
-* **Plano de 3 Passos Simples**: Uma seção visual conectada por linhas indicadoras que detalha o processo de criação sem fricção: o envio de um áudio no WhatsApp, a produção pela nossa equipe e a publicação em 96h.
-* **Manifesto da Autoridade**: Uma conexão filosófica profunda combatendo a injustiça do algoritmo das redes sociais, empoderando o profissional de excelência a focar na sua competência e não na produção diária de dancinhas e conteúdo efêmero.
-* **Tabela de Planos (Start, Pro, Elite)**: Sistema interativo de faturamento (mensal/anual com 15% OFF) que atualiza preços e parcelamentos instantaneamente.
-* **Contador de Membros**: Simulação inteligente de membros ativos com atualização assíncrona.
-* **Carrossel de Depoimentos Premium**: Slider elegante com 6 histórias de sucesso reais que cobrem nichos estratégicos (Estética, Advocacia, Moda, Arquitetura, Odontologia e Consultoria).
-* **FAQ Accordion (Perguntas Frequentes)**: Um acordeão de dúvidas interativo com transições suaves que responde e elimina as principais objeções de venda do cliente.
-* **Chatbot Conversacional com Persistência**: Um chatbot interativo que qualifica o lead perguntando o nicho, as necessidades e o WhatsApp. O progresso é salvo no `sessionStorage`, garantindo que o usuário possa fechar e reabrir o chat sem perder o preenchimento.
+### 📝 Conteúdo Editorial e Seções Interativas (Universo Hub Symples)
+Integrado no mesmo fundo de papel envelhecido claro, com visual de colunas jornalísticas, anúncios de época e diagramas técnicos:
+* **Banner Inteligente de Urgência**: Manchete de "Última Hora" (Breaking News) fixada no topo com vagas escassas atualizadas dinamicamente.
+* **Slider Interativo "Antes vs. Depois" (Hiper-realista)**: Moldura metálica clássica que contrasta um feed de Instagram confuso (Antes) com a landing page de luxo (Depois).
+* **Plano de 3 Passos Simples**: Diagrama técnico editorial detalhando o processo de criação de áudio no WhatsApp.
+* **Manifesto da Autoridade**: Coluna de opinião/editorial assinado que combate a escravidão do algoritmo.
+* **Tabela de Planos (Start, Pro, Elite)**: Inspirada nas páginas de assinatura do *The Wall Street Journal*, com faturamento mensal/anual interativo e sem cantos arredondados.
+* **Contador de Membros**: Classificado oficial de membros ativos com atualização assíncrona.
+* **Carrossel de Depoimentos**: Formatado como "Cartas à Redação" com tipografia clássica e histórias reais.
+* **FAQ Accordion**: Acordeão com linhas pretas finas e fundo limpo.
+* **Chatbot Conversacional**: Caixa de chat estilizada como um recorte de aviso vintage claro com persistência via `sessionStorage`, garantindo que o usuário possa fechar e reabrir o chat sem perder o preenchimento.
 
 ---
 
@@ -74,4 +74,9 @@ Como o projeto preza pelo minimalismo e máxima performance:
   * Adicionado wrapper absoluto de largura fixa de `320px` no painel "Depois" do smartphone interativo para evitar a compressão de textos e deformidades visuais no arrasto.
   * Reestruturados os bullets dos planos **Pro** e **Elite** no `index.html` para destacar o valor agregado do Portal Hub (Bio-Link e Agendamento Público) e a Automação do Robô de WhatsApp de lembretes contra no-show.
   * Criada e disponibilizada a tag Git de controle `retorno-antes-ajustes-slider`.
+* **[Junho/2026] Unificação Estética do Jornal Clássico (Ponta a Ponta)**:
+  * Redesenhada a landing page inteira para adotar um fluxo contínuo de rolagem sob a cor do papel envelhecido (`bg-jornalBg` / `#f4f3ed`), do início ao fim.
+  * Remoção completa de fundos escuros, gradientes neon e cantos arredondados, unificando o design em um estilo limpo de jornal de alta autoridade (*Wall Street Journal* vintage).
+  * Reestilização de todas as seções interativas (incluindo o comparador móvel, tabelas de planos, chatbot e área de notificações de vendas) com bordas retas pretas, fundos brancos/sépia e tipografia clássica (Merriweather e Playfair Display).
+  * Criada e disponibilizada a tag Git de controle `retorno-antes-jornal-completo`.
 
