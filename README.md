@@ -87,5 +87,12 @@ Como o projeto preza pelo minimalismo e máxima performance:
   * Inclusão de coluna lateral de Classificados de Época com bordas tracejadas e anúncios satíricos fictícios da resistência digital.
   * Substituição de ícones puramente tecnológicos e modernos do FontAwesome por marcadores tipográficos clássicos (`✦`, `❖`, `•`, `▼`, `☞`) no site principal, preservando apenas ícones nativos de ações (como WhatsApp e links).
   * Harmonização da alça do slider comparador em preto e branco, utilizando a alça quadrada e caractere tipográfico `◀▶`.
+* **[Junho/2026] Refinamentos de Jornal de Banca (Acessórios de Banca e Papel Realista)**:
+  * **Orelhas de Jornal (Ear Tabs)**: Adicionadas orelhas informativas laterais no topo do cabeçalho principal com boletins e cotações satíricas ("Cotação do Mercado" vs "Boletim do Tempo") em telas grandes.
+  * **Efeito Mesa de Leitura (Escrivaninha)**: Estilizado o plano de fundo do site em marrom-escuro marcenaria (#1a120b) com o site flutuando como uma folha de jornal física centralizada e com box-shadow profundo no desktop, mantendo visual de tela cheia no mobile.
+  * **Cupom Destacável**: Adicionado cupom retrô com borda serrilhada/tracejada e ícone de tesoura (`✄`) acima da tabela de planos comerciais chamando para o faturamento Anual.
+  * **Carimbos Vintage (Ink Stamps)**: Carimbo de tinta vermelha envelhecida e inclinada em estilo tipográfico vintage aplicada no classificado ("Resistência") e na Garantia Absoluta ("Garantido").
+  * **Retícula Halftone**: Efeito de textura halftone radial pontilhada clássica sobreposto às interfaces digitais do comparador simulando impressão física em papel áspero de época.
+  * **Editorial de Opinião**: Manifesto diagramado em duas colunas com divisão de imprensa física para maior fidelidade de leitura.
 
 
