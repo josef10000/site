@@ -1,6 +1,6 @@
-# Hub Symples - Sites de Alta Conversão
+# Hub Symples - Ecossistema de Gestão e Vendas
 
-Bem-vindo ao repositório oficial da **Hub Symples**, uma landing page inovadora e de alta performance desenhada para transformar negócios comuns em **Marcas de Autoridade** na internet, eliminando a dependência excessiva das redes sociais.
+Bem-vindo ao repositório oficial da **Hub Symples**, um ecossistema completo de gestão e vendas (Site Inteligente + Portal Hub) desenhado para trazer comodidade, ordem e previsibilidade para empreendedores sobrecarregados, eliminando a dependência excessiva do Instagram e o caos do WhatsApp.
 
 O projeto é estruturado de forma ultra eficiente em um único arquivo de código-fonte (`index.html`), facilitando a manutenção e garantindo carregamento instantâneo.
 
@@ -94,5 +94,9 @@ Como o projeto preza pelo minimalismo e máxima performance:
   * **Carimbos Vintage (Ink Stamps)**: Carimbo de tinta vermelha envelhecida e inclinada em estilo tipográfico vintage aplicada no classificado ("Resistência") e na Garantia Absoluta ("Garantido").
   * **Retícula Halftone**: Efeito de textura halftone radial pontilhada clássica sobreposto às interfaces digitais do comparador simulando impressão física em papel áspero de época.
   * **Editorial de Opinião**: Manifesto diagramado em duas colunas com divisão de imprensa física para maior fidelidade de leitura.
+* **[Junho/2026] Pivot de Posicionamento para Ecossistema SaaS B2B**:
+  * **Rebranding da Copy**: Nova Hero Section focada no fim do caos operacional no WhatsApp e previsibilidade real; reescrita do Manifesto da Autoridade para "Manifesto da Ordem".
+  * **Reengenharia do Portal Hub (A Casa)**: Substituição dos antigos painéis de estoque e suporte por painéis interativos modernos: **Agenda Integrada** (simulador de lembretes automáticos de confirmação), **CRM Financeiro** (com visualização de contas atrasadas e simulação de envio de cobrança Pix no WhatsApp), **Growth Hub** (player animado de pílulas de áudio e scripts de conversão) e **Máquina de LTV** (para reativar clientes inativos e gerar scripts personalizados de WhatsApp em 1 clique).
+  * **Sintonização Comercial**: Atualização da tabela de planos comerciais, depoimentos do carrossel (focados em tempo livre, redução de no-shows e inadimplência) e FAQ de acordo com a proposta de ecossistema de gestão.
 
 
