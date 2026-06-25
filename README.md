@@ -78,6 +78,11 @@ Como o projeto preza pelo minimalismo e máxima performance:
   * **Antes vs. Depois Otimizado**: Reorganização em duas colunas (texto explicativo à esquerda, smartphone interativo à direita) e restauração do design premium original de alta autoridade (Dra. Alessandra Veiga) no mockup do celular.
   * **Seção de Criadores em Fundo Escuro**: A seção de influenciadores/criadores foi atualizada com fundo preto (`#050505`) e cards em glassmorphism escuro para maximizar o contraste e o apelo visual.
   * **QR Code Pix no CRM**: Substituição da mensagem estática de cobrança de texto na simulação do CRM Financeiro por um QR Code interativo em SVG estilizado do Pix com atualização dinâmica do destinatário.
+* **[Junho/2026] Implementação de Wow Effects (Efeitos 3D Premium)**:
+  * **Globo 3D Interativo**: Adição de uma nova seção contendo um globo terrestre tridimensional interativo de partículas de alta performance, rotacionável com o arraste do mouse/dedo.
+  * **Aurora WebGL Reativa (Caos para Ordem)**: Modificado o shader da Aurora WebGL para que sua velocidade e amplitude diminuam suavemente conforme o usuário rola a página, acalmando visualmente o fluxo.
+  * **Dashboard Explodido na Hero**: O mockup do Portal Hub na Hero agora possui paralaxe 3D real baseado no movimento do mouse, com as camadas da Agenda, CRM e LTV flutuando em profundidades (eixo Z) distintas.
+  * **Radar Holográfico de Leads**: Inclusão de um canvas que desenha um radar sonar circular simulando a captação e automação de leads, populando logs dinamicamente.
 * **[Junho/2026] Pivot de Posicionamento para Ecossistema SaaS B2B**:
   * **Rebranding da Copy**: Nova Hero Section focada no fim do caos operacional no WhatsApp e previsibilidade real; reescrita do Manifesto da Autoridade para "Manifesto da Ordem".
   * **Reengenharia do Portal Hub (A Casa)**: Substituição dos painéis por ferramentas funcionais de **Agenda Integrada** (simulador de no-show), **CRM Financeiro** (cobrança Pix rápida), **Growth Hub** (mentoria em áudio) e **Máquina de LTV** (reativação de leads em 1 clique).

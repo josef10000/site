@@ -184,6 +184,38 @@
         .animate-float-medium {
             animation: float-medium 5s ease-in-out infinite;
         }
+
+        /* 3D Dashboard Exploded Parallax Effect */
+        .mockup-3d-wrapper {
+            perspective: 1200px;
+            transform-style: preserve-3d;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .mockup-3d-card {
+            transform-style: preserve-3d;
+            transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+            position: relative;
+        }
+        /* Placas internas flutuando em Z */
+        .layer-crm {
+            transform: translateZ(55px) !important;
+            transition: transform 0.3s ease;
+        }
+        .layer-agenda {
+            transform: translateZ(85px) translateY(16px) !important;
+            transition: transform 0.3s ease;
+        }
+        .layer-growth {
+            transform: translateZ(35px) translateY(-8px) !important;
+            transition: transform 0.3s ease;
+        }
+        .layer-ltv {
+            transform: translateZ(70px) translateY(-32px) translateX(8px) !important;
+            transition: transform 0.3s ease;
+        }
     </style>
 </head>
 <body class="font-sans antialiased relative">
@@ -279,81 +311,83 @@
                     </div>
                 </div>
 
-                <!-- Coluna Direita: Mockup 3D do Portal Hub -->
-                <div class="lg:col-span-5 w-full flex items-center justify-center relative">
-                    <div class="relative w-full max-w-[400px] aspect-[4/3] sm:aspect-video lg:aspect-[4/3] rounded-2xl bg-white/30 border border-white/20 backdrop-blur-md shadow-2xl p-5 select-none overflow-hidden animate-float-slow">
-                        
-                        <!-- Header do App -->
-                        <div class="flex items-center justify-between border-b border-black/5 pb-3 mb-4">
-                            <div class="flex items-center gap-1.5">
-                                <span class="w-2.5 h-2.5 rounded-full bg-danger/70"></span>
-                                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/70"></span>
-                                <span class="w-2.5 h-2.5 rounded-full bg-success/70"></span>
-                            </div>
-                            <div class="bg-white/50 border border-black/5 rounded-full px-4 py-0.5 text-[9px] text-gray-500 font-medium">
-                                portal.hubsymples.com
-                            </div>
-                            <div class="w-6 h-6 rounded-full bg-accent/15 flex items-center justify-center text-accent text-[9px] font-black">HS</div>
-                        </div>
-
-                        <!-- Grid de Elementos Flutuantes -->
-                        <div class="grid grid-cols-12 gap-3 relative h-[calc(100%-40px)]">
+                <!-- Coluna Direita: Mockup 3D do Portal Hub com Efeito Paralaxe Explodido -->
+                <div class="lg:col-span-5 w-full flex items-center justify-center relative" id="mockup-3d-sensor">
+                    <div class="mockup-3d-wrapper">
+                        <div class="relative w-full max-w-[400px] aspect-[4/3] sm:aspect-video lg:aspect-[4/3] rounded-2xl bg-white/30 border border-white/20 backdrop-blur-md shadow-2xl p-5 select-none overflow-hidden animate-float-slow mockup-3d-card" id="mockup-3d-card">
                             
-                            <!-- Bloco CRM / Financeiro -->
-                            <div class="col-span-7 bg-white/70 border border-black/5 rounded-xl p-3 shadow-md flex flex-col justify-between h-[130px] animate-float-medium">
-                                <div>
-                                    <span class="text-[9px] font-bold text-gray-400 uppercase tracking-wider block">CRM Financeiro</span>
-                                    <div class="flex items-baseline gap-1 mt-1">
-                                        <span class="text-xs font-bold text-gray-500">R$</span>
-                                        <span class="text-lg font-black text-dark tracking-tight">4.700</span>
-                                        <span class="text-[9px] text-success font-bold flex items-center"><i class="fas fa-caret-up ml-0.5"></i> 12%</span>
+                            <!-- Header do App -->
+                            <div class="flex items-center justify-between border-b border-black/5 pb-3 mb-4">
+                                <div class="flex items-center gap-1.5">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-danger/70"></span>
+                                    <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/70"></span>
+                                    <span class="w-2.5 h-2.5 rounded-full bg-success/70"></span>
+                                </div>
+                                <div class="bg-white/50 border border-black/5 rounded-full px-4 py-0.5 text-[9px] text-gray-500 font-medium">
+                                    portal.hubsymples.com
+                                </div>
+                                <div class="w-6 h-6 rounded-full bg-accent/15 flex items-center justify-center text-accent text-[9px] font-black">HS</div>
+                            </div>
+
+                            <!-- Grid de Elementos Flutuantes -->
+                            <div class="grid grid-cols-12 gap-3 relative h-[calc(100%-40px)]" style="transform-style: preserve-3d;">
+                                
+                                <!-- Bloco CRM / Financeiro -->
+                                <div class="col-span-7 bg-white/70 border border-black/5 rounded-xl p-3 shadow-md flex flex-col justify-between h-[130px] animate-float-medium layer-crm">
+                                    <div>
+                                        <span class="text-[9px] font-bold text-gray-400 uppercase tracking-wider block">CRM Financeiro</span>
+                                        <div class="flex items-baseline gap-1 mt-1">
+                                            <span class="text-xs font-bold text-gray-500">R$</span>
+                                            <span class="text-lg font-black text-dark tracking-tight">4.700</span>
+                                            <span class="text-[9px] text-success font-bold flex items-center"><i class="fas fa-caret-up ml-0.5"></i> 12%</span>
+                                        </div>
+                                    </div>
+                                    <!-- Minigráfico em CSS -->
+                                    <div class="flex items-end gap-1.5 h-12 pt-2 border-t border-black/5">
+                                        <div class="bg-accent/20 hover:bg-accent/40 w-full rounded-t" style="height: 35%"></div>
+                                        <div class="bg-accent/30 hover:bg-accent/50 w-full rounded-t" style="height: 50%"></div>
+                                        <div class="bg-accent/20 hover:bg-accent/40 w-full rounded-t" style="height: 45%"></div>
+                                        <div class="bg-accent hover:bg-accentHover w-full rounded-t shadow-sm shadow-accent/20" style="height: 85%"></div>
                                     </div>
                                 </div>
-                                <!-- Minigráfico em CSS -->
-                                <div class="flex items-end gap-1.5 h-12 pt-2 border-t border-black/5">
-                                    <div class="bg-accent/20 hover:bg-accent/40 w-full rounded-t" style="height: 35%"></div>
-                                    <div class="bg-accent/30 hover:bg-accent/50 w-full rounded-t" style="height: 50%"></div>
-                                    <div class="bg-accent/20 hover:bg-accent/40 w-full rounded-t" style="height: 45%"></div>
-                                    <div class="bg-accent hover:bg-accentHover w-full rounded-t shadow-sm shadow-accent/20" style="height: 85%"></div>
-                                </div>
-                            </div>
 
-                            <!-- Bloco Agenda Flutuante -->
-                            <div class="col-span-5 bg-white/70 border border-black/5 rounded-xl p-3 shadow-md flex flex-col justify-between h-[105px] transform translate-y-4 animate-float-slow">
-                                <div class="flex items-center justify-between">
-                                    <span class="text-[8px] font-bold text-gray-400 uppercase tracking-wider">Agenda</span>
-                                    <span class="w-1.5 h-1.5 rounded-full bg-success"></span>
+                                <!-- Bloco Agenda Flutuante -->
+                                <div class="col-span-5 bg-white/70 border border-black/5 rounded-xl p-3 shadow-md flex flex-col justify-between h-[105px] transform translate-y-4 animate-float-slow layer-agenda">
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-[8px] font-bold text-gray-400 uppercase tracking-wider">Agenda</span>
+                                        <span class="w-1.5 h-1.5 rounded-full bg-success"></span>
+                                    </div>
+                                    <div class="mt-1">
+                                        <span class="text-[10px] font-bold text-dark block leading-tight">Dra. Marina</span>
+                                        <span class="text-[8px] text-gray-400 block mt-0.5">14:00 - Confirmado</span>
+                                    </div>
+                                    <div class="bg-success text-white text-[7px] font-bold py-1 px-2 rounded-full text-center mt-2 uppercase tracking-wide">
+                                        Confirmado
+                                    </div>
                                 </div>
-                                <div class="mt-1">
-                                    <span class="text-[10px] font-bold text-dark block leading-tight">Dra. Marina</span>
-                                    <span class="text-[8px] text-gray-400 block mt-0.5">14:00 - Confirmado</span>
-                                </div>
-                                <div class="bg-success text-white text-[7px] font-bold py-1 px-2 rounded-full text-center mt-2 uppercase tracking-wide">
-                                    Confirmado
-                                </div>
-                            </div>
 
-                            <!-- Bloco Growth Hub / Mentoria -->
-                            <div class="col-span-6 bg-white/70 border border-black/5 rounded-xl p-3 shadow-md flex items-center gap-2 h-[55px] transform -translate-y-2 animate-float-medium">
-                                <div class="w-7 h-7 rounded-lg bg-accent/15 text-accent flex items-center justify-center text-xs">
-                                    <i class="fas fa-play text-[8px] ml-0.5"></i>
+                                <!-- Bloco Growth Hub / Mentoria -->
+                                <div class="col-span-6 bg-white/70 border border-black/5 rounded-xl p-3 shadow-md flex items-center gap-2 h-[55px] transform -translate-y-2 animate-float-medium layer-growth">
+                                    <div class="w-7 h-7 rounded-lg bg-accent/15 text-accent flex items-center justify-center text-xs">
+                                        <i class="fas fa-play text-[8px] ml-0.5"></i>
+                                    </div>
+                                    <div class="flex-grow min-w-0">
+                                        <span class="text-[9px] font-bold text-dark block truncate leading-none">Pílula #04</span>
+                                        <span class="text-[7px] text-gray-400 block mt-0.5">Como reter clientes</span>
+                                    </div>
                                 </div>
-                                <div class="flex-grow min-w-0">
-                                    <span class="text-[9px] font-bold text-dark block truncate leading-none">Pílula #04</span>
-                                    <span class="text-[7px] text-gray-400 block mt-0.5">Como reter clientes</span>
-                                </div>
-                            </div>
 
-                            <!-- Bloco Máquina de LTV -->
-                            <div class="col-span-6 bg-white/70 border border-black/5 rounded-xl p-3 shadow-md flex flex-col justify-between h-[80px] transform -translate-y-8 translate-x-2 animate-float-slow">
-                                <div class="flex items-center gap-1.5">
-                                    <div class="w-4 h-4 rounded bg-success/15 text-success flex items-center justify-center text-[8px]"><i class="fas fa-redo"></i></div>
-                                    <span class="text-[8px] font-bold text-gray-400 uppercase tracking-wider">Máquina LTV</span>
+                                <!-- Bloco Máquina de LTV -->
+                                <div class="col-span-6 bg-white/70 border border-black/5 rounded-xl p-3 shadow-md flex flex-col justify-between h-[80px] transform -translate-y-8 translate-x-2 animate-float-slow layer-ltv">
+                                    <div class="flex items-center gap-1.5">
+                                        <div class="w-4 h-4 rounded bg-success/15 text-success flex items-center justify-center text-[8px]"><i class="fas fa-redo"></i></div>
+                                        <span class="text-[8px] font-bold text-gray-400 uppercase tracking-wider">Máquina LTV</span>
+                                    </div>
+                                    <span class="text-[8px] text-gray-600 block mt-1 leading-tight">Cliente Inativo há 30 dias detectado</span>
+                                    <span class="text-[7.5px] font-bold text-accent hover:underline cursor-pointer block mt-1 flex items-center gap-0.5">Reativar <i class="fas fa-chevron-right text-[5px]"></i></span>
                                 </div>
-                                <span class="text-[8px] text-gray-600 block mt-1 leading-tight">Cliente Inativo há 30 dias detectado</span>
-                                <span class="text-[7.5px] font-bold text-accent hover:underline cursor-pointer block mt-1 flex items-center gap-0.5">Reativar <i class="fas fa-chevron-right text-[5px]"></i></span>
-                            </div>
 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -409,6 +443,41 @@
                         <p class="text-sm text-gray-600 leading-relaxed">
                             <strong class="text-dark">PROCURA-SE:</strong> Empreendedores e profissionais autônomos cansados do caos diário no WhatsApp, no-shows frequentes e desorganização financeira. <em>Oferecemos refúgio imediato:</em> um ecossistema completo (Site Inteligente + Portal Hub) pronto em 4 dias. Tratar diretamente abaixo.
                         </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- GLOBO 3D ECOSSISTEMA SECTION (WOW EFFECT) -->
+    <!-- ========================================== -->
+    <section class="py-20 md:py-28 relative overflow-hidden bg-cream" id="secao-globo-3d">
+        <div class="container mx-auto px-6 max-w-6xl relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 order-2 lg:order-1">
+                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/8 text-accent text-xs font-semibold mb-6">
+                        <i class="fas fa-globe-americas"></i> Conectividade Sem Limites
+                    </span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight text-dark">Seu negócio operando a nível global com presença profissional</h2>
+                    <div class="space-y-4 text-base text-gray-600 leading-relaxed">
+                        <p>
+                            Seus clientes não estão apenas restritos à sua rua ou indicações locais. Eles estão em toda parte. A infraestrutura da Hub Symples garante que sua marca esteja online 24 horas por dia, com carregamento instantâneo.
+                        </p>
+                        <p>
+                            Nosso ecossistema atrai, qualifica e organiza os leads de forma contínua, permitindo que você atenda com escala, profissionalismo e previsibilidade de qualquer lugar do mundo.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-4 text-xs font-bold text-slate-700 mt-6">
+                        <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-success"></span> Latência Zero</span>
+                        <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-accent"></span> WebGL 3D Real</span>
+                        <span class="flex items-center gap-1.5 text-accent"><i class="fas fa-hand-pointer animate-pulse"></i> Arraste para girar</span>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 flex items-center justify-center order-1 lg:order-2">
+                    <div class="relative w-full max-w-[450px] aspect-square rounded-2xl bg-white/40 border border-white/25 backdrop-blur-md shadow-2xl p-4 overflow-hidden flex items-center justify-center select-none cursor-grab active:cursor-grabbing" id="canvas-globo-container">
+                        <canvas id="canvas-globo-3d" class="w-full h-full max-w-full max-h-full"></canvas>
                     </div>
                 </div>
             </div>
@@ -481,6 +550,53 @@
                             <span><strong class="text-dark">Retenção (LTV) & Growth Hub:</strong> Identifique clientes inativos há 30 dias e acesse templates e pílulas de áudio para faturar mais.</span>
                         </li>
                     </ul>
+                </div>
+            </div>
+
+            <!-- RADAR DE LEADS SIMULADO (WOW EFFECT) -->
+            <div class="mt-16 bg-[#0a0a0c] border border-white/10 rounded-2xl p-6 md:p-8 text-white relative overflow-hidden shadow-2xl">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-purple-600"></div>
+                <div class="grid lg:grid-cols-12 gap-8 items-center relative z-10">
+                    <div class="lg:col-span-7 flex flex-col md:flex-row items-center gap-6 justify-center">
+                        <!-- Canvas do Radar de Leads -->
+                        <div class="relative w-48 h-48 md:w-56 md:h-56 rounded-full border border-accent/20 flex items-center justify-center overflow-hidden bg-accent/[0.02] flex-shrink-0">
+                            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,85,255,0.05)_0%,transparent_70%)]"></div>
+                            <!-- Círculos concêntricos do radar -->
+                            <div class="absolute w-3/4 h-3/4 rounded-full border border-accent/15"></div>
+                            <div class="absolute w-1/2 h-1/2 rounded-full border border-accent/10"></div>
+                            <div class="absolute w-1/4 h-1/4 rounded-full border border-accent/5"></div>
+                            <!-- Eixo cruzado do radar -->
+                            <div class="absolute w-full h-[1px] bg-accent/10"></div>
+                            <div class="absolute h-full w-[1px] bg-accent/10"></div>
+                            <!-- Canvas para renderizar a varredura e os alvos -->
+                            <canvas id="canvas-radar" class="absolute inset-0 w-full h-full"></canvas>
+                        </div>
+                        
+                        <!-- Painel de Deteções do Radar -->
+                        <div class="flex-grow w-full space-y-3">
+                            <span class="text-[9px] font-bold text-accent uppercase tracking-widest block flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
+                                <i class="fas fa-satellite-dish"></i> Radar de Leads Ativo
+                            </span>
+                            <div class="space-y-2 max-h-[160px] overflow-hidden" id="radar-detections-list">
+                                <div class="text-xs bg-white/5 border border-white/5 p-2 rounded-lg flex items-center justify-between text-slate-300">
+                                    <span>Aguardando varredura inicial...</span>
+                                    <span class="text-[9px] text-gray-500">Live</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:col-span-5">
+                        <span class="text-[10px] font-bold text-purple-400 uppercase tracking-widest block mb-2">Automação Invisível</span>
+                        <h4 class="text-xl md:text-2xl font-bold mb-3 text-white leading-tight">Sua marca captando e agendando clientes no piloto automático</h4>
+                        <p class="text-xs md:text-sm text-slate-400 leading-relaxed mb-4">
+                            O Radar de Leads simula a integração em tempo real entre o seu **Site Inteligente** e o seu **Portal Hub**. Nosso robô escaneia o tráfego, atrai interessados e dispara ações para preencher sua agenda sem que você precise gerenciar contatos manualmente.
+                        </p>
+                        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] text-slate-300">
+                            <span class="w-1.5 h-1.5 rounded-full bg-success animate-ping"></span> Simulação de Tráfego Orgânico & Pago
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2116,6 +2232,9 @@
             startTestimonialAutoPlay();
             initFAQAccordion();
             initPersistentCounter();
+            initGlobo3D();
+            initRadarLeads();
+            initMockupParallax();
 
             const retentionObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -2635,10 +2754,33 @@
               const mesh = new Mesh(gl, { geometry, program });
               ctn.appendChild(gl.canvas);
 
+              let currentSpeedFactor = 1.5;
+              let accumulatedTime = 0;
+              let lastTime = 0;
+
+              window.addEventListener('scroll', () => {
+                const maxScroll = 1200;
+                const pct = Math.min(window.scrollY / maxScroll, 1.0);
+                
+                // No caos (pct = 0): amplitude 1.8, speed 1.5
+                // Na ordem (pct = 1): amplitude 1.1, speed 0.3
+                const currentAmp = 1.8 - (pct * 0.7);
+                currentSpeedFactor = 1.5 - (pct * 1.2);
+                
+                if (program) {
+                  program.uniforms.uAmplitude.value = currentAmp;
+                }
+              }, { passive: true });
+
               let animateId = 0;
               const update = t => {
                 animateId = requestAnimationFrame(update);
-                program.uniforms.uTime.value = t * 0.001 * speed * 0.1;
+                if (lastTime === 0) lastTime = t;
+                accumulatedTime += (t - lastTime) * 0.001 * speed * currentSpeedFactor * 0.1;
+                lastTime = t;
+                if (program) {
+                  program.uniforms.uTime.value = accumulatedTime;
+                }
                 renderer.render({ scene: mesh });
               };
               animateId = requestAnimationFrame(update);
@@ -2963,6 +3105,325 @@
         }
 
         setTimeout(mostrarNotificacaoVendas, 18000);
+
+        // Globo 3D Interativo de Partículas (Wow Effect 1)
+        function initGlobo3D() {
+            const canvas = document.getElementById('canvas-globo-3d');
+            const container = document.getElementById('canvas-globo-container');
+            if (!canvas || !container) return;
+
+            const ctx = canvas.getContext('2d');
+            let width = canvas.width = container.clientWidth;
+            let height = canvas.height = container.clientHeight;
+
+            new ResizeObserver(() => {
+                width = canvas.width = container.clientWidth;
+                height = canvas.height = container.clientHeight;
+            }).observe(container);
+
+            const particles = [];
+            const numParticles = 250;
+            const radius = Math.min(width, height) * 0.35;
+
+            for (let i = 0; i < numParticles; i++) {
+                const phi = Math.acos(-1 + (2 * i) / numParticles);
+                const theta = Math.sqrt(numParticles * Math.PI) * phi;
+                particles.push({
+                    x: radius * Math.sin(phi) * Math.cos(theta),
+                    y: radius * Math.sin(phi) * Math.sin(theta),
+                    z: radius * Math.cos(phi),
+                    color: i % 5 === 0 ? '#32b3a6' : '#0055ff'
+                });
+            }
+
+            let angleX = 0.005;
+            let angleY = 0.005;
+            let targetAngleX = 0.005;
+            let targetAngleY = 0.005;
+
+            let isDragging = false;
+            let startMouseX = 0;
+            let startMouseY = 0;
+
+            container.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                startMouseX = e.clientX;
+                startMouseY = e.clientY;
+            });
+
+            window.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                const dx = e.clientX - startMouseX;
+                const dy = e.clientY - startMouseY;
+                
+                targetAngleY = dx * 0.005;
+                targetAngleX = -dy * 0.005;
+                
+                startMouseX = e.clientX;
+                startMouseY = e.clientY;
+            });
+
+            window.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+
+            container.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                startMouseX = e.touches[0].clientX;
+                startMouseY = e.touches[0].clientY;
+            }, { passive: true });
+
+            window.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                const dx = e.touches[0].clientX - startMouseX;
+                const dy = e.touches[0].clientY - startMouseY;
+                
+                targetAngleY = dx * 0.005;
+                targetAngleX = -dy * 0.005;
+                
+                startMouseX = e.touches[0].clientX;
+                startMouseY = e.touches[0].clientY;
+            }, { passive: true });
+
+            window.addEventListener('touchend', () => {
+                isDragging = false;
+            });
+
+            function rotateX(p, angle) {
+                const cos = Math.cos(angle);
+                const sin = Math.sin(angle);
+                const y1 = p.y * cos - p.z * sin;
+                const z1 = p.y * sin + p.z * cos;
+                p.y = y1;
+                p.z = z1;
+            }
+
+            function rotateY(p, angle) {
+                const cos = Math.cos(angle);
+                const sin = Math.sin(angle);
+                const x1 = p.x * cos - p.z * sin;
+                const z1 = p.x * sin + p.z * cos;
+                p.x = x1;
+                p.z = z1;
+            }
+
+            function render() {
+                ctx.clearRect(0, 0, width, height);
+
+                angleX += (targetAngleX - angleX) * 0.1;
+                angleY += (targetAngleY - angleY) * 0.1;
+
+                if (!isDragging) {
+                    targetAngleX *= 0.95;
+                    targetAngleY *= 0.95;
+                    angleX += (0.001 - angleX) * 0.05;
+                    angleY += (0.002 - angleY) * 0.05;
+                }
+
+                particles.forEach(p => {
+                    rotateX(p, angleX);
+                    rotateY(p, angleY);
+
+                    const fov = 400;
+                    const scale = fov / (fov + p.z);
+                    const projX = p.x * scale + width / 2;
+                    const projY = p.y * scale + height / 2;
+
+                    const alpha = (radius - p.z) / (2 * radius) * 0.7 + 0.3;
+                    const size = scale * 2.2;
+
+                    ctx.beginPath();
+                    ctx.arc(projX, projY, Math.max(0.5, size), 0, 2 * Math.PI);
+                    ctx.fillStyle = p.color;
+                    ctx.globalAlpha = alpha;
+                    ctx.fill();
+                });
+
+                ctx.globalAlpha = 0.07;
+                ctx.strokeStyle = '#0055ff';
+                ctx.lineWidth = 0.4;
+                for (let i = 0; i < numParticles; i += 4) {
+                    for (let j = i + 1; j < numParticles; j += 8) {
+                        const dx = particles[i].x - particles[j].x;
+                        const dy = particles[i].y - particles[j].y;
+                        const dz = particles[i].z - particles[j].z;
+                        const dist = Math.sqrt(dx*dx + dy*dy + dz*dz);
+                        
+                        if (dist < radius * 0.45) {
+                            const fov = 400;
+                            const scaleI = fov / (fov + particles[i].z);
+                            const scaleJ = fov / (fov + particles[j].z);
+                            
+                            ctx.beginPath();
+                            ctx.moveTo(particles[i].x * scaleI + width / 2, particles[i].y * scaleI + height / 2);
+                            ctx.lineTo(particles[j].x * scaleJ + width / 2, particles[j].y * scaleJ + height / 2);
+                            ctx.stroke();
+                        }
+                    }
+                }
+                ctx.globalAlpha = 1.0;
+
+                requestAnimationFrame(render);
+            }
+
+            render();
+        }
+
+        // Radar Holográfico de Leads (Wow Effect 4)
+        function initRadarLeads() {
+            const canvas = document.getElementById('canvas-radar');
+            const list = document.getElementById('radar-detections-list');
+            if (!canvas || !list) return;
+
+            const ctx = canvas.getContext('2d');
+            let size = canvas.width = canvas.parentElement.clientWidth;
+            canvas.height = canvas.parentElement.clientHeight;
+            let centerX = size / 2;
+            let centerY = size / 2;
+            let radius = size / 2;
+
+            new ResizeObserver(() => {
+                if (canvas.parentElement) {
+                    size = canvas.width = canvas.parentElement.clientWidth;
+                    canvas.height = canvas.parentElement.clientHeight;
+                    centerX = size / 2;
+                    centerY = size / 2;
+                    radius = size / 2;
+                }
+            }).observe(canvas.parentElement);
+
+            let sweepAngle = 0;
+            const targets = [];
+            const leadLogs = [
+                { nome: "Dra. Paula Rocha", acao: "entrou no site", icone: "fa-door-open", cor: "text-accent" },
+                { nome: "Clínica OdontoPlus", acao: "preencheu formulário", icone: "fa-wpforms", cor: "text-purple-400" },
+                { nome: "Carlos Magno", acao: "visualizou proposta Pix", icone: "fa-wallet", cor: "text-success" },
+                { nome: "Renata Abreu (Nutri)", acao: "agendou avaliação", icone: "fa-calendar-check", cor: "text-yellow-500" },
+                { nome: "Dr. Marcos Santos", acao: "solicitou contato comercial", icone: "fa-comment-alt", cor: "text-accent" },
+                { nome: "Studio Beleza Viva", acao: "ativou lembrete WhatsApp", icone: "fa-bell", cor: "text-success" }
+            ];
+            let logIndex = 0;
+
+            function addDetectionLog(log) {
+                const item = document.createElement('div');
+                item.className = 'text-xs bg-white/5 border border-white/5 p-2 rounded-lg flex items-center justify-between text-slate-300 opacity-0 -translate-y-2 transition-all duration-500';
+                item.innerHTML = `
+                    <span class="flex items-center gap-2">
+                        <i class="fas ${log.icone} ${log.cor}"></i>
+                        <span><strong>${log.nome}</strong> ${log.acao}</span>
+                    </span>
+                    <span class="text-[8px] text-gray-500 font-mono">AGORA</span>
+                `;
+                
+                if (list.children[0] && list.children[0].textContent.includes('Aguardando')) {
+                    list.innerHTML = '';
+                }
+
+                list.insertBefore(item, list.firstChild);
+                
+                if (list.children.length > 4) {
+                    list.removeChild(list.lastChild);
+                }
+
+                requestAnimationFrame(() => {
+                    item.classList.remove('opacity-0', '-translate-y-2');
+                });
+            }
+
+            function triggerNewTarget(angle) {
+                const angleRad = angle;
+                const distance = radius * (0.3 + Math.random() * 0.5);
+                const log = leadLogs[logIndex];
+                
+                targets.push({
+                    x: centerX + distance * Math.cos(angleRad),
+                    y: centerY + distance * Math.sin(angleRad),
+                    alpha: 1.0,
+                    log: log
+                });
+
+                addDetectionLog(log);
+                logIndex = (logIndex + 1) % leadLogs.length;
+            }
+
+            function drawRadar() {
+                ctx.clearRect(0, 0, size, size);
+
+                sweepAngle += 0.015;
+                if (sweepAngle > Math.PI * 2) {
+                    sweepAngle = 0;
+                }
+
+                const grad = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, radius);
+                grad.addColorStop(0, 'rgba(0, 85, 255, 0.01)');
+                grad.addColorStop(1, 'rgba(0, 85, 255, 0.06)');
+                
+                ctx.beginPath();
+                ctx.moveTo(centerX, centerY);
+                ctx.arc(centerX, centerY, radius, sweepAngle - 0.35, sweepAngle);
+                ctx.closePath();
+                ctx.fillStyle = grad;
+                ctx.fill();
+
+                ctx.beginPath();
+                ctx.moveTo(centerX, centerY);
+                ctx.lineTo(centerX + radius * Math.cos(sweepAngle), centerY + radius * Math.sin(sweepAngle));
+                ctx.strokeStyle = 'rgba(0, 85, 255, 0.35)';
+                ctx.lineWidth = 1.5;
+                ctx.stroke();
+
+                if (Math.random() < 0.007 && targets.length < 5) {
+                    triggerNewTarget(sweepAngle);
+                }
+
+                for (let i = targets.length - 1; i >= 0; i--) {
+                    const t = targets[i];
+                    
+                    ctx.beginPath();
+                    ctx.arc(t.x, t.y, 4, 0, 2 * Math.PI);
+                    ctx.fillStyle = `rgba(0, 85, 255, ${t.alpha})`;
+                    ctx.fill();
+
+                    ctx.beginPath();
+                    ctx.arc(t.x, t.y, 14 - t.alpha * 10, 0, 2 * Math.PI);
+                    ctx.strokeStyle = `rgba(0, 85, 255, ${t.alpha * 0.4})`;
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+
+                    t.alpha -= 0.0035;
+                    if (t.alpha <= 0) {
+                        targets.splice(i, 1);
+                    }
+                }
+
+                requestAnimationFrame(drawRadar);
+            }
+
+            drawRadar();
+        }
+
+        // Paralaxe 3D no Mockup da Hero (Wow Effect 3)
+        function initMockupParallax() {
+            const sensor = document.getElementById('mockup-3d-sensor');
+            const card3D = document.getElementById('mockup-3d-card');
+            
+            if (sensor && card3D) {
+                sensor.addEventListener('mousemove', (e) => {
+                    const rect = sensor.getBoundingClientRect();
+                    const x = e.clientX - rect.left - rect.width/2;
+                    const y = e.clientY - rect.top - rect.height/2;
+                    
+                    const rotateX = -(y / (rect.height/2)) * 12;
+                    const rotateY = (x / (rect.width/2)) * 12;
+                    
+                    card3D.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                });
+                
+                sensor.addEventListener('mouseleave', () => {
+                    card3D.style.transform = 'rotateX(0deg) rotateY(0deg)';
+                });
+            }
+        }
     </script>
 
     <!-- SALES NOTIFICATIONS -->
