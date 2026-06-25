@@ -90,5 +90,5 @@ Como o projeto preza pelo minimalismo e máxima performance:
   * **Sintonização Comercial**: Atualização da tabela de planos comerciais, depoimentos do carrossel (focados em tempo livre, redução de no-shows e inadimplência) e FAQ de acordo com a proposta de ecossistema de gestão.
 * **[Junho/2026] Refinamento de Copy (Maturidade Comercial) & Remoção de Wow Effects**:
   * **Remoção de Wow Effects**: Retirada completa da seção de Globo 3D Interativo e do Radar Holográfico de Leads para otimização de performance e simplificação visual a pedido do usuário.
-  * **Aprimoramento de Copy**: Reescrita cirúrgica da subheadline da Hero Section e de toda a seção de Filosofia (Manifesto da Ordem), enfatizando a maturidade, o fim do amadorismo operacional, o profissionalismo comercial e a segurança/estabilidade da vida familiar do empreendedor.
+  * **Aprimoramento de Copy**: Reescrita cirúrgica da subheadline da Hero Section, de toda a seção de Filosofia (Manifesto da Ordem) e da seção do Ecossistema (Porta/Casa), enfatizando a maturidade, o fim do amadorismo operacional, o profissionalismo comercial e a segurança/estabilidade da vida familiar do empreendedor.
   * **Verificação e Entrega**: Validação completa da integridade do arquivo `index.html` via script `check_syntax.js`.
