@@ -216,6 +216,17 @@
             transform: translateZ(70px) translateY(-32px) translateX(8px) !important;
             transition: transform 0.3s ease;
         }
+
+        /* Ajuste fino da Prova Social / Depoimentos */
+        .testimonial-slide {
+            height: 100%;
+        }
+        .testimonial-slide > div:last-child {
+            flex-shrink: 0;
+        }
+        .testimonial-slide .rounded-xl {
+            flex-shrink: 0;
+        }
     </style>
 </head>
 <body class="font-sans antialiased relative">
@@ -1262,7 +1273,7 @@
 
             <div class="relative max-w-4xl mx-auto px-4 md:px-12 select-none">
                 
-                <div class="relative overflow-hidden min-h-[380px] md:min-h-[280px]">
+                <div class="relative overflow-hidden min-h-[520px] sm:min-h-[420px] md:min-h-[320px] lg:min-h-[280px]">
                     
                     <!-- Slide 1 -->
                     <div class="testimonial-slide absolute inset-0 flex flex-col justify-between card-modern p-8 transition-all duration-500 opacity-100 scale-100 z-10 text-dark">
@@ -2091,28 +2102,16 @@
         function nextTestimonial() {
             activeTestimonial = (activeTestimonial + 1) % totalTestimonials;
             updateTestimonials();
-            resetTestimonialAutoPlay();
         }
 
         function prevTestimonial() {
             activeTestimonial = (activeTestimonial - 1 + totalTestimonials) % totalTestimonials;
             updateTestimonials();
-            resetTestimonialAutoPlay();
         }
 
         function setTestimonial(idx) {
             activeTestimonial = idx;
             updateTestimonials();
-            resetTestimonialAutoPlay();
-        }
-
-        function startTestimonialAutoPlay() {
-            testimonialInterval = setInterval(nextTestimonial, 7000);
-        }
-
-        function resetTestimonialAutoPlay() {
-            clearInterval(testimonialInterval);
-            startTestimonialAutoPlay();
         }
 
         function initFAQAccordion() {
@@ -2147,10 +2146,8 @@
             // Inicializadores Básicos
             initComparisonSlider();
             updateTestimonials();
-            startTestimonialAutoPlay();
             initFAQAccordion();
             initPersistentCounter();
-            initMockupParallax();
 
             const retentionObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -3023,28 +3020,6 @@
         setTimeout(mostrarNotificacaoVendas, 18000);
 
 
-        // Paralaxe 3D no Mockup da Hero (Wow Effect 3)
-        function initMockupParallax() {
-            const sensor = document.getElementById('mockup-3d-sensor');
-            const card3D = document.getElementById('mockup-3d-card');
-            
-            if (sensor && card3D) {
-                sensor.addEventListener('mousemove', (e) => {
-                    const rect = sensor.getBoundingClientRect();
-                    const x = e.clientX - rect.left - rect.width/2;
-                    const y = e.clientY - rect.top - rect.height/2;
-                    
-                    const rotateX = -(y / (rect.height/2)) * 12;
-                    const rotateY = (x / (rect.width/2)) * 12;
-                    
-                    card3D.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-                });
-                
-                sensor.addEventListener('mouseleave', () => {
-                    card3D.style.transform = 'rotateX(0deg) rotateY(0deg)';
-                });
-            }
-        }
     </script>
 
     <!-- SALES NOTIFICATIONS -->
