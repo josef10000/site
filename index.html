@@ -313,8 +313,8 @@
 
                 <!-- Coluna Direita: Mockup 3D do Portal Hub com Efeito Paralaxe Explodido -->
                 <div class="lg:col-span-5 w-full flex items-center justify-center relative" id="mockup-3d-sensor">
-                    <div class="mockup-3d-wrapper">
-                        <div class="relative w-full max-w-[400px] aspect-[4/3] sm:aspect-video lg:aspect-[4/3] rounded-2xl bg-white/30 border border-white/20 backdrop-blur-md shadow-2xl p-5 select-none overflow-hidden animate-float-slow mockup-3d-card" id="mockup-3d-card">
+                    <div class="mockup-3d-wrapper animate-float-slow">
+                        <div class="relative w-full max-w-[400px] aspect-[4/3] sm:aspect-video lg:aspect-[4/3] rounded-2xl bg-white/30 border border-white/20 backdrop-blur-md shadow-2xl p-5 select-none overflow-hidden mockup-3d-card" id="mockup-3d-card">
                             
                             <!-- Header do App -->
                             <div class="flex items-center justify-between border-b border-black/5 pb-3 mb-4">
@@ -511,7 +511,7 @@
                         </li>
                         <li class="flex items-start gap-3 text-gray-600">
                             <i class="fas fa-check text-success mt-1.5"></i>
-                            <span><strong class="text-dark">Retenção (LTV) & Growth Hub:</strong> Identifique clientes inativos há 30 dias e acesse templates e pílulas de áudio para faturar mais.</span>
+                            <span><strong class="text-dark">Retenção (LTV) & Hub de Crescimento:</strong> Identifique clientes inativos há 30 dias e acesse templates e pílulas de áudio para faturar mais.</span>
                         </li>
                     </ul>
                 </div>
@@ -940,7 +940,7 @@
                         </button>
                         <button onclick="trocarAbaPortal(event, 'crescimento')" class="portal-tab-btn flex items-center gap-3 text-gray-500 hover:text-dark px-4 py-2.5 rounded-xl transition-all font-semibold text-left w-full hover:bg-black/5 text-sm">
                             <i class="fas fa-microphone-alt text-base"></i>
-                            <span>Growth Hub</span>
+                            <span>Hub de Crescimento</span>
                         </button>
                         <button onclick="trocarAbaPortal(event, 'suporte')" class="portal-tab-btn flex items-center gap-3 text-gray-500 hover:text-dark px-4 py-2.5 rounded-xl transition-all font-semibold text-left w-full hover:bg-black/5 text-sm">
                             <i class="fas fa-history text-base"></i>
@@ -1082,11 +1082,11 @@
                         </div>
                     </div>
 
-                    <!-- PAINEL 3: GROWTH HUB -->
+                    <!-- PAINEL 3: HUB DE CRESCIMENTO -->
                     <div id="portal-panel-crescimento" class="portal-panel space-y-6 transition-all duration-300 transform opacity-0 translate-x-10 absolute inset-0 p-6 md:p-8 hidden relative z-10 text-dark">
                         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-black/8 pb-4">
                             <div>
-                                <h3 class="text-xl font-bold text-dark flex items-center gap-2"><i class="fas fa-microphone-alt text-accent"></i> Growth Hub & Aceleração</h3>
+                                <h3 class="text-xl font-bold text-dark flex items-center gap-2"><i class="fas fa-microphone-alt text-accent"></i> Hub de Crescimento & Aceleração</h3>
                                 <p class="text-xs text-gray-400 mt-1">Mini-podcasts em áudio e scripts testados de conversão no seu bolso.</p>
                             </div>
                             <span class="bg-accent/8 text-accent text-[10px] font-bold px-3 py-1.5 rounded-full self-start md:self-auto flex items-center gap-1"><i class="fas fa-rocket"></i> Aulas & Scripts</span>
@@ -1644,7 +1644,7 @@
                             </div>
                             <span class="text-[11px] text-gray-500 ml-6 leading-relaxed">Painel para identificar e gerar mensagens personalizadas para clientes inativos há 30 dias.</span>
                         </li>
-                        <li class="flex items-start gap-3"><span class="text-accent select-none">✦</span> <span class="text-gray-600">Growth Hub com Mini-Podcasts e Scripts Prontos</span></li>
+                        <li class="flex items-start gap-3"><span class="text-accent select-none">✦</span> <span class="text-gray-600">Hub de Crescimento com Mini-Podcasts e Scripts Prontos</span></li>
                         <li class="flex items-start gap-3"><span class="text-accent select-none">✦</span> <span class="text-gray-600">Domínio Próprio (.com.br) e E-mail Corporativo</span></li>
                         <li class="flex items-start gap-3"><span class="text-accent select-none">✦</span> <span class="text-gray-600">Otimização Avançada de SEO (Google)</span></li>
                         <li class="flex items-start gap-3"><span class="text-gray-600">Galeria de Portfólio Premium e Pixel de Anúncios</span></li>
@@ -1761,7 +1761,7 @@
                     </button>
                     <div class="faq-collapse max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <p class="px-6 pb-6 text-gray-500 text-sm md:text-base leading-relaxed border-t border-black/5 pt-4">
-                            O <strong class="text-dark">Portal Hub</strong> é a sua central de controle e gestão exclusiva (A Casa). Ele reúne 4 ferramentas integradas: Agenda Integrada (com lembretes automáticos de confirmação contra no-shows), CRM Financeiro (para monitorar quem pagou, quem deve e enviar cobrança Pix no WhatsApp), Growth Hub (aulas diárias de 3 min em áudio e scripts rápidos de vendas) e a Máquina de LTV (para reativar clientes inativos de 30 dias). <strong class="text-dark">Não há custos adicionais, taxas de configuração ou mensalidades extras</strong> para usar o portal.
+                            O <strong class="text-dark">Portal Hub</strong> é a sua central de controle e gestão exclusiva (A Casa). Ele reúne 4 ferramentas integradas: Agenda Integrada (com lembretes automáticos de confirmação contra no-shows), CRM Financeiro (para monitorar quem pagou, quem deve e enviar cobrança Pix no WhatsApp), Hub de Crescimento (aulas diárias de 3 min em áudio e scripts rápidos de vendas) e a Máquina de LTV (para reativar clientes inativos de 30 dias). <strong class="text-dark">Não há custos adicionais, taxas de configuração ou mensalidades extras</strong> para usar o portal.
                         </p>
                     </div>
                 </div>
@@ -2858,7 +2858,7 @@
             }
         }
 
-        // Player de Áudio Growth Hub
+        // Player de Áudio Hub de Crescimento
         let audioTocando = false;
         let audioInterval = null;
         
@@ -2912,7 +2912,7 @@
             }
         }
         
-        // Copiar Scripts Growth Hub
+        // Copiar Scripts Hub de Crescimento
         function copiarScriptMock(btn, texto) {
             const originalText = btn.textContent;
             btn.textContent = "Copiado!";
