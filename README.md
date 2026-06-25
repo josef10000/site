@@ -33,7 +33,7 @@ Moldura metálica de smartphone moderna com slider funcional que contrasta o fee
 Painel interativo no qual o usuário pode navegar por 4 abas simuladas e executar ações reais em tempo real:
 * **Agenda**: Simulação de confirmação de compromissos com disparo de notificações.
 * **CRM Financeiro**: Exibição visual de receitas e simulação de cobrança Pix direta por WhatsApp.
-* **Growth Hub**: Player para ouvir pílulas rápidas de áudio de mentoria e copiar scripts de venda prontos.
+* **Hub de Crescimento**: Player para ouvir pílulas rápidas de áudio de mentoria e copiar scripts de venda prontos.
 * **Máquina de LTV**: Geração rápida de copy de reativação personalizada em 1 clique para clientes antigos.
 
 ### 💳 Planos e Assinaturas
@@ -85,7 +85,7 @@ Como o projeto preza pelo minimalismo e máxima performance:
   * **Radar Holográfico de Leads**: Inclusão de um canvas que desenha um radar sonar circular simulando a captação e automação de leads, populando logs dinamicamente.
 * **[Junho/2026] Pivot de Posicionamento para Ecossistema SaaS B2B**:
   * **Rebranding da Copy**: Nova Hero Section focada no fim do caos operacional no WhatsApp e previsibilidade real; reescrita do Manifesto da Autoridade para "Manifesto da Ordem".
-  * **Reengenharia do Portal Hub (A Casa)**: Substituição dos painéis por ferramentas funcionais de **Agenda Integrada** (simulador de no-show), **CRM Financeiro** (cobrança Pix rápida), **Growth Hub** (mentoria em áudio) e **Máquina de LTV** (reativação de leads em 1 clique).
+  * **Reengenharia do Portal Hub (A Casa)**: Substituição dos painéis por ferramentas funcionais de **Agenda Integrada** (simulador de no-show), **CRM Financeiro** (cobrança Pix rápida), **Hub de Crescimento** (mentoria em áudio) e **Máquina de LTV** (reativação de leads em 1 clique).
   * **Tabela Comercial**: Atualização da ancoragem de planos para destacar o Portal Hub e o robô de lembrete de WhatsApp contra faltas.ientes inativos e gerar scripts personalizados de WhatsApp em 1 clique).
   * **Sintonização Comercial**: Atualização da tabela de planos comerciais, depoimentos do carrossel (focados em tempo livre, redução de no-shows e inadimplência) e FAQ de acordo com a proposta de ecossistema de gestão.
 * **[Junho/2026] Refinamento de Copy (Maturidade Comercial) & Remoção de Wow Effects**:
