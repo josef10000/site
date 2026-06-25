@@ -88,5 +88,7 @@ Como o projeto preza pelo minimalismo e máxima performance:
   * **Reengenharia do Portal Hub (A Casa)**: Substituição dos painéis por ferramentas funcionais de **Agenda Integrada** (simulador de no-show), **CRM Financeiro** (cobrança Pix rápida), **Growth Hub** (mentoria em áudio) e **Máquina de LTV** (reativação de leads em 1 clique).
   * **Tabela Comercial**: Atualização da ancoragem de planos para destacar o Portal Hub e o robô de lembrete de WhatsApp contra faltas.ientes inativos e gerar scripts personalizados de WhatsApp em 1 clique).
   * **Sintonização Comercial**: Atualização da tabela de planos comerciais, depoimentos do carrossel (focados em tempo livre, redução de no-shows e inadimplência) e FAQ de acordo com a proposta de ecossistema de gestão.
-
-
+* **[Junho/2026] Refinamento de Copy (Maturidade Comercial) & Remoção de Wow Effects**:
+  * **Remoção de Wow Effects**: Retirada completa da seção de Globo 3D Interativo e do Radar Holográfico de Leads para otimização de performance e simplificação visual a pedido do usuário.
+  * **Aprimoramento de Copy**: Reescrita cirúrgica da subheadline da Hero Section e de toda a seção de Filosofia (Manifesto da Ordem), enfatizando a maturidade, o fim do amadorismo operacional, o profissionalismo comercial e a segurança/estabilidade da vida familiar do empreendedor.
+  * **Verificação e Entrega**: Validação completa da integridade do arquivo `index.html` via script `check_syntax.js`.
