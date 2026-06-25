@@ -77,6 +77,7 @@ Como o projeto preza pelo minimalismo e máxima performance:
   * **Hero em Duas Colunas**: A dobra inicial (Hero) foi otimizada para duas colunas (headline e CTA à esquerda, mockup tridimensional animado do Portal Hub com efeitos dinâmicos à direita) incorporando a logo e nome local.
   * **Antes vs. Depois Otimizado**: Reorganização em duas colunas (texto explicativo à esquerda, smartphone interativo à direita) e restauração do design premium original de alta autoridade (Dra. Alessandra Veiga) no mockup do celular.
   * **Seção de Criadores em Fundo Escuro**: A seção de influenciadores/criadores foi atualizada com fundo preto (`#050505`) e cards em glassmorphism escuro para maximizar o contraste e o apelo visual.
+  * **QR Code Pix no CRM**: Substituição da mensagem estática de cobrança de texto na simulação do CRM Financeiro por um QR Code interativo em SVG estilizado do Pix com atualização dinâmica do destinatário.
 * **[Junho/2026] Pivot de Posicionamento para Ecossistema SaaS B2B**:
   * **Rebranding da Copy**: Nova Hero Section focada no fim do caos operacional no WhatsApp e previsibilidade real; reescrita do Manifesto da Autoridade para "Manifesto da Ordem".
   * **Reengenharia do Portal Hub (A Casa)**: Substituição dos painéis por ferramentas funcionais de **Agenda Integrada** (simulador de no-show), **CRM Financeiro** (cobrança Pix rápida), **Growth Hub** (mentoria em áudio) e **Máquina de LTV** (reativação de leads em 1 clique).
