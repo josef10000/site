@@ -92,3 +92,10 @@ Como o projeto preza pelo minimalismo e máxima performance:
   * **Remoção de Wow Effects**: Retirada completa da seção de Globo 3D Interativo e do Radar Holográfico de Leads para otimização de performance e simplificação visual a pedido do usuário.
   * **Aprimoramento de Copy**: Reescrita cirúrgica da subheadline da Hero Section, de toda a seção de Filosofia (Manifesto da Ordem) e da seção do Ecossistema (Porta/Casa), enfatizando a maturidade, o fim do amadorismo operacional, o profissionalismo comercial e a segurança/estabilidade da vida familiar do empreendedor.
   * **Verificação e Entrega**: Validação completa da integridade do arquivo `index.html` via script `check_syntax.js`.
+* **[Junho/2026] Otimização de Conversão (CRO) & Foco em Lucratividade**:
+  * **Nova Headline & Produto no Topo**: O Hero do site destaca imediatamente a proposta de produto ('Seu site profissional + sistema completo de gestão por assinatura') e expõe 7 checks de funcionalidades visíveis acima da dobra em 5 segundos.
+  * **Copy de Sobrevivência & Lucratividade**: A seção de filosofia foi reformulada sob a ótica de dores de caixa reais (clientes perdidos no WhatsApp, faltas que custam R$ 250, cobranças Pix esquecidas).
+  * **Simplificação & Página 40% Menor**: Remoção completa da seção de criadores de conteúdo/influenciadores, consolidação da ancoragem de valor, e eliminação da seção redundante de retenção.
+  * **Planos por Maturidade (Fases de Evolução)**: Reorganização psicológica dos planos comerciais como fases de amadurecimento operacional do negócio (Start: organizar, Pro: crescer, Elite: automatizar e escalar) com CTAs voltados a identidade e recorrência posicionada como parceria de crescimento contínuo.
+  * **Depoimentos Quantitativos**: Atualização de todos os relatos no carrossel de depoimentos com métricas numéricas concretas de lucro recuperado e redução de no-shows.
+  * **Carrossel Responsivo com Altura Dinâmica**: Ajuste CSS/JS de depoimentos para que a altura do slide ativo (relative) guie o container automaticamente, eliminando a altura mínima fixa e impedindo cortes de nome/profissão no celular.

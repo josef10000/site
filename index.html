@@ -219,7 +219,7 @@
 
         /* Ajuste fino da Prova Social / Depoimentos */
         .testimonial-slide {
-            height: 100%;
+            width: 100%;
         }
         .testimonial-slide > div:last-child {
             flex-shrink: 0;
@@ -296,41 +296,52 @@
 
                     <!-- Main Title -->
                     <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.08] text-dark mb-6 text-balance">
-                        Seu Negócio Não Precisa de Mais Esforço. Precisa de <span class="text-accent">Estrutura</span>.
+                        Seu site profissional + <span class="text-accent">sistema completo de gestão</span> por assinatura.
                     </h1>
 
                     <!-- Subtitle -->
                     <p class="text-base sm:text-lg text-gray-600 mb-8 leading-relaxed font-light max-w-2xl">
-                        Centralize vendas, agenda e financeiro em um único sistema e volte a ter controle sobre sua rotina.
+                        A solução ideal para médicos, clínicas e prestadores de serviços. Centralize vendas, agenda e financeiro em um único ecossistema e pare de perder dinheiro na desorganização.
                     </p>
+
+                    <!-- Recursos Rápidos (Em 5 segundos) -->
+                    <div class="grid grid-cols-2 gap-x-6 gap-y-3 mb-8 w-full max-w-lg select-none">
+                        <div class="flex items-center gap-2.5 text-sm font-bold text-gray-800">
+                            <i class="fas fa-check-circle text-success flex-shrink-0 text-base"></i>
+                            <span>Site Profissional</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-sm font-bold text-gray-800">
+                            <i class="fas fa-check-circle text-success flex-shrink-0 text-base"></i>
+                            <span>Agenda Integrada</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-sm font-bold text-gray-800">
+                            <i class="fas fa-check-circle text-success flex-shrink-0 text-base"></i>
+                            <span>CRM e Clientes</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-sm font-bold text-gray-800">
+                            <i class="fas fa-check-circle text-success flex-shrink-0 text-base"></i>
+                            <span>Financeiro Completo</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-sm font-bold text-gray-800">
+                            <i class="fas fa-check-circle text-success flex-shrink-0 text-base"></i>
+                            <span>Agendamento Online 24h</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-sm font-bold text-gray-800">
+                            <i class="fas fa-check-circle text-success flex-shrink-0 text-base"></i>
+                            <span>WhatsApp Integrado</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-sm font-bold text-gray-800 col-span-2">
+                            <i class="fas fa-check-circle text-success flex-shrink-0 text-base"></i>
+                            <span>Máquina de LTV (Reativação de Inativos)</span>
+                        </div>
+                    </div>
 
                     <!-- CTA Button -->
                     <div class="flex flex-col sm:flex-row items-center gap-4 mb-8 w-full sm:w-auto">
-                        <a href="#secao-filosofia" onclick="revelarNovaEra(event)" class="inline-flex items-center justify-center gap-3 bg-accent hover:bg-accentHover text-white font-bold text-base px-8 py-4 btn-pill shadow-lg shadow-accent/20 hover:shadow-accent/30 transition-all transform hover:scale-105 w-full sm:w-auto">
+                        <a href="#planos" class="inline-flex items-center justify-center gap-3 bg-accent hover:bg-accentHover text-white font-bold text-base px-8 py-4 btn-pill shadow-lg shadow-accent/20 hover:shadow-accent/30 transition-all transform hover:scale-105 w-full sm:w-auto">
                             QUERO ORGANIZAR MEU NEGÓCIO
                             <i class="fas fa-arrow-right text-sm"></i>
                         </a>
-                    </div>
-
-                    <!-- Prova de Processo: Você fala, nós fazemos tudo -->
-                    <div class="flex flex-col gap-2.5 mb-8">
-                        <p class="text-xs font-bold text-dark uppercase tracking-widest mb-1">Como funciona na prática:</p>
-                        <div class="flex items-center gap-2.5 text-sm text-gray-600">
-                            <i class="fas fa-check-circle text-success flex-shrink-0"></i>
-                            <span>Você envia um áudio contando sobre seu negócio</span>
-                        </div>
-                        <div class="flex items-center gap-2.5 text-sm text-gray-600">
-                            <i class="fas fa-check-circle text-success flex-shrink-0"></i>
-                            <span>Nós escrevemos toda a copy</span>
-                        </div>
-                        <div class="flex items-center gap-2.5 text-sm text-gray-600">
-                            <i class="fas fa-check-circle text-success flex-shrink-0"></i>
-                            <span>Nós criamos todo o design</span>
-                        </div>
-                        <div class="flex items-center gap-2.5 text-sm text-gray-600">
-                            <i class="fas fa-check-circle text-success flex-shrink-0"></i>
-                            <span><strong class="text-dark">Seu ecossistema fica pronto em até 4 dias</strong></span>
-                        </div>
                     </div>
 
                     <!-- Live Counter -->
@@ -437,60 +448,59 @@
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 <div>
                     <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/8 text-accent text-xs font-semibold mb-6">
-                        <i class="fas fa-shield-alt"></i> O Manifesto da Ordem
+                        <i class="fas fa-exclamation-triangle"></i> O Custo Invisível do Caos
                     </div>
-                    <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight text-dark">Você não está cansado porque trabalha muito. Está cansado porque tudo depende de você.</h2>
-                    <div class="space-y-3">
-                        <div class="space-y-1">
-                            <p class="text-base text-gray-700 font-medium">Mensagens no domingo.</p>
-                            <p class="text-base text-gray-700 font-medium">Cobranças atrasadas.</p>
-                            <p class="text-base text-gray-700 font-medium">Clientes esquecidos.</p>
-                            <p class="text-base text-gray-700 font-medium">Horários desorganizados.</p>
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight text-dark">O improviso operacional está custando muito caro para o seu caixa.</h2>
+                    <div class="space-y-4">
+                        <div class="space-y-2">
+                            <p class="text-base text-gray-700 font-bold flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-danger"></span> "Perdi três pacientes/clientes essa semana por falta de retorno."
+                            </p>
+                            <p class="text-base text-gray-700 font-bold flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-danger"></span> "Esqueci de responder orçamentos importantes no WhatsApp."
+                            </p>
+                            <p class="text-base text-gray-700 font-bold flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-danger"></span> "Minha agenda virou uma bagunça e não sei quanto vou faturar."
+                            </p>
                         </div>
-                        <div class="pt-3 border-t border-black/6 space-y-2">
+                        <div class="pt-4 border-t border-black/6 space-y-3">
                             <p class="text-base text-gray-600 leading-relaxed">
-                                O problema não é falta de competência.<br>
-                                <strong class="text-dark">É falta de estrutura.</strong>
+                                Cada falta de cliente custa em média <strong class="text-dark">R$ 250</strong>. Cada orçamento esquecido no WhatsApp custa <strong class="text-dark">R$ 600</strong>. Cada cobrança em atraso não enviada drena o lucro do seu mês.
                             </p>
                             <p class="text-base text-gray-600 leading-relaxed">
-                                O Hub Symples transforma processos improvisados em uma operação organizada, previsível e profissional.
+                                Você não está cansado apenas porque trabalha muito. Está exausto porque seu negócio depende 100% de tarefas manuais que poderiam rodar sozinhas.
                             </p>
-                            <p class="text-sm text-gray-500 italic leading-relaxed pt-1">
-                                Porque competência sem estrutura gera exaustão.<br>
-                                <strong class="text-dark not-italic">Estrutura gera liberdade.</strong>
-                            </p>
-                            <p class="text-sm text-accent font-semibold not-italic leading-relaxed pt-1">
-                                Quando os processos funcionam sem você, o negócio cresce sem consumir sua vida.
+                            <p class="text-base text-accent font-semibold leading-relaxed pt-1">
+                                O Hub Symples blinda o seu faturamento e recupera o seu tempo livre. A estrutura gera lucro e previsibilidade.
                             </p>
                         </div>
                     </div>
                 </div>
 
                 <div class="space-y-5">
-                    <!-- Card Processos -->
-                    <div class="card-modern p-6 flex gap-4 items-start">
-                        <div class="w-11 h-11 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-lg font-bold flex-shrink-0">I</div>
+                    <!-- Card 1 -->
+                    <div class="card-modern p-6 flex gap-4 items-start text-dark">
+                        <div class="w-11 h-11 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-lg font-bold flex-shrink-0"><i class="fab fa-whatsapp"></i></div>
                         <div>
-                            <h4 class="text-base font-bold text-dark mb-1">O Fim do Improviso Exaustivo</h4>
-                            <p class="text-gray-500 text-sm leading-relaxed">Substitua planilhas confusas, anotações perdidas e processos manuais por um ecossistema sólido. Tenha a postura de um negócio de alto valor que gera confiança imediata no mercado.</p>
+                            <h4 class="text-base font-bold text-dark mb-1">O Fim das Vendas Perdidas no WhatsApp</h4>
+                            <p class="text-gray-500 text-sm leading-relaxed">Deixar clientes esperando ou esquecer de enviar propostas é desperdício de receita. Seu Site Inteligente faz a triagem automática, filtrando os leads qualificados em poucos segundos.</p>
                         </div>
                     </div>
-                    <!-- Card Faturamento -->
-                    <div class="card-modern p-6 flex gap-4 items-start">
-                        <div class="w-11 h-11 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-lg font-bold flex-shrink-0">II</div>
+                    <!-- Card 2 -->
+                    <div class="card-modern p-6 flex gap-4 items-start text-dark">
+                        <div class="w-11 h-11 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-lg font-bold flex-shrink-0"><i class="fas fa-calendar-check"></i></div>
                         <div>
-                            <h4 class="text-base font-bold text-dark mb-1">O Verdadeiro Prejuízo Operacional</h4>
-                            <p class="text-gray-500 text-sm leading-relaxed">O custo de continuar no caos não é apenas financeiro. É a ansiedade, a falta de sono e a presença física em casa enquanto sua mente ainda está no trabalho. Resgate o tempo de qualidade com quem importa.</p>
+                            <h4 class="text-base font-bold text-dark mb-1">Controle Real Contra Faltas (No-Shows)</h4>
+                            <p class="text-gray-500 text-sm leading-relaxed">Horários vazios custam caro. O Portal Hub envia disparos automáticos de confirmação de agendamentos no WhatsApp para blindar sua agenda e evitar prejuízos de última hora.</p>
                         </div>
                     </div>
-                    <!-- Card Utilidade -->
-                    <div class="card-modern p-6 relative overflow-hidden">
-                        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent text-white text-[10px] font-bold uppercase tracking-wider mb-3">
-                            A Hora da Decisão
+                    <!-- Card 3 -->
+                    <div class="card-modern p-6 flex gap-4 items-start text-dark">
+                        <div class="w-11 h-11 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-lg font-bold flex-shrink-0"><i class="fas fa-coins"></i></div>
+                        <div>
+                            <h4 class="text-base font-bold text-dark mb-1">Cobrança Amigável Sem Desgaste</h4>
+                            <p class="text-gray-500 text-sm leading-relaxed">Ter vergonha de cobrar atrasos ou esquecer datas drena seu fluxo de caixa. O sistema permite visualizar pendências e enviar cobranças com Pix em um único clique no WhatsApp.</p>
                         </div>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            <strong class="text-dark">ESCOLHA A LIBERDADE:</strong> O amadorismo operacional já custou caro demais à sua saúde e ao seu tempo. Vai continuar administrando o crescimento no improviso ou vai assumir o controle definitivo do seu negócio em 4 dias? Dê o passo definitivo abaixo.
-                        </p>
                     </div>
                 </div>
             </div>
@@ -518,18 +528,15 @@
     <!-- ========================================== -->
     <section class="py-20 md:py-32 relative" id="secao-contraste">
         <div class="container mx-auto px-6 max-w-6xl">
-            <div class="text-center mb-16">
+            <div class="text-center mb-12">
                 <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/8 text-accent text-xs font-semibold mb-6">
                     <i class="fas fa-layer-group"></i> O Ecossistema Unificado
                 </div>
-                <h2 class="text-3xl md:text-5xl font-extrabold mb-4 text-dark leading-tight">A estrutura completa para transformar sua operação de vez</h2>
-                <p class="text-lg text-gray-500 max-w-3xl mx-auto mb-8">Não entregamos apenas um site ou uma ferramenta solta. Construímos o ecossistema que transforma um profissional sobrecarregado em uma empresa madura e organizada.</p>
-                <div class="bg-danger/5 border border-danger/20 p-4 max-w-3xl mx-auto rounded-xl">
-                    <p class="text-xs md:text-sm text-danger font-semibold leading-relaxed"><strong>✦ O Erro da Ferramenta Solta:</strong> Um site sem gestão gera leads dispersos e perdidos; um sistema de gestão sem site não atrai novos clientes. Nós unimos os dois lados da moeda para você.</p>
-                </div>
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-4 text-dark leading-tight">O mecanismo completo para parar de perder dinheiro</h2>
+                <p class="text-lg text-gray-500 max-w-3xl mx-auto mb-8">Unimos atração de clientes e gestão operacional em uma única assinatura mensal. O site atrai; o sistema organiza e cobra.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="grid md:grid-cols-2 gap-8 text-dark">
                 <!-- Porta -->
                 <div class="card-modern p-8 relative overflow-hidden">
                     <div class="absolute top-0 left-0 w-full h-1 bg-accent rounded-t-2xl"></div>
@@ -537,20 +544,20 @@
                         <div class="w-11 h-11 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-lg">
                             <i class="fas fa-door-open"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-dark">A Porta (Site Inteligente) - Trabalha enquanto você vive</h3>
+                        <h3 class="text-xl font-bold text-dark">A Porta (Site Profissional) — Atração de Leads Premium</h3>
                     </div>
                     <ul class="space-y-4">
                         <li class="flex items-start gap-3 text-gray-600">
                             <i class="fas fa-check text-success mt-1.5"></i>
-                            <span><strong class="text-dark">Apresentação Profissional que Gera Confiança:</strong> Posicione-se com credibilidade e profissionalismo, transmitindo segurança imediata para clientes que valorizam qualidade.</span>
+                            <span><strong class="text-dark">Postura Profissional Imediata:</strong> Acabe com o envio de PDFs ou links amadores. Passe a credibilidade necessária para cobrar mais caro.</span>
                         </li>
                         <li class="flex items-start gap-3 text-gray-600">
                             <i class="fas fa-check text-success mt-1.5"></i>
-                            <span><strong class="text-dark">Filtro de Curiosos no WhatsApp:</strong> Capture apenas clientes qualificados e alinhados, que realmente valorizam e pagam bem pelo seu trabalho.</span>
+                            <span><strong class="text-dark">Filtro de Curiosos no WhatsApp:</strong> O site faz a triagem antes do contato, garantindo que você converse apenas com quem pode pagar.</span>
                         </li>
                         <li class="flex items-start gap-3 text-gray-600">
                             <i class="fas fa-check text-success mt-1.5"></i>
-                            <span><strong class="text-dark">Vitrine Oficial 24h:</strong> Acabe com o envio manual de PDFs informativos. Seus depoimentos, dúvidas e serviços sempre expostos com excelência.</span>
+                            <span><strong class="text-dark">Vitrine Ativa 24h:</strong> Destaque seus melhores tratamentos, especialidades, depoimentos e currículo de forma premium.</span>
                         </li>
                     </ul>
                 </div>
@@ -562,20 +569,20 @@
                         <div class="w-11 h-11 rounded-xl bg-dark text-white flex items-center justify-center text-lg">
                             <i class="fas fa-laptop-house"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-dark">A Casa (Portal Hub) - Processos invisíveis no automático</h3>
+                        <h3 class="text-xl font-bold text-dark">A Casa (Portal Hub) — Controle e Retenção do Caixa</h3>
                     </div>
                     <ul class="space-y-4">
                         <li class="flex items-start gap-3 text-gray-600">
                             <i class="fas fa-check text-success mt-1.5"></i>
-                            <span><strong class="text-dark">Agenda Unificada com Confirmação:</strong> Dispare lembretes de confirmação automáticos via WhatsApp e reduza drasticamente as ausências (no-shows).</span>
+                            <span><strong class="text-dark">Agenda Blindada e Lembretes:</strong> O sistema envia avisos de confirmação pelo WhatsApp para reduzir os furos de clientes e recuperar perdas.</span>
                         </li>
                         <li class="flex items-start gap-3 text-gray-600">
                             <i class="fas fa-check text-success mt-1.5"></i>
-                            <span><strong class="text-dark">CRM Financeiro Descomplicado:</strong> Gerencie o caixa, controle faturamento e inadimplência sem o desgaste de cobranças manuais ou anotações perdidas.</span>
+                            <span><strong class="text-dark">CRM Financeiro Simplificado:</strong> Monitore pagamentos, fluxo de caixa e inadimplências com facilidade e cobranças em um clique.</span>
                         </li>
                         <li class="flex items-start gap-3 text-gray-600">
                             <i class="fas fa-check text-success mt-1.5"></i>
-                            <span><strong class="text-dark">Hub de Crescimento & LTV:</strong> Identifique clientes inativos há mais de 30 dias e utilize estratégias prontas para faturar mais com quem já confia em você.</span>
+                            <span><strong class="text-dark">Máquina de Reativação (LTV):</strong> Identifique clientes inativos há mais de 30 dias e traga-os de volta com scripts validados.</span>
                         </li>
                     </ul>
                 </div>
@@ -1233,7 +1240,7 @@
                                 <p class="text-[9px] text-gray-400 mt-4"><i class="fas fa-info-circle"></i> Clique em <strong>Reativar</strong> para gerar a copy de cobrança/lembrete.</p>
                             </div>
                             
-                            <div class="md:col-span-6 bg-cream/50 border border-black/5 rounded-xl p-5 flex flex-col justify-between">
+                                    <div class="md:col-span-6 bg-cream/50 border border-black/5 rounded-xl p-5 flex flex-col justify-between">
                                 <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mb-4">Mensagem Pronta (WhatsApp)</span>
                                 <div class="bg-white border border-black/5 p-4 rounded-xl min-h-[140px] flex flex-col justify-between text-xs" id="ltv-script-box">
                                     <div class="text-gray-400 italic" id="ltv-cobranca-preview">
@@ -1247,102 +1254,43 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
-
-
-    <!-- ========================================== -->
-    <!-- INFLUENCERS / CREATORS SECTION -->
-    <!-- ========================================== -->
-    <section class="py-20 md:py-32 relative bg-[#050505] text-white overflow-hidden" id="secao-influenciadores">
-        <!-- Efeito sutil de luz azul de fundo -->
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent/5 blur-[120px] rounded-full pointer-events-none"></div>
-
-        <div class="container mx-auto px-6 max-w-6xl relative z-10">
-            <div class="flex flex-col lg:flex-row gap-12 items-center">
-                <div class="lg:w-1/2">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-semibold mb-6">
-                        <i class="fas fa-camera-retro"></i> Criadores de Conteúdo
-                    </div>
-                    <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight text-white">Sua influência não cabe só no Instagram. Torne-se a própria marca.</h2>
-                    <p class="text-base sm:text-lg text-slate-400 mb-6 leading-relaxed">Muitas marcas chegam até o seu perfil, mas desistem de fechar parceria porque você não passa o profissionalismo de uma empresa estruturada. Entenda: <strong class="text-white">nenhuma marca quer assistir 50 stories por dia</strong> para tentar entender a sua história ou o seu posicionamento.</p>
-                    <p class="text-base sm:text-lg text-slate-400 mb-8 leading-relaxed">Com a Hub Symples, você ganha a sua casa própria na internet. Um verdadeiro <strong class="text-accent font-semibold">Media Kit Vivo</strong>, que impressiona patrocinadores em 5 segundos e converte seguidores em fãs.</p>
-                </div>
-                
-                <div class="lg:w-1/2 w-full bg-white/[0.03] border border-white/10 rounded-2xl p-8 md:p-10 shadow-2xl backdrop-blur-sm">
-                    <h3 class="text-xl md:text-2xl font-bold text-white mb-8">O que entregamos no seu "Site Minimalista":</h3>
-                    
-                    <ul class="space-y-6 relative z-10">
-                        <li class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent/15 flex items-center justify-center flex-shrink-0 text-accent mt-1"><i class="fas fa-bolt"></i></div>
-                            <div>
-                                <strong class="text-white block text-lg mb-1 font-semibold">Header de Impacto</strong>
-                                <span class="text-sm text-slate-400 leading-relaxed block">Sua foto profissional, seu nome e sua promessa clara (ex: "Criando conexões reais através do humor cotidiano").</span>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent/15 flex items-center justify-center flex-shrink-0 text-accent mt-1"><i class="fas fa-book-open"></i></div>
-                            <div>
-                                <strong class="text-white block text-lg mb-1 font-semibold">A Sua História (Quem Sou)</strong>
-                                <span class="text-sm text-slate-400 leading-relaxed block">Texto curto e muito bem escrito (Copy), mostrando a sua essência. O que humaniza e conecta de verdade com as marcas.</span>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent/15 flex items-center justify-center flex-shrink-0 text-accent mt-1"><i class="fas fa-images"></i></div>
-                            <div>
-                                <strong class="text-white block text-lg mb-1 font-semibold">Galeria / Portfólio Visual</strong>
-                                <span class="text-sm text-slate-400 leading-relaxed block">Espaço limpo para destacar os melhores conteúdos ou fotos, transmitindo imediatamente a estética da sua marca pessoal.</span>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent/15 flex items-center justify-center flex-shrink-0 text-accent mt-1"><i class="fab fa-whatsapp"></i></div>
-                            <div>
-                                <strong class="text-white block text-lg mb-1 font-semibold">O Grande Diferencial: Contato Profissional</strong>
-                                <span class="text-sm text-slate-400 leading-relaxed block">Botão direto pro WhatsApp (com automação receptiva para triagem) e destaque para o e-mail corporativo que fornecemos a você.</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
     <!-- ========================================== -->
     <!-- TESTIMONIALS CAROUSEL -->
     <!-- ========================================== -->
     <section class="py-20 md:py-32 relative" id="secao-depoimentos">
         <div class="container mx-auto px-6 max-w-6xl">
-            <div class="text-center mb-12 md:mb-16">
+            <div class="text-center mb-12 md:mb-16 text-dark">
                 <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/8 text-accent text-xs font-semibold mb-6">
                     <i class="fas fa-users"></i> Prova Social
                 </div>
-                <h2 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight text-dark">Histórias Reais de Quem Deixou a Invisibilidade</h2>
-                <p class="text-lg text-gray-500 max-w-2xl mx-auto">Veja o impacto real nos negócios de quem parou de depender do algoritmo do Instagram e passou a ter uma operação organizada e previsível.</p>
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight text-dark">Histórias Reais de Quem Deixou o Caos e Blindou seu Caixa</h2>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto">Veja o impacto real e quantificável nos negócios de quem parou de improvisar nas redes sociais e estruturou sua operação.</p>
             </div>
 
             <div class="relative max-w-4xl mx-auto px-4 md:px-12 select-none">
                 
-                <div class="relative overflow-hidden min-h-[620px] sm:min-h-[500px] md:min-h-[400px] lg:min-h-[360px]">
+                <div class="relative overflow-hidden w-full">
                     
                     <!-- Slide 1 -->
-                    <div class="testimonial-slide absolute inset-0 flex flex-col justify-between card-modern p-8 transition-all duration-500 opacity-100 scale-100 z-10 text-dark">
+                    <div class="testimonial-slide relative flex flex-col justify-between card-modern p-8 transition-all duration-500 opacity-100 scale-100 z-10 text-dark">
                         <div>
                             <div class="flex items-center justify-between gap-4 mb-4 flex-wrap">
                                 <div class="flex items-center gap-1 text-amber-400 text-sm">
                                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                                 </div>
-                                <span class="bg-accent/8 text-accent px-3 py-1 rounded-full text-xs font-bold">Métrica: Zero No-Shows no primeiro mês</span>
+                                <span class="bg-accent/8 text-accent px-3 py-1 rounded-full text-xs font-bold">Métrica: -37% de faltas na agenda / R$ 3.200 salvos/mês</span>
                             </div>
                             <p class="text-gray-600 italic text-base md:text-lg leading-relaxed mb-6">
-                                "Responder dezenas de mensagens picadas no WhatsApp enquanto tentava atender meus pacientes era um caos que me esgotava. Com a Agenda Integrada do Portal Hub, os pacientes agendam sozinhos e recebem lembretes de confirmação automáticos. Minha taxa de no-shows caiu a zero no primeiro mês e recuperei a tranquilidade da minha rotina."
+                                "Responder dezenas de mensagens picadas no WhatsApp enquanto tentava atender meus pacientes era um caos que me esgotava. Com a Agenda Integrada do Portal Hub, os pacientes agendam sozinhos e recebem lembretes de confirmação automáticos. Reduzimos as faltas em 37% no primeiro mês e economizei R$ 3.200 que antes eram perdidos em horários vazios."
                             </p>
                         </div>
                         <div class="flex items-center gap-4 border-t border-black/5 pt-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent text-white flex items-center justify-center font-bold text-lg">AV</div>
+                            <div class="w-12 h-12 rounded-xl bg-accent text-white flex items-center justify-center font-bold text-lg flex-shrink-0">AV</div>
                             <div>
                                 <h4 class="font-bold text-dark text-base">Dra. Alessandra Veiga</h4>
                                 <p class="text-xs text-gray-400">Clínica de Dermatologia & Estética</p>
@@ -1357,14 +1305,14 @@
                                 <div class="flex items-center gap-1 text-amber-400 text-sm">
                                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                                 </div>
-                                <span class="bg-accent/8 text-accent px-3 py-1 rounded-full text-xs font-bold">Métrica: Queda de 90% na inadimplência</span>
+                                <span class="bg-accent/8 text-accent px-3 py-1 rounded-full text-xs font-bold">Métrica: R$ 4.800 recuperados em cobranças atrasadas</span>
                             </div>
                             <p class="text-gray-600 italic text-base md:text-lg leading-relaxed mb-6">
-                                "Cobrar honorários de forma manual era uma tarefa constrangedora e ineficiente que tomava muito tempo da minha equipe. Com o CRM Financeiro do Portal Hub, visualizo contas pendentes e envio lembretes de cobrança com Pix direto no WhatsApp em apenas 1 clique. A inadimplência da minha banca caiu 90% logo nos primeiros 30 dias."
+                                "Cobrar honorários de forma manual era uma tarefa constrangedora e ineficiente que tomava muito tempo da minha equipe. Com o CRM Financeiro do Portal Hub, visualizo contas pendentes e envio lembretes de cobrança com Pix direto no WhatsApp em apenas 1 clique. Recuperamos R$ 4.800 em cobranças esquecidas logo nos primeiros 30 dias."
                             </p>
                         </div>
                         <div class="flex items-center gap-4 border-t border-black/5 pt-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent text-white flex items-center justify-center font-bold text-lg">RA</div>
+                            <div class="w-12 h-12 rounded-xl bg-accent text-white flex items-center justify-center font-bold text-lg flex-shrink-0">RA</div>
                             <div>
                                 <h4 class="font-bold text-dark text-base">Roberto Albuquerque</h4>
                                 <p class="text-xs text-gray-400">Advogado Tributarista Corporativo</p>
@@ -1379,14 +1327,14 @@
                                 <div class="flex items-center gap-1 text-amber-400 text-sm">
                                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                                 </div>
-                                <span class="bg-accent/8 text-accent px-3 py-1 rounded-full text-xs font-bold">Métrica: +40% de faturamento em reativações</span>
+                                <span class="bg-accent/8 text-accent px-3 py-1 rounded-full text-xs font-bold">Métrica: +R$ 2.400 extras em clientes antigos reativados</span>
                             </div>
                             <p class="text-gray-600 italic text-base md:text-lg leading-relaxed mb-6">
-                                "Eu vivia no caos das planilhas e cadernos, esquecendo de entrar em contato com antigos pacientes que simplesmente sumiam. A Máquina de LTV do Portal Hub me alerta sobre clientes inativos há mais de 30 dias e gera o script de reativação perfeito para enviar. Aumentamos o faturamento em 40% trazendo antigos pacientes de volta de forma ultra simples."
+                                "Eu vivia no caos das planilhas e cadernos, esquecendo de entrar em contato com antigos pacientes que simplesmente sumiam. A Máquina de LTV do Portal Hub me alerta sobre clientes inativos há mais de 30 dias e gera o script de reativação perfeito para enviar. Faturamos R$ 2.400 extras trazendo antigos pacientes de volta de forma ultra simples."
                             </p>
                         </div>
                         <div class="flex items-center gap-4 border-t border-black/5 pt-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent text-white flex items-center justify-center font-bold text-lg">JM</div>
+                            <div class="w-12 h-12 rounded-xl bg-accent text-white flex items-center justify-center font-bold text-lg flex-shrink-0">JM</div>
                             <div>
                                 <h4 class="font-bold text-dark text-base">Juliana Mendes</h4>
                                 <p class="text-xs text-gray-400">Nutricionista & Mentora de Saúde</p>
@@ -1401,14 +1349,14 @@
                                 <div class="flex items-center gap-1 text-amber-400 text-sm">
                                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                                 </div>
-                                <span class="bg-accent/8 text-accent px-3 py-1 rounded-full text-xs font-bold">Métrica: Vendas qualificadas sem curiosos</span>
+                                <span class="bg-accent/8 text-accent px-3 py-1 rounded-full text-xs font-bold">Métrica: R$ 6.000 fechados com lead de alta qualidade</span>
                             </div>
                             <p class="text-gray-600 italic text-base md:text-lg leading-relaxed mb-6">
-                                "Nosso foco são projetos residenciais de alto padrão, mas o WhatsApp vivia entupido de curiosos tomando nosso tempo. A Porta (Site Inteligente) do ecossistema Hub Symples faz um filtro impecável de triagem e captação de leads. Agora, só conversamos com clientes qualificados que já chegam prontos para fechar contrato."
+                                "Nosso foco são projetos residenciais de alto padrão, mas o WhatsApp vivia entupido de curiosos que tomavam nosso tempo e nos faziam perder dinheiro. O site inteligente da Hub Symples faz um filtro impecável de triagem e captação. Agora, só conversamos com clientes qualificados que já chegam prontos para fechar contrato. Fechamos R$ 6.000 logo no primeiro lead filtrado."
                             </p>
                         </div>
                         <div class="flex items-center gap-4 border-t border-black/5 pt-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent text-white flex items-center justify-center font-bold text-lg">SK</div>
+                            <div class="w-12 h-12 rounded-xl bg-accent text-white flex items-center justify-center font-bold text-lg flex-shrink-0">SK</div>
                             <div>
                                 <h4 class="font-bold text-dark text-base">Studio Kaza</h4>
                                 <p class="text-xs text-gray-400">Arquitetura de Alto Padrão & Interiores</p>
@@ -1423,14 +1371,14 @@
                                 <div class="flex items-center gap-1 text-amber-400 text-sm">
                                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                                 </div>
-                                <span class="bg-accent/8 text-accent px-3 py-1 rounded-full text-xs font-bold">Métrica: Gestão blindada contra esquecimentos</span>
+                                <span class="bg-accent/8 text-accent px-3 py-1 rounded-full text-xs font-bold">Métrica: Fim do desperdício de receita operacional</span>
                             </div>
                             <p class="text-gray-600 italic text-base md:text-lg leading-relaxed mb-6">
                                 "Antes do Portal Hub, meu consultório era desorganizado: erros de agendamento, faturamento descontrolado e dinheiro sendo deixado na mesa. O Portal Hub unificou tudo. O agendamento automático alimenta o CRM Financeiro na hora, me dando controle total de fluxo de caixa e previsibilidade real de receita no final do mês."
                             </p>
                         </div>
                         <div class="flex items-center gap-4 border-t border-black/5 pt-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent text-white flex items-center justify-center font-bold text-lg">MR</div>
+                            <div class="w-12 h-12 rounded-xl bg-accent text-white flex items-center justify-center font-bold text-lg flex-shrink-0">MR</div>
                             <div>
                                 <h4 class="font-bold text-dark text-base">Dr. Marcelo Rezende</h4>
                                 <p class="text-xs text-gray-400">Reabilitação & Fisioterapia de Alto Padrão</p>
@@ -1445,14 +1393,14 @@
                                 <div class="flex items-center gap-1 text-amber-400 text-sm">
                                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                                 </div>
-                                <span class="bg-accent/8 text-accent px-3 py-1 rounded-full text-xs font-bold">Métrica: Processo de vendas rodando sozinho</span>
+                                <span class="bg-accent/8 text-accent px-3 py-1 rounded-full text-xs font-bold">Métrica: Configuração completa com esforço zero</span>
                             </div>
                             <p class="text-gray-600 italic text-base md:text-lg leading-relaxed mb-6">
-                                "Eu achava que organizar minha gestão e vendas daria muito trabalho e tomaria o tempo que eu não tinha. Com a Symples, mandei apenas dois áudios e em poucos dias meu ecossistema completo estava no ar: um site luxuoso que filtra os leads e um portal que resolve meu financeiro e agenda sem eu precisar fazer nada."
+                                "Eu achava que organizar minha gestão e vendas daria muito trabalho e tomaria o tempo que eu não tinha. Com a Symples, mandei apenas dois áudios e em poucos dias meu ecossistema completo estava no ar: um site profissional que filtra os leads e um portal que resolve meu financeiro e agenda sem eu precisar fazer nada."
                             </p>
                         </div>
                         <div class="flex items-center gap-4 border-t border-black/5 pt-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent text-white flex items-center justify-center font-bold text-lg">CM</div>
+                            <div class="w-12 h-12 rounded-xl bg-accent text-white flex items-center justify-center font-bold text-lg flex-shrink-0">CM</div>
                             <div>
                                 <h4 class="font-bold text-dark text-base">Carla Mendes</h4>
                                 <p class="text-xs text-gray-400">Mentora & Consultora de Negócios</p>
@@ -1482,17 +1430,26 @@
 
             </div>
         </div>
+    </section>"w-3 h-3 bg-gray-300 hover:bg-gray-400 transition-all duration-300 rounded-full"></button>
+                    <button onclick="setTestimonial(5)" class="w-3 h-3 bg-gray-300 hover:bg-gray-400 transition-all duration-300 rounded-full"></button>
+                </div>
+
+            </div>
+        </div>
     </section>
 
 
     <!-- ========================================== -->
     <!-- ANCHORING / VALUE SECTION -->
     <!-- ========================================== -->
+    <!-- ========================================== -->
+    <!-- ANCHORING / VALUE SECTION -->
+    <!-- ========================================== -->
     <section class="py-20 md:py-32 relative" id="secao-ancoragem">
         <div class="container mx-auto px-6 max-w-4xl">
-            <div class="text-center mb-12 md:mb-16">
-                <h2 class="text-3xl md:text-5xl font-extrabold mb-4 md:mb-6 text-dark">Nós resolvemos isso por você.</h2>
-                <p class="text-lg md:text-xl text-gray-500">Veja o que estamos entregando hoje por uma fração mínima do valor cobrado por agências tradicionais.</p>
+            <div class="text-center mb-12 md:mb-16 text-dark">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-4 md:mb-6 text-dark">Todo o suporte que você precisa por uma fração do custo</h2>
+                <p class="text-lg md:text-xl text-gray-500">Compare o custo de contratar profissionais e ferramentas separadas contra a assinatura do Hub Symples:</p>
             </div>
 
             <div class="card-modern p-6 sm:p-8 md:p-12 text-dark relative overflow-hidden">
@@ -1500,57 +1457,36 @@
                     <li class="flex items-start sm:items-center justify-between pb-4 md:pb-6 border-b border-black/5 gap-4">
                         <div class="flex items-start sm:items-center gap-3 md:gap-4">
                             <i class="fas fa-check-circle text-success text-xl md:text-2xl mt-0.5 sm:mt-0 flex-shrink-0"></i>
-                            <span class="text-base md:text-lg font-bold text-dark">Design Premium e Estrutura de Alta Conversão</span>
+                            <span class="text-base md:text-lg font-bold text-dark">Design Premium & Copywriting Profissional</span>
+                        </div>
+                        <span class="text-gray-400 line-through text-sm md:text-base whitespace-nowrap mt-1 sm:mt-0">R$ 1.500,00</span>
+                    </li>
+                    <li class="flex items-start sm:items-center justify-between pb-4 md:pb-6 border-b border-black/5 gap-4">
+                        <div class="flex items-start sm:items-center gap-3 md:gap-4">
+                            <i class="fas fa-check-circle text-success text-xl md:text-2xl mt-0.5 sm:mt-0 flex-shrink-0"></i>
+                            <span class="text-base md:text-lg font-bold text-dark">Portal Hub (ERP & CRM de Gestão)</span>
                         </div>
                         <span class="text-gray-400 line-through text-sm md:text-base whitespace-nowrap mt-1 sm:mt-0">R$ 850,00</span>
                     </li>
                     <li class="flex items-start sm:items-center justify-between pb-4 md:pb-6 border-b border-black/5 gap-4">
                         <div class="flex items-start sm:items-center gap-3 md:gap-4">
-                            <i class="fas fa-pen-nib text-success text-xl md:text-2xl mt-0.5 sm:mt-0 flex-shrink-0"></i>
-                            <span class="text-base md:text-lg font-bold text-dark">Estrutura de Copywriting Profissional</span>
+                            <i class="fas fa-check-circle text-success text-xl md:text-2xl mt-0.5 sm:mt-0 flex-shrink-0"></i>
+                            <span class="text-base md:text-lg font-bold text-dark">Lembretes & Disparos no WhatsApp</span>
                         </div>
-                        <span class="text-gray-400 line-through text-sm md:text-base whitespace-nowrap mt-1 sm:mt-0">R$ 650,00</span>
-                    </li>
-                    <li class="flex items-start sm:items-center justify-between pb-4 md:pb-6 border-b border-black/5 gap-4">
-                        <div class="flex items-start sm:items-center gap-3 md:gap-4">
-                            <i class="fas fa-chart-pie text-success text-xl md:text-2xl mt-0.5 sm:mt-0 flex-shrink-0"></i>
-                            <span class="text-base md:text-lg font-bold text-dark">Portal Hub: ERP & CRM Integrados</span>
-                        </div>
-                        <span class="text-gray-400 line-through text-sm md:text-base whitespace-nowrap mt-1 sm:mt-0">R$ 850,00</span>
-                    </li>
-                    <li class="flex items-start sm:items-center justify-between pb-4 md:pb-6 border-b border-black/5 gap-4">
-                        <div class="flex items-start sm:items-center gap-3 md:gap-4">
-                            <i class="fas fa-calendar-check text-success text-xl md:text-2xl mt-0.5 sm:mt-0 flex-shrink-0"></i>
-                            <span class="text-base md:text-lg font-bold text-dark">Mini-Site Bio-Link & Agendamento Online</span>
-                        </div>
-                        <span class="text-gray-400 line-through text-sm md:text-base whitespace-nowrap mt-1 sm:mt-0">R$ 450,00</span>
-                    </li>
-                    <li class="flex items-start sm:items-center justify-between pb-4 md:pb-6 border-b border-black/5 gap-4">
-                        <div class="flex items-start sm:items-center gap-3 md:gap-4">
-                            <i class="fas fa-mobile-alt text-success text-xl md:text-2xl mt-0.5 sm:mt-0 flex-shrink-0"></i>
-                            <span class="text-base md:text-lg font-bold text-dark">Otimização Perfeita para Celular (Mobile First)</span>
-                        </div>
-                        <span class="text-gray-400 line-through text-sm md:text-base whitespace-nowrap mt-1 sm:mt-0">R$ 250,00</span>
-                    </li>
-                    <li class="flex items-start sm:items-center justify-between pb-4 md:pb-6 border-b border-black/5 gap-4">
-                        <div class="flex items-start sm:items-center gap-3 md:gap-4">
-                            <i class="fas fa-bolt text-success text-xl md:text-2xl mt-0.5 sm:mt-0 flex-shrink-0"></i>
-                            <span class="text-base md:text-lg font-bold text-dark">Servidor Hospedagem Ultra Rápido e Seguro</span>
-                        </div>
-                        <span class="text-gray-400 line-through text-sm md:text-base whitespace-nowrap mt-1 sm:mt-0">R$ 250,00</span>
+                        <span class="text-gray-400 line-through text-sm md:text-base whitespace-nowrap mt-1 sm:mt-0">R$ 700,00</span>
                     </li>
                     <li class="flex items-start sm:items-center justify-between gap-4">
                         <div class="flex items-start sm:items-center gap-3 md:gap-4">
-                            <i class="fas fa-shield-alt text-success text-xl md:text-2xl mt-0.5 sm:mt-0 flex-shrink-0"></i>
-                            <span class="text-base md:text-lg font-bold text-dark">Certificado de Segurança SSL Ativo</span>
+                            <i class="fas fa-check-circle text-success text-xl md:text-2xl mt-0.5 sm:mt-0 flex-shrink-0"></i>
+                            <span class="text-base md:text-lg font-bold text-dark">Hospedagem, Domínio & Suporte Mensal Ilimitado</span>
                         </div>
-                        <span class="text-gray-400 line-through text-sm md:text-base whitespace-nowrap mt-1 sm:mt-0">R$ 200,00</span>
+                        <span class="text-gray-400 line-through text-sm md:text-base whitespace-nowrap mt-1 sm:mt-0">R$ 450,00</span>
                     </li>
                 </ul>
 
                 <div class="mt-8 pt-8 border-t border-black/10 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6 relative z-10">
                     <div class="text-center md:text-left">
-                        <p class="text-gray-500 text-base md:text-lg">Valor cobrado em agências:</p>
+                        <p class="text-gray-500 text-base md:text-lg">Contratando separado:</p>
                         <p class="text-2xl md:text-3xl font-extrabold text-danger line-through decoration-2">R$ 3.500,00 <span class="text-sm font-normal">à vista</span></p>
                     </div>
                     <div class="text-center md:text-right">
@@ -1562,29 +1498,8 @@
                 <div class="mt-6 text-center border-t border-black/5 pt-6 relative z-10">
                     <p class="text-sm md:text-base text-gray-500 font-light max-w-2xl mx-auto leading-relaxed">
                         <i class="fas fa-chart-line text-success mr-1.5"></i>
-                        <strong class="text-dark">Pense no retorno:</strong> Se o seu Sistema de Gestão fechar apenas <strong>um único cliente premium</strong> ao longo do ano inteiro, o investimento já se pagou com lucro.
+                        <strong class="text-dark">Pense no retorno:</strong> Se a organização da sua agenda evitar a perda de apenas <strong>um único cliente premium</strong> no ano, o investimento já se pagou com sobra.
                     </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ========================================== -->
-    <!-- RETENTION SECTION -->
-    <!-- ========================================== -->
-    <section class="py-12 md:py-20 relative" id="secao-retencao">
-        <div class="container mx-auto px-6 max-w-5xl">
-            <div class="card-modern p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-16 relative overflow-hidden text-dark">
-                <div class="text-center md:text-left flex-shrink-0 relative w-full md:w-48 flex flex-col items-center md:items-start justify-center">
-                    <div class="relative z-10 w-full">
-                        <span id="retention-number" class="inline-block min-w-[3em] text-center md:text-left tabular-nums text-7xl md:text-8xl font-extrabold text-dark">0%</span>
-                        <span class="block text-dark font-bold tracking-widest uppercase text-sm mt-2 whitespace-nowrap">De Retenção Ativa</span>
-                    </div>
-                </div>
-                <div class="text-center md:text-left relative z-10">
-                    <h3 class="text-2xl md:text-3xl font-extrabold text-dark mb-4">O mercado cancela. Nossos clientes ficam.</h3>
-                    <p class="text-gray-500 text-lg leading-relaxed">Enquanto construtores e agências têm altas taxas de abandono, nossa plataforma mantém uma <strong class="text-dark font-semibold">taxa de cancelamento menor que 3%</strong>. Por quê? Porque ninguém quer jogar fora a estrutura conquistada para voltar a depender exclusivamente das redes sociais.</p>
                 </div>
             </div>
         </div>
@@ -1610,12 +1525,17 @@
             </div>
 
             <div class="text-center mb-8 md:mb-10 text-dark">
-                <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Escolha o plano para o seu momento atual</h2>
-                <p class="text-gray-500 max-w-2xl mx-auto leading-relaxed text-sm md:text-base">Comece hoje e faça upgrades a qualquer momento, conforme o seu negócio exige mais escala.</p>
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-success/8 border border-success/20 text-success text-xs font-semibold mb-6">
+                    <i class="fas fa-handshake"></i> Parceria de Crescimento (97% de Retenção)
+                </div>
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Escolha a fase de evolução do seu negócio</h2>
+                <p class="text-gray-500 max-w-3xl mx-auto leading-relaxed text-sm md:text-base">
+                    Enquanto agências tradicionais entregam um site e desaparecem, nós atualizamos, mantemos e evoluímos o seu ecossistema todos os meses. Comece na fase ideal e mude a qualquer momento.
+                </p>
                 <div class="flex justify-center mt-4">
                     <div class="inline-flex items-center gap-2.5 bg-success/8 border border-success/20 px-5 py-2.5 rounded-full text-sm">
                         <i class="fas fa-calculator text-success text-xs"></i>
-                        <span class="text-gray-600">Menos de <strong class="text-dark">R$ 3,25 por dia</strong> para ter um negócio organizado, previsível e profissional.</span>
+                        <span class="text-gray-600">Menos de <strong class="text-dark">R$ 3,25 por dia</strong> para blindar sua operação contra faltas e esquecimentos.</span>
                     </div>
                 </div>
             </div>
@@ -1648,10 +1568,10 @@
                 <!-- PLANO START -->
                 <div class="card-modern p-8 relative flex flex-col h-full text-dark">
                     <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent/8 text-accent text-[10px] font-bold uppercase tracking-wider mb-5 w-max">
-                        Fase 1: Porta + Casa
+                        Fase 1: Organize sua operação
                     </div>
                     <h3 class="text-2xl font-extrabold mb-2 text-dark">Plano Start</h3>
-                    <p class="text-gray-500 mb-6 text-sm">O pontapé inicial para sair do caos. Seu Site Inteligente no ar com a Agenda Integrada do Portal Hub para organizar seus horários.</p>
+                    <p class="text-gray-500 mb-6 text-sm">O primeiro passo para sair do caos. Seu Site Profissional ativo junto com a Agenda Integrada do Portal Hub para organizar seus horários de atendimento.</p>
                     
                     <div class="mb-8 min-h-[80px]">
                         <div class="flex items-end gap-1">
@@ -1662,40 +1582,39 @@
                     </div>
                     
                     <ul class="space-y-3 mb-8 flex-grow">
-                        <li class="flex items-start gap-3"><span class="text-accent select-none">✦</span> <span class="text-gray-600">Site Inteligente de Alta Conversão (A Porta)</span></li>
-                        <li class="flex items-start gap-3"><span class="text-accent select-none">✦</span> <span class="text-gray-600">Copywriting de Conversão e Foco em Dor</span></li>
-                        <li class="flex items-start gap-3"><span class="text-accent select-none">✦</span> <span class="text-gray-600">Otimização Perfeita para Celular</span></li>
+                        <li class="flex items-start gap-3"><span class="text-accent select-none">✦</span> <span class="text-gray-600">Site Profissional de Alta Conversão</span></li>
+                        <li class="flex items-start gap-3"><span class="text-accent select-none">✦</span> <span class="text-gray-600">Copywriting focado em dores de perda de caixa</span></li>
+                        <li class="flex items-start gap-3"><span class="text-accent select-none">✦</span> <span class="text-gray-600">Otimização Perfeita para Dispositivos Móveis</span></li>
                         
                         <li class="flex flex-col gap-1 bg-accent/5 p-3 rounded-xl -mx-2 border border-accent/10">
                             <div class="flex items-start gap-3">
                                 <span class="text-accent select-none">❖</span>
-                                <span class="text-accent font-bold uppercase tracking-wider text-xs">Portal Hub (A Casa) Incluso</span>
+                                <span class="text-accent font-bold uppercase tracking-wider text-xs">Portal Hub Incluso</span>
                             </div>
-                            <span class="text-[11px] text-gray-500 ml-6 leading-relaxed">Acesso completo ao sistema operacional com Agenda Integrada e CRM Financeiro simplificado para o dia a dia.</span>
+                            <span class="text-[11px] text-gray-500 ml-6 leading-relaxed">Painel de controle com Agenda Integrada e CRM Financeiro básico para organizar seu fluxo financeiro.</span>
                         </li>
                         
-                        <li class="flex items-start gap-3"><span class="text-accent select-none">✦</span> <span class="text-gray-600">Mini-Site Bio-Link (Instagram/TikTok)</span></li>
-                        <li class="flex items-start gap-3"><span class="text-accent select-none">✦</span> <span class="text-gray-600">Agendamento Online Público 24h Integrado</span></li>
+                        <li class="flex items-start gap-3"><span class="text-accent select-none">✦</span> <span class="text-gray-600">Agendamento Online Público 24h</span></li>
+                        <li class="flex items-start gap-3"><span class="text-accent select-none">✦</span> <span class="text-gray-600">Evolução e Adaptação Mensal do Site</span></li>
 
                         <li class="pt-2 pb-1"><div class="h-px w-full bg-black/5"></div></li>
 
-                        <li class="flex items-start gap-2 text-sm text-gray-400"><span class="text-gray-300 select-none">•</span> <span>Hospedagem Ultra Rápida</span></li>
-                        <li class="flex items-start gap-2 text-sm text-gray-400"><span class="text-gray-300 select-none">•</span> <span>Certificado SSL Incluso</span></li>
-                        <li class="flex items-start gap-2 text-sm text-gray-400"><span class="text-gray-300 select-none">•</span> <span>Suporte e Manutenção Inclusos</span></li>
+                        <li class="flex items-start gap-2 text-sm text-gray-400"><span class="text-gray-300 select-none">•</span> <span>Hospedagem Premium & SSL Inclusos</span></li>
+                        <li class="flex items-start gap-2 text-sm text-gray-400"><span class="text-gray-300 select-none">•</span> <span>Suporte Técnico Ilimitado</span></li>
                     </ul>
                     
                     <button onclick="abrirChat(event, 'Fase 1 (Start)')" class="w-full text-center bg-dark hover:bg-gray-800 text-white py-4 btn-pill font-bold transition-colors mt-auto flex justify-center items-center gap-2">
-                        <i class="fab fa-whatsapp text-lg"></i> Quero o Plano Start
+                        <i class="fab fa-whatsapp text-lg"></i> Quero Organizar Minha Operação
                     </button>
                 </div>
 
                 <!-- PLANO PRO -->
                 <div class="card-modern p-8 relative flex flex-col h-full text-dark border-2 border-accent/30">
                     <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent text-white text-[10px] font-bold uppercase tracking-wider mb-5 w-max">
-                        Fase 2: Gestão + Vendas
+                        Fase 2: Comece a crescer
                     </div>
                     <h3 class="text-2xl font-extrabold mb-2 text-dark">Plano Pro</h3>
-                    <p class="text-gray-500 mb-6 text-sm">Estrutura profissional e previsibilidade. Domínio próprio, e-mail corporativo e a Máquina de LTV no seu Portal Hub para reativar clientes antigos.</p>
+                    <p class="text-gray-500 mb-6 text-sm">O estágio de crescimento acelerado. Domínio personalizado, e-mail profissional e acesso à Máquina de LTV para resgatar e faturar com clientes sumidos.</p>
                     
                     <div class="mb-8 min-h-[80px]">
                         <div class="flex items-end gap-1">
@@ -1710,19 +1629,19 @@
                         <li class="flex flex-col gap-1 bg-accent/5 p-3 rounded-xl -mx-2 border border-accent/10">
                             <div class="flex items-start gap-3">
                                 <span class="text-accent select-none">❖</span>
-                                <span class="text-accent font-bold uppercase tracking-wider text-xs">Máquina de LTV no Portal</span>
+                                <span class="text-accent font-bold uppercase tracking-wider text-xs">Máquina de LTV (Reativação)</span>
                             </div>
-                            <span class="text-[11px] text-gray-500 ml-6 leading-relaxed">Painel para identificar e gerar mensagens personalizadas para clientes inativos há 30 dias.</span>
+                            <span class="text-[11px] text-gray-500 ml-6 leading-relaxed">Alertas automáticos de inatividade de 30 dias com scripts de reativação prontos para envio.</span>
                         </li>
-                        <li class="flex items-start gap-3"><span class="text-accent select-none">✦</span> <span class="text-gray-600">Hub de Crescimento com Mini-Podcasts e Scripts Prontos</span></li>
+                        <li class="flex items-start gap-3"><span class="text-accent select-none">✦</span> <span class="text-gray-600">Hub de Crescimento (Aulas diárias de 3 min em áudio)</span></li>
                         <li class="flex items-start gap-3"><span class="text-accent select-none">✦</span> <span class="text-gray-600">Domínio Próprio (.com.br) e E-mail Corporativo</span></li>
-                        <li class="flex items-start gap-3"><span class="text-accent select-none">✦</span> <span class="text-gray-600">Otimização Avançada de SEO (Google)</span></li>
-                        <li class="flex items-start gap-3"><span class="text-gray-600">Galeria de Portfólio Premium e Pixel de Anúncios</span></li>
-                        <li class="flex items-start gap-3"><span class="text-gray-600">Atendimento de Suporte VIP no Portal</span></li>
+                        <li class="flex items-start gap-3"><span class="text-accent select-none">✦</span> <span class="text-gray-600">Otimização Avançada de SEO para buscas no Google</span></li>
+                        <li class="flex items-start gap-3"><span class="text-gray-600">Galeria de Resultados & Pixels de Anúncios</span></li>
+                        <li class="flex items-start gap-3"><span class="text-gray-600">Evolução Mensal Prioritária de Layout e Textos</span></li>
                     </ul>
                     
                     <button onclick="abrirChat(event, 'Fase 2 (Pro)')" class="w-full text-center bg-accent hover:bg-accentHover text-white py-4 btn-pill font-bold transition-colors mt-auto flex justify-center items-center gap-2">
-                        <i class="fab fa-whatsapp text-lg"></i> Quero o Plano Pro
+                        <i class="fab fa-whatsapp text-lg"></i> Quero Começar a Crescer
                     </button>
                 </div>
 
@@ -1730,10 +1649,10 @@
                 <div class="card-modern p-8 relative flex flex-col h-full text-dark md:col-span-2 lg:col-span-1">
                     <div class="absolute -top-3 right-6 bg-danger text-white text-[9px] font-bold uppercase tracking-widest px-4 py-1 rounded-full shadow-md">O Mais Completo</div>
                     <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-dark text-white text-[10px] font-bold uppercase tracking-wider mb-5 w-max">
-                        Fase 3: Automação & Escala
+                        Fase 3: Automatize e escale
                     </div>
                     <h3 class="text-2xl font-extrabold mb-2 text-dark">Plano Elite</h3>
-                    <p class="text-gray-500 mb-6 text-sm">O controle absoluto da sua operação. Robô de WhatsApp integrado para disparar lembretes contra faltas e cobranças Pix de forma automática.</p>
+                    <p class="text-gray-500 mb-6 text-sm">O controle operacional absoluto. Integração total do Robô de WhatsApp para disparar confirmações de consultas e lembretes de cobrança automáticos.</p>
                     
                     <div class="mb-8 min-h-[80px]">
                         <div class="flex items-end gap-1">
@@ -1751,20 +1670,21 @@
                                 <span class="text-dark select-none">❖</span>
                                 <span class="text-dark font-bold uppercase tracking-wider text-xs">Robô de WhatsApp Integrado</span>
                             </div>
-                            <span class="text-[11px] text-gray-500 ml-6 leading-relaxed">Disparo automático de confirmação de agendamentos e lembretes de cobrança Pix no WhatsApp sem esforço.</span>
+                            <span class="text-[11px] text-gray-500 ml-6 leading-relaxed">Disparo autônomo e sem esforço de lembretes Pix para inadimplência e mensagens de presença na agenda.</span>
                         </li>
                         
-                        <li class="flex items-start gap-3"><span class="text-dark select-none">✦</span> <span class="text-gray-600">Automação de Agendamentos & Escala Sem Caos</span></li>
-                        <li class="flex items-start gap-3"><span class="text-dark select-none">✦</span> <span class="text-gray-600">Triagem Inteligente de Contatos Qualificados</span></li>
+                        <li class="flex items-start gap-3"><span class="text-dark select-none">✦</span> <span class="text-gray-600">Triagem e Filtro Inteligente de Leads Qualificados</span></li>
+                        <li class="flex items-start gap-3"><span class="text-dark select-none">✦</span> <span class="text-gray-600">Automação Completa de Fluxo de Caixa no Portal</span></li>
+                        <li class="flex items-start gap-3"><span class="text-dark select-none">✦</span> <span class="text-gray-600">Evolução Mensal Ilimitada de Design, Copy e Recursos</span></li>
 
                         <li class="pt-2 pb-1"><div class="h-px w-full bg-black/5"></div></li>
 
-                        <li class="flex items-start gap-2 text-sm text-gray-400"><span class="text-gray-300 select-none">•</span> <span>Servidor com Prioridade Máxima</span></li>
-                        <li class="flex items-start gap-2 text-sm text-gray-400"><span class="text-gray-300 select-none">•</span> <span>Fila de Suporte Expressa</span></li>
+                        <li class="flex items-start gap-2 text-sm text-gray-400"><span class="text-gray-300 select-none">•</span> <span>Fila de Atendimento Prioritário (WhatsApp Direto)</span></li>
+                        <li class="flex items-start gap-2 text-sm text-gray-400"><span class="text-gray-300 select-none">•</span> <span>Infraestrutura e Servidor Dedicado</span></li>
                     </ul>
                     
                     <button onclick="abrirChat(event, 'Fase 3 (Elite)')" class="w-full text-center bg-dark hover:bg-gray-800 text-white py-4 btn-pill font-bold transition-colors mt-auto flex justify-center items-center gap-2">
-                        <i class="fab fa-whatsapp text-lg"></i> Quero o Plano Elite
+                        <i class="fab fa-whatsapp text-lg"></i> Quero Automatizar e Escalar
                     </button>
                 </div>
 
@@ -2139,11 +2059,11 @@
 
             slides.forEach((slide, idx) => {
                 if (idx === activeTestimonial) {
-                    slide.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
-                    slide.classList.add('opacity-100', 'scale-100', 'z-10');
+                    slide.classList.remove('opacity-0', 'scale-95', 'pointer-events-none', 'absolute', 'inset-0', 'z-0');
+                    slide.classList.add('opacity-100', 'scale-100', 'z-10', 'relative');
                 } else {
-                    slide.classList.remove('opacity-100', 'scale-100', 'z-10');
-                    slide.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+                    slide.classList.remove('opacity-100', 'scale-100', 'z-10', 'relative');
+                    slide.classList.add('opacity-0', 'scale-95', 'pointer-events-none', 'absolute', 'inset-0', 'z-0');
                 }
             });
 
