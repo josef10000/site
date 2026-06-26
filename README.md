@@ -99,3 +99,13 @@ Como o projeto preza pelo minimalismo e máxima performance:
   * **Planos por Maturidade (Fases de Evolução)**: Reorganização psicológica dos planos comerciais como fases de amadurecimento operacional do negócio (Start: organizar, Pro: crescer, Elite: automatizar e escalar) com CTAs voltados a identidade e recorrência posicionada como parceria de crescimento contínuo.
   * **Depoimentos Quantitativos**: Atualização de todos os relatos no carrossel de depoimentos com métricas numéricas concretas de lucro recuperado e redução de no-shows.
   * **Carrossel Responsivo com Altura Dinâmica**: Ajuste CSS/JS de depoimentos para que a altura do slide ativo (relative) guie o container automaticamente, eliminando a altura mínima fixa e impedindo cortes de nome/profissão no celular.
+* **[Junho/2026] Refinamentos de Copy Emocional & Consequências de Caixa (CRO Rodada 2)**:
+  * **Headline e Subheadline Emocionais**: Mudança da dobra inicial para tocar na dor direta ("Pare de perder clientes por falta de organização. Seu site profissional + sistema completo de gestão para médicos, clínicas e prestadores de serviço.").
+  * **Frase-Síntese no Topo**: Posicionada logo na dobra inicial para explicar a mecânica do negócio: "O site atrai. O sistema organiza e cobra."
+  * **Substituição de Valores Arbitrários**: A seção "O Custo Invisível do Caos" agora apresenta perdas financeiras gerais e incontestáveis, enfatizando que a assinatura se paga ao evitar a perda de um único cliente.
+  * **Funcionalidades como Consequências**: Tradução dos termos técnicos (CRM, Agenda, WhatsApp, LTV) em consequências operacionais ("Fim do Esquecimento de Cobranças", "Previsibilidade de Faturamento Sem Furos").
+  * **Rebranding de Atração**: Renomeada a seção de atração do ecossistema de "A Porta (Site Profissional)" para "Aquisição de Clientes (Site Premium)".
+  * **Estatísticas de Autoridade**: Grid visual de escala adicionado à prova social (+160 empresas, +8.000 agendamentos e +R$ 2M administrados).
+  * **Bloco Contraste Operacional (Antes vs. Depois)**: Novo comparador visual de fluxos de processos detalhando as etapas manuais contra o processo automático rodando sozinho, substituindo custos técnicos de TI.
+  * **Analogia do Secretário Digital**: Inserção de pitch de conversão vendendo a inteligência do Hub como um secretário que nunca erra, trabalha 24h e custa menos de R$ 100/mês.
+  * **Planos Orientados a Benefícios**: Copy do checklist e das descrições dos planos Start, Pro e Elite reescritas com foco em recuperar horas de trabalho e faturamento desperdiçado.
