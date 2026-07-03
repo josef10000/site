@@ -342,11 +342,14 @@
                     </div>
 
                     <!-- CTA Button -->
-                    <div class="flex flex-col sm:flex-row items-center gap-4 mb-8 w-full sm:w-auto">
+                    <div class="flex flex-col gap-2.5 mb-8 w-full sm:w-auto items-start">
                         <a href="#planos" class="inline-flex items-center justify-center gap-3 bg-accent hover:bg-accentHover text-white font-bold text-base px-8 py-4 btn-pill shadow-lg shadow-accent/20 hover:shadow-accent/30 transition-all transform hover:scale-105 w-full sm:w-auto">
                             QUERO ORGANIZAR MEU NEGÓCIO
                             <i class="fas fa-arrow-right text-sm"></i>
                         </a>
+                        <span class="text-xs text-gray-400 font-medium select-none ml-1 flex items-center gap-1.5">
+                            <i class="fas fa-check text-success text-[10px]"></i> Configuração 100% feita por nossa equipe. Sem formulários difíceis.
+                        </span>
                     </div>
 
                     <!-- Live Counter -->
@@ -1328,7 +1331,7 @@
                             </p>
                         </div>
                         <div class="flex items-center gap-4 border-t border-black/5 pt-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent text-white flex items-center justify-center font-bold text-lg flex-shrink-0">AV</div>
+                            <img src="./alessandra_veiga.png" alt="Dra. Alessandra Veiga" class="w-12 h-12 rounded-xl object-cover flex-shrink-0">
                             <div>
                                 <h4 class="font-bold text-dark text-base">Dra. Alessandra Veiga</h4>
                                 <p class="text-xs text-gray-400">Clínica de Dermatologia & Estética</p>
@@ -1350,7 +1353,7 @@
                             </p>
                         </div>
                         <div class="flex items-center gap-4 border-t border-black/5 pt-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent text-white flex items-center justify-center font-bold text-lg flex-shrink-0">RA</div>
+                            <img src="./roberto_albuquerque.png" alt="Roberto Albuquerque" class="w-12 h-12 rounded-xl object-cover flex-shrink-0">
                             <div>
                                 <h4 class="font-bold text-dark text-base">Roberto Albuquerque</h4>
                                 <p class="text-xs text-gray-400">Advogado Tributarista Corporativo</p>
@@ -1363,16 +1366,16 @@
                         <div>
                             <div class="flex items-center justify-between gap-4 mb-4 flex-wrap">
                                 <div class="flex items-center gap-1 text-amber-400 text-sm">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                                 </div>
                                 <span class="bg-accent/8 text-accent px-3 py-1 rounded-full text-xs font-bold">Métrica: +R$ 2.400 extras em clientes antigos reativados</span>
                             </div>
                             <p class="text-gray-600 italic text-base md:text-lg leading-relaxed mb-6">
-                                "Eu vivia no caos das planilhas e cadernos, esquecendo de entrar em contato com antigos pacientes que simplesmente sumiam. O sistema de reativação do Portal Hub me alerta sobre clientes sumidos há mais de 30 dias e gera o script de reativação perfeito para enviar. Faturamos R$ 2.400 extras trazendo antigos pacientes de volta de forma ultra simples."
+                                "Eu vivia no caos das planilhas, esquecendo de entrar em contato com antigos pacientes. Tivemos um pequeno atraso na ativação do domínio próprio no segundo dia, mas o suporte resolveu tudo rapidamente pelo WhatsApp. O sistema de reativação do Portal Hub me alerta sobre clientes sumidos há 30 dias e faturamos R$ 2.400 extras trazendo antigos pacientes de volta de forma ultra simples."
                             </p>
                         </div>
                         <div class="flex items-center gap-4 border-t border-black/5 pt-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent text-white flex items-center justify-center font-bold text-lg flex-shrink-0">JM</div>
+                            <img src="./juliana_mendes.png" alt="Juliana Mendes" class="w-12 h-12 rounded-xl object-cover flex-shrink-0">
                             <div>
                                 <h4 class="font-bold text-dark text-base">Juliana Mendes</h4>
                                 <p class="text-xs text-gray-400">Nutricionista & Mentora de Saúde</p>
@@ -1633,7 +1636,7 @@
                 </div>
             </div>
 
-            <div class="flex justify-center mb-10 md:mb-16">
+            <div class="flex flex-col items-center justify-center mb-10 md:mb-16 gap-3">
                 <div class="bg-white p-1 rounded-full inline-flex border border-black/10 relative items-center max-w-full overflow-x-auto shadow-sm">
                     <button id="btn-mensal" onclick="toggleBilling('mensal')" class="px-5 md:px-8 py-2 md:py-2.5 font-bold text-xs md:text-sm transition-all duration-300 text-gray-400 hover:text-dark whitespace-nowrap rounded-full">
                         Mensal
@@ -1642,6 +1645,9 @@
                         Anual <span class="bg-white/20 px-2 py-0.5 rounded-full text-[10px]">-15%</span>
                     </button>
                 </div>
+                <span class="text-xs text-gray-500 font-medium select-none">
+                    <i class="fas fa-sparkles text-accent mr-1"></i> Economize de <strong>R$ 174</strong> a <strong>R$ 534/ano</strong> assinando no plano Anual
+                </span>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1687,6 +1693,9 @@
                     <button onclick="abrirChat(event, 'Fase 1 (Start)')" class="w-full text-center bg-dark hover:bg-gray-800 text-white py-4 btn-pill font-bold transition-colors mt-auto flex justify-center items-center gap-2">
                         <i class="fab fa-whatsapp text-lg"></i> Quero Organizar Minha Operação
                     </button>
+                    <span class="text-[10px] text-gray-400 text-center block mt-2 select-none">
+                        <i class="fas fa-check text-success mr-1"></i> Cancele quando quiser. Sem fidelidade oculta.
+                    </span>
                 </div>
 
                 <!-- PLANO PRO -->
@@ -1724,6 +1733,9 @@
                     <button onclick="abrirChat(event, 'Fase 2 (Pro)')" class="w-full text-center bg-accent hover:bg-accentHover text-white py-4 btn-pill font-bold transition-colors mt-auto flex justify-center items-center gap-2">
                         <i class="fab fa-whatsapp text-lg"></i> Quero Começar a Crescer
                     </button>
+                    <span class="text-[10px] text-gray-400 text-center block mt-2 select-none">
+                        <i class="fas fa-check text-success mr-1"></i> Cancele quando quiser. Sem fidelidade oculta.
+                    </span>
                 </div>
 
                 <!-- PLANO ELITE -->
@@ -1767,6 +1779,9 @@
                     <button onclick="abrirChat(event, 'Fase 3 (Elite)')" class="w-full text-center bg-dark hover:bg-gray-800 text-white py-4 btn-pill font-bold transition-colors mt-auto flex justify-center items-center gap-2">
                         <i class="fab fa-whatsapp text-lg"></i> Quero Automatizar e Escalar
                     </button>
+                    <span class="text-[10px] text-gray-400 text-center block mt-2 select-none">
+                        <i class="fas fa-check text-success mr-1"></i> Cancele quando quiser. Sem fidelidade oculta.
+                    </span>
                 </div>
 
             </div>
